@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odontología Dra. García | Odontología en Buenos Aires</title>
+<meta name="description" content="Odontología Dra. García en Buenos Aires. Blanqueamiento, ortodoncia, implantes y limpieza dental con tecnología de última generación. ¡Reservá tu turno hoy!">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Odontología Dra. García","address":{"@type":"PostalAddress","streetAddress":"Av. Corrientes 1234","addressLocality":"Buenos Aires","addressCountry":"AR"},"telephone":"+541112345678","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"120"},"openingHours":"Mo-Fr 09:00-19:00"}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0a1f44;--blue:#1a3a6b;--sky:#2e86de;--light:#e8f4fd;--white:#fff;--gray:#f5f7fa}
+body{font-family:'Poppins',sans-serif;color:#333;overflow-x:hidden}
+.watermark{position:fixed;inset:0;z-index:9999;pointer-events:none;overflow:hidden}
+.watermark-inner{position:absolute;inset:-50%;width:200%;height:200%;display:flex;flex-direction:column;justify-content:center;gap:60px;transform:rotate(-35deg);opacity:.07}
+.watermark-row{white-space:nowrap;font-size:18px;font-weight:700;color:#333;letter-spacing:2px;display:flex;gap:80px}
+a{text-decoration:none}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:14px 32px;border-radius:50px;font-weight:700;font-size:1rem;transition:.3s;box-shadow:0 4px 20px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(37,211,102,.5)}
+.btn-wa svg{width:22px;height:22px;fill:#fff}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,31,68,.95);backdrop-filter:blur(10px);padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;font-size:1.2rem;font-weight:700;letter-spacing:.5px}
+.logo span{color:#2e86de}
+nav ul{list-style:none;display:flex;gap:28px}
+nav ul li a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:.2s}
+nav ul li a:hover{color:#2e86de}
+@media(max-width:768px){nav ul{display:none}}
+#hero{min-height:100vh;background:linear-gradient(135deg,rgba(10,31,68,.88) 0%,rgba(46,134,222,.7) 100%),url('https://images.unsplash.com/photo-1588776814546-1ffedbe47add?w=1200') center/cover no-repeat;display:flex;align-items:center;padding:120px 5% 80px}
+.hero-content{max-width:620px;color:#fff}
+.hero-badge{display:inline-block;background:rgba(46,134,222,.3);border:1px solid rgba(46,134,222,.6);color:#7ec8f7;padding:6px 18px;border-radius:50px;font-size:.8rem;font-weight:600;margin-bottom:20px;letter-spacing:1px}
+#hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:20px}
+#hero h1 span{color:#2e86de}
+#hero p{font-size:1.1rem;line-height:1.7;opacity:.9;margin-bottom:36px}
+.hero-stats{display:flex;gap:32px;margin-top:40px}
+.stat{text-align:center}
+.stat strong{display:block;font-size:1.8rem;font-weight:800;color:#2e86de}
+.stat span{font-size:.8rem;opacity:.8}
+section{padding:80px 5%}
+.section-tag{display:inline-block;color:#2e86de;font-weight:600;font-size:.85rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:var(--navy);margin-bottom:16px}
+.subtitle{color:#666;font-size:1rem;line-height:1.7;max-width:540px}
+#servicios{background:var(--gray)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px}
+.service-card{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;box-shadow:0 2px 20px rgba(0,0,0,.06);transition:.3s;border-top:4px solid transparent}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(46,134,222,.15);border-top-color:#2e86de}
+.service-icon{width:64px;height:64px;background:var(--light);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem}
+.service-card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.service-card p{font-size:.88rem;color:#777;line-height:1.6}
+#nosotros{background:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr}}
+.why-img{border-radius:24px;overflow:hidden;position:relative}
+.why-img img{width:100%;height:380px;object-fit:cover;display:block}
+.badge-float{position:absolute;bottom:24px;left:24px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.badge-float strong{display:block;font-size:1.6rem;font-weight:800;color:var(--navy)}
+.badge-float span{font-size:.8rem;color:#666}
+.why-points{display:flex;flex-direction:column;gap:24px}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-num{min-width:48px;height:48px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1rem;color:#2e86de}
+.why-item h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.why-item p{font-size:.87rem;color:#777;line-height:1.6}
+#testimonios{background:var(--navy);padding:80px 5%}
+#testimonios h2{color:#fff}
+#testimonios .subtitle{color:rgba(255,255,255,.7)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.testi-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px;transition:.3s}
+.testi-card:hover{background:rgba(255,255,255,.12)}
+.stars{color:#f4c430;font-size:1rem;margin-bottom:16px;letter-spacing:2px}
+.testi-card p{color:rgba(255,255,255,.85);font-size:.92rem;line-height:1.7;margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.avatar{width:44px;height:44px;border-radius:50%;background:#2e86de;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:1rem}
+.testi-author strong{color:#fff;font-size:.9rem;display:block}
+.testi-author span{color:rgba(255,255,255,.5);font-size:.78rem}
+.testi-note{text-align:center;margin-top:32px;color:rgba(255,255,255,.35);font-size:.78rem}
+#ubicacion{background:#fff}
+.map-wrapper{border-radius:20px;overflow:hidden;margin-top:40px;height:380px;box-shadow:0 4px 30px rgba(0,0,0,.1)}
+.map-wrapper iframe{width:100%;height:100%;border:none}
+#cta{background:linear-gradient(135deg,#1a3a6b 0%,#2e86de 100%);text-align:center;padding:80px 5%}
+#cta h2{color:#fff;margin-bottom:16px}
+#cta p{color:rgba(255,255,255,.85);margin-bottom:36px;font-size:1rem;line-height:1.7}
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:40px 5%;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+footer h4{color:#fff;font-size:1rem;font-weight:700;margin-bottom:12px}
+footer p,footer a{font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.65)}
+footer a:hover{color:#2e86de}
+.footer-bottom{background:#060f22;text-align:center;padding:16px 5%;color:rgba(255,255,255,.3);font-size:.78rem}
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<div class="watermark">
+  <div class="watermark-inner">
+    <div class="watermark-row"><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span></div>
+    <div class="watermark-row"><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span></div>
+    <div class="watermark-row"><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span></div>
+    <div class="watermark-row"><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span></div>
+    <div class="watermark-row"><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span><span>DEMO - Sitio de muestra. Contactanos para obtener tu versión final</span></div>
+  </div>
+</div>
+<nav>
+  <div class="logo">Dra. <span>García</span></div>
+  <ul>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#testimonios">Opiniones</a></li>
+    <li><a href="#ubicacion">Ubicación</a></li>
+    <li><a href="https://wa.me/541112345678?text=Hola%2C%20quiero%20consultar%20turnos" class="btn-wa" style="padding:10px 22px;font-size:.85rem">Turno</a></li>
+  </ul>
+</nav>
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">⭐ 4.8 en Google · +500 pacientes</div>
+    <h1>Tu sonrisa<br>merece lo <span>mejor</span></h1>
+    <p>En el corazón de Buenos Aires, cuidamos tu salud dental con tecnología avanzada y atención personalizada. Pedí tu turno hoy.</p>
+    <a href="https://wa.me/541112345678?text=Hola%2C%20quiero%20consultar%20turnos" class="btn-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Reservar turno por WhatsApp
+    </a>
+    <div class="hero-stats">
+      <div class="stat"><strong>+15</strong><span>Años de experiencia</span></div>
+      <div class="stat"><strong>4.8★</strong><span>Google Reviews</span></div>
+      <div class="stat"><strong>100%</strong><span>Satisfacción</span></div>
+    </div>
+  </div>
+</section>
+<section id="servicios">
+  <div class="section-tag">Nuestros tratamientos</div>
+  <h2>Servicios dentales completos</h2>
+  <p class="subtitle">Todo lo que necesitás para mantener tu sonrisa saludable en un solo lugar.</p>
+  <div class="services-grid">
+    <div class="service-card fade-in"><div class="service-icon">🦷</div><h3>Limpieza Dental</h3><p>Higiene profesional para eliminar sarro y manchas. Recomendada cada 6 meses.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">✨</div><h3>Blanqueamiento</h3><p>Recuperá el blanco natural de tus dientes con tecnología LED de última generación.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">😁</div><h3>Ortodoncia</h3><p>Brackets tradicionales o alineadores transparentes. Sonrisas perfectas para todas las edades.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">🔩</div><h3>Implantes</h3><p>Solución permanente para dientes perdidos. Implantes de titanio con garantía de por vida.</p></div>
+    <div class="service-card fade-in"><div class="service-icon">🚨</div><h3>Urgencias</h3><p>Atención rápida para dolores y emergencias dentales. Contactanos al instante por WhatsApp.</p></div>
+  </div>
+</section>
+<section id="nosotros">
+  <div class="why-grid">
+    <div class="why-img fade-in">
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800" alt="Consultorio odontológico moderno de la Dra. García en Buenos Aires">
+      <div class="badge-float"><strong>+15 años</strong><span>de experiencia</span></div>
+    </div>
+    <div>
+      <div class="section-tag">¿Por qué elegirnos?</div>
+      <h2>Atención que marca la diferencia</h2>
+      <div class="why-points" style="margin-top:32px">
+        <div class="why-item fade-in"><div class="why-num">01</div><div><h3>Experiencia comprobada</h3><p>Más de 15 años transformando sonrisas en Buenos Aires con resultados que hablan solos.</p></div></div>
+        <div class="why-item fade-in"><div class="why-num">02</div><div><h3>Tecnología de vanguardia</h3><p>Equipos digitales de última generación para diagnósticos precisos y tratamientos menos invasivos.</p></div></div>
+        <div class="why-item fade-in"><div class="why-num">03</div><div><h3>Máxima comodidad</h3><p>Ambiente cálido, turnos sin espera y planes de pago flexibles para que cuides tu salud sin estrés.</p></div></div>
+        <div class="why-item fade-in"><div class="why-num">04</div><div><h3>Ubicación estratégica</h3><p>En Av. Corrientes 1234, en el corazón de Buenos Aires. Fácil acceso en transporte público.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="testimonios">
+  <div style="text-align:center;margin-bottom:8px"><div class="section-tag" style="color:#7ec8f7">Lo que dicen nuestros pacientes</div></div>
+  <h2 style="text-align:center;color:#fff">Experiencias de nuestros pacientes</h2>
+  <p class="subtitle" style="color:rgba(255,255,255,.7);margin:0 auto;text-align:center">Más de 500 pacientes confían en nosotros para cuidar su sonrisa.</p>
+  <div class="testi-grid">
+    <div class="testi-card fade-in"><div class="stars">★★★★★</div><p>"Llegué con mucho miedo al dentista y la Dra. García me hizo sentir completamente tranquila. El blanqueamiento quedó increíble, estoy muy feliz con el resultado."</p><div class="testi-author"><div class="avatar">ML</div><div><strong>María Laura</strong><span>Blanqueamiento dental</span></div></div></div>
+    <div class="testi-card fade-in"><div class="stars">★★★★★</div><p>"Excelente atención y profesionalismo. Me colocaron implantes y el proceso fue mucho más cómodo de lo que esperaba. 100% recomendados."</p><div class="testi-author"><div class="avatar">CR</div><div><strong>Carlos R.</strong><span>Implantes dentales</span></div></div></div>
+    <div class="testi-card fade-in"><div class="stars">★★★★★</div><p>"Llevo 18 meses con la ortodoncia y los cambios son increíbles. El equipo es súper atento y siempre resuelven todas mis dudas al instante."</p><div class="testi-author"><div class="avatar">SV</div><div><strong>Sofía V.</strong><span>Ortodoncia</span></div></div></div>
+  </div>
+  <p class="testi-note">(Testimonios de demostración)</p>
+</section>
+<section id="ubicacion">
+  <div class="section-tag">Dónde encontrarnos</div>
+  <h2>Visitanos en Buenos Aires</h2>
+  <p class="subtitle">Av. Corrientes 1234, Buenos Aires · Lunes a Viernes 9 a 19hs</p>
+  <div class="map-wrapper fade-in">
+    <iframe src="https://maps.google.com/maps?q=Av.+Corrientes+1234,+Buenos+Aires&output=embed" allowfullscreen loading="lazy" title="Ubicación de Odontología Dra. García en Av. Corrientes 1234, Buenos Aires"></iframe>
+  </div>
+</section>
+<section id="cta">
+  <div class="section-tag" style="color:#7ec8f7">Empezá hoy</div>
+  <h2>¿Listo para transformar tu sonrisa?</h2>
+  <p>Reservá tu consulta sin costo. Atendemos por WhatsApp de forma inmediata.<br>Tu primera evaluación es completamente gratuita.</p>
+  <a href="https://wa.me/541112345678?text=Hola%2C%20quiero%20consultar%20turnos" class="btn-wa">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Pedir turno por WhatsApp
+  </a>
+</section>
+<footer>
+  <div><h4>Odontología Dra. García</h4><p>Tu sonrisa merece el mejor cuidado. Atención profesional y personalizada en Buenos Aires.</p></div>
+  <div><h4>Contacto</h4><p>📍 Av. Corrientes 1234, CABA<br>📞 <a href="tel:541112345678">+54 11 1234-5678</a><br>💬 <a href="https://wa.me/541112345678">WhatsApp</a></p></div>
+  <div><h4>Servicios</h4><p>Blanqueamiento · Ortodoncia<br>Implantes · Limpieza<br>Urgencias dentales</p></div>
+  <div><h4>Horarios</h4><p>Lunes a Viernes<br>9:00 a 19:00 hs<br>Sábados con turno previo</p></div>
+</footer>
+<div class="footer-bottom">© 2024 Odontología Dra. García · Av. Corrientes 1234, Buenos Aires</div>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, {threshold: 0.15});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
