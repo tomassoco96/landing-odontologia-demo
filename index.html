@@ -4,173 +4,161 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Odontología Dr. Martínez | Odontología en Buenos Aires</title>
-<meta name="description" content="Odontología Dr. Martínez en Buenos Aires. Blanqueamiento, Ortodoncia, Implantes y Limpieza dental. Turnos disponibles. Llamá al +54 11 9876-5432.">
+<meta name="description" content="Consultorio odontológico del Dr. Martínez en Av. Santa Fe 2345, Buenos Aires. Blanqueamiento, ortodoncia, implantes y limpieza dental. Turnos por WhatsApp.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Odontología Dr. Martínez","address":{"@type":"PostalAddress","streetAddress":"Av. Santa Fe 2345","addressLocality":"Buenos Aires","addressCountry":"AR"},"telephone":"+541198765432","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"89"},"openingHours":"Mo-Fr 09:00-19:00","priceRange":"$$"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dentist","name":"Odontología Dr. Martínez","address":{"@type":"PostalAddress","streetAddress":"Av. Santa Fe 2345","addressLocality":"Buenos Aires","addressCountry":"AR"},"telephone":"+541198765432","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"89"}}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;color:#1a1a2e;overflow-x:hidden}
-:root{--navy:#0d2b5e;--sky:#4fc3f7;--white:#fff;--light:#f0f8ff;--gray:#64748b}
-.fade-in{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-nav{position:fixed;top:0;width:100%;background:rgba(13,43,94,.97);backdrop-filter:blur(10px);z-index:999;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-.logo{color:var(--white);font-weight:700;font-size:1.1rem;letter-spacing:.3px}
+body{font-family:'Poppins',sans-serif;color:#1a1a2e;background:#fff}
+:root{--navy:#0d2b5e;--sky:#4fc3f7;--white:#fff;--gray:#f4f7fb}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.btn-wp{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:14px 30px;border-radius:50px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(37,211,102,.35)}
+.btn-wp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,.45)}
+.btn-wp svg{flex-shrink:0}
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(13,43,94,.97);backdrop-filter:blur(8px);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{color:#fff;font-weight:800;font-size:1.1rem;display:flex;align-items:center;gap:8px}
 .logo span{color:var(--sky)}
-nav a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.85rem;font-weight:500;margin-left:20px;transition:color .3s}
-nav a:hover{color:var(--sky)}
-.nav-links{display:none}
-@media(min-width:768px){.nav-links{display:block}}
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 24px 60px}
-.hero-bg{position:absolute;inset:0;background:url('https://picsum.photos/seed/dental1/1200/800') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,43,94,.92) 0%,rgba(13,43,94,.75) 100%)}
-.hero-content{position:relative;z-index:2;max-width:720px}
-.hero-badge{display:inline-block;background:rgba(79,195,247,.2);border:1px solid rgba(79,195,247,.4);color:var(--sky);padding:6px 18px;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:1px;margin-bottom:20px;text-transform:uppercase}
-h1{color:var(--white);font-size:clamp(2rem,5vw,3.4rem);font-weight:800;line-height:1.15;margin-bottom:20px}
-h1 span{color:var(--sky)}
-.hero-sub{color:rgba(255,255,255,.8);font-size:clamp(.95rem,2vw,1.1rem);font-weight:300;margin-bottom:36px;line-height:1.7}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;text-decoration:none;padding:16px 32px;border-radius:50px;font-weight:700;font-size:1rem;box-shadow:0 8px 30px rgba(37,211,102,.4);transition:transform .3s,box-shadow .3s}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.5)}
-.btn-primary svg{flex-shrink:0}
-.stars{color:#fbbf24;font-size:1.3rem;margin-bottom:8px}
-.rating-text{color:rgba(255,255,255,.7);font-size:.85rem}
-.hero-rating{margin-top:40px}
-section{padding:80px 24px}
-.container{max-width:1100px;margin:0 auto}
-h2{font-size:clamp(1.6rem,3.5vw,2.3rem);font-weight:800;color:var(--navy);line-height:1.2}
-.section-tag{color:var(--sky);font-weight:700;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
-.section-sub{color:var(--gray);font-size:1rem;margin-top:12px;max-width:560px;line-height:1.7}
-.services{background:var(--light)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:50px}
-.service-card{background:var(--white);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 4px 20px rgba(13,43,94,.07);border:1px solid rgba(13,43,94,.06);transition:transform .3s,box-shadow .3s}
-.service-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(13,43,94,.14)}
-.icon-wrap{width:64px;height:64px;background:linear-gradient(135deg,var(--navy),#1a4a9e);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
-.service-card h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
-.service-card p{color:var(--gray);font-size:.85rem;line-height:1.6}
-.why-wrap{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
-@media(min-width:768px){.why-wrap{grid-template-columns:1fr 1fr}}
-.why-img{border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(13,43,94,.2)}
-.why-img img{width:100%;height:380px;object-fit:cover;display:block}
-.why-points{display:flex;flex-direction:column;gap:24px;margin-top:36px}
-.why-point{display:flex;gap:16px;align-items:flex-start}
-.why-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--sky),#0288d1);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.why-point h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
-.why-point p{color:var(--gray);font-size:.85rem;line-height:1.6}
-.testimonials{background:var(--navy)}
-.testimonials h2{color:var(--white)}
-.testimonials .section-tag{color:var(--sky)}
-.testimonials .section-sub{color:rgba(255,255,255,.6)}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:50px}
-.testi-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:28px 24px}
-.testi-stars{color:#fbbf24;font-size:1rem;margin-bottom:14px}
-.testi-card p{color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.7;margin-bottom:18px}
-.testi-demo{display:block;font-size:.72rem;color:rgba(255,255,255,.35);font-style:italic}
-.testi-author{display:flex;align-items:center;gap:12px}
-.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--sky),#0288d1);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.95rem}
-.testi-name{color:#fff;font-weight:600;font-size:.9rem}
-.testi-loc{color:rgba(255,255,255,.45);font-size:.78rem}
-.map-section{padding:0}
-.map-section iframe{width:100%;height:420px;border:0;display:block;filter:grayscale(20%)}
-.cta-section{background:linear-gradient(135deg,var(--navy) 0%,#1a4a9e 100%);text-align:center;padding:90px 24px}
-.cta-section h2{color:#fff}
-.cta-section p{color:rgba(255,255,255,.75);margin-top:14px;font-size:1rem;margin-bottom:36px}
-.btn-cta-big{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;text-decoration:none;padding:18px 40px;border-radius:50px;font-weight:700;font-size:1.05rem;box-shadow:0 10px 40px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s}
-.btn-cta-big:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(37,211,102,.55)}
-footer{background:#060f1f;color:rgba(255,255,255,.6);text-align:center;padding:40px 24px}
-.footer-logo{color:#fff;font-weight:700;font-size:1.1rem;margin-bottom:12px}
+nav{display:none}
+@media(min-width:768px){nav{display:flex;gap:28px}nav a{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:500;transition:color .2s}nav a:hover{color:var(--sky)}}
+section.hero{min-height:100vh;background:linear-gradient(135deg,#0d2b5e 0%,#1a4a8a 60%,#0d2b5e 100%);position:relative;display:flex;align-items:center;overflow:hidden;padding-top:70px}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15}
+.hero-inner{position:relative;z-index:2;padding:40px 20px;max-width:700px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-block;background:rgba(79,195,247,.15);border:1px solid rgba(79,195,247,.4);color:var(--sky);padding:6px 18px;border-radius:50px;font-size:.8rem;font-weight:600;margin-bottom:22px;letter-spacing:.5px}
+.hero-inner h1{color:#fff;font-size:clamp(2rem,5vw,3.4rem);font-weight:800;line-height:1.15;margin-bottom:18px}
+.hero-inner h1 span{color:var(--sky)}
+.hero-inner p{color:rgba(255,255,255,.78);font-size:clamp(.95rem,2vw,1.15rem);margin-bottom:34px;line-height:1.7}
+.stars{color:#f5c518;font-size:1.3rem;margin-bottom:6px}
+.rating-text{color:rgba(255,255,255,.65);font-size:.85rem;margin-bottom:30px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.4);color:#fff;padding:13px 28px;border-radius:50px;font-weight:600;font-size:.95rem;transition:all .2s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+section.services{padding:70px 20px;background:var(--gray)}
+.section-label{text-align:center;color:var(--sky);font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.section-title{text-align:center;color:var(--navy);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:10px}
+.section-sub{text-align:center;color:#555;max-width:520px;margin:0 auto 48px;font-size:.97rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;max-width:1000px;margin:0 auto}
+.srv-card{background:#fff;border-radius:18px;padding:32px 22px;text-align:center;box-shadow:0 2px 20px rgba(13,43,94,.07);transition:transform .25s,box-shadow .25s;border-bottom:3px solid transparent}
+.srv-card:hover{transform:translateY(-5px);box-shadow:0 10px 35px rgba(13,43,94,.13);border-bottom-color:var(--sky)}
+.srv-icon{width:60px;height:60px;background:linear-gradient(135deg,#e8f4fd,#cce9f9);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.srv-card h3{color:var(--navy);font-size:1rem;font-weight:700;margin-bottom:8px}
+.srv-card p{color:#666;font-size:.87rem;line-height:1.6}
+section.about{padding:70px 20px;background:#fff}
+.about-wrap{max-width:1000px;margin:0 auto;display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.about-wrap{grid-template-columns:1fr 1fr}}
+.about-img{border-radius:22px;overflow:hidden;position:relative}
+.about-img img{width:100%;height:340px;object-fit:cover}
+.about-img::after{content:'';position:absolute;bottom:-12px;right:-12px;width:100px;height:100px;background:var(--sky);border-radius:16px;z-index:-1}
+.about-content h2{color:var(--navy);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;margin-bottom:16px}
+.about-content p{color:#555;line-height:1.75;margin-bottom:24px;font-size:.97rem}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.perk{display:flex;align-items:flex-start;gap:10px}
+.perk-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--navy),#1a4a8a);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.perk-text strong{display:block;color:var(--navy);font-size:.9rem;font-weight:700}
+.perk-text span{color:#777;font-size:.8rem}
+section.team{padding:70px 20px;background:var(--gray)}
+.team-wrap{max-width:1000px;margin:0 auto;display:grid;gap:40px;align-items:center}
+@media(min-width:768px){.team-wrap{grid-template-columns:1fr 1fr}}
+.team-img{border-radius:22px;overflow:hidden}
+.team-img img{width:100%;height:360px;object-fit:cover}
+.team-info h2{color:var(--navy);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:14px}
+.team-info p{color:#555;line-height:1.75;font-size:.97rem;margin-bottom:18px}
+.tag-list{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:#e8f4fd;color:var(--navy);padding:6px 16px;border-radius:50px;font-size:.82rem;font-weight:600}
+section.testimonials{padding:70px 20px;background:#fff}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:950px;margin:0 auto}
+.test-card{background:var(--gray);border-radius:18px;padding:28px;position:relative;border-left:4px solid var(--sky)}
+.test-quote{font-size:2.5rem;color:var(--sky);line-height:1;margin-bottom:10px}
+.test-card p{color:#444;font-size:.92rem;line-height:1.7;margin-bottom:18px}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--sky));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.95rem;flex-shrink:0}
+.test-name strong{display:block;color:var(--navy);font-size:.9rem;font-weight:700}
+.test-name span{color:#888;font-size:.78rem}
+.demo-note{text-align:center;margin-top:22px;color:#aaa;font-size:.8rem;font-style:italic}
+section.map-section{padding:70px 20px;background:var(--gray)}
+.map-wrap{max-width:900px;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:0 4px 30px rgba(13,43,94,.12)}
+.map-wrap iframe{width:100%;height:380px;border:none;display:block}
+section.cta-final{padding:80px 20px;background:linear-gradient(135deg,var(--navy),#1a4a8a);text-align:center}
+.cta-final h2{color:#fff;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;margin-bottom:14px}
+.cta-final p{color:rgba(255,255,255,.75);max-width:480px;margin:0 auto 34px;font-size:.97rem;line-height:1.7}
+footer{background:#07193a;padding:40px 20px;text-align:center}
+.footer-logo{color:#fff;font-weight:800;font-size:1.1rem;margin-bottom:16px}
 .footer-logo span{color:var(--sky)}
-footer p{font-size:.85rem;line-height:1.8}
-footer a{color:var(--sky);text-decoration:none}
-.footer-copy{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
-.fab{position:fixed;bottom:24px;right:24px;z-index:998;width:58px;height:58px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 25px rgba(37,211,102,.5);animation:pulse 2.5s infinite;text-decoration:none}
-@keyframes pulse{0%,100%{box-shadow:0 6px 25px rgba(37,211,102,.5)}50%{box-shadow:0 6px 40px rgba(37,211,102,.75)}}
+.footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-bottom:18px}
+.footer-links a{color:rgba(255,255,255,.6);font-size:.87rem;transition:color .2s}
+.footer-links a:hover{color:var(--sky)}
+.footer-copy{color:rgba(255,255,255,.35);font-size:.8rem}
+.fab-wp{position:fixed;bottom:28px;right:24px;z-index:999;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .2s;animation:pulse-wp 2.5s infinite}
+.fab-wp:hover{transform:scale(1.08)}
+@keyframes pulse-wp{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5)}50%{box-shadow:0 4px 35px rgba(37,211,102,.75)}}
 .watermark{position:fixed;bottom:0;left:0;width:100%;height:100%;z-index:9999;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.watermark-text{font-size:clamp(2rem,6vw,5rem);font-weight:900;color:#000;opacity:.07;transform:rotate(-35deg);white-space:nowrap;letter-spacing:4px;font-family:'Poppins',sans-serif;user-select:none}
+.watermark-text{transform:rotate(-35deg);color:#333;opacity:.07;font-size:clamp(2rem,5vw,4rem);font-weight:900;white-space:nowrap;letter-spacing:2px;font-family:'Poppins',sans-serif;user-select:none}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">Dr. <span>Martínez</span> Odontología</div>
-  <div class="nav-links">
+<header>
+  <div class="logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#4fc3f7" opacity=".2"/><path d="M9 8c0-2.2 1.8-4 4-4h2c2.2 0 4 1.8 4 4 0 1.5-.6 2.7-1.5 3.6L17 20c0 1.1-.9 2-2 2h-2c-1.1 0-2-.9-2-2l-.5-8.4C9.6 10.7 9 9.5 9 8z" fill="#4fc3f7"/></svg>
+    Dr. <span>Martínez</span>
+  </div>
+  <nav>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#testimonios">Testimonios</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</nav>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="https://wa.me/541198765432?text=Hola%2C%20quiero%20consultar%20turnos" target="_blank" style="color:var(--sky);font-weight:700">Turnos</a>
+  </nav>
+</header>
 
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content fade-in">
-    <div class="hero-badge">⭐ 4.7 · Dentistas en Buenos Aires</div>
-    <h1>Tu sonrisa merece el <span>mejor cuidado</span></h1>
-    <p class="hero-sub">Atención odontológica de excelencia en el corazón de Buenos Aires. Tecnología avanzada, trato personalizado y resultados que duran toda la vida.</p>
-    <a href="https://wa.me/541198765432?text=Hola%2C%20quiero%20consultar%20turnos" class="btn-primary" target="_blank" rel="noopener">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.126 1.533 5.858L.057 23.428a.75.75 0 00.916.916l5.57-1.476A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.73 9.73 0 01-4.964-1.358l-.356-.213-3.685.977.978-3.685-.213-.356A9.73 9.73 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-      Pedir turno por WhatsApp
-    </a>
-    <div class="hero-rating">
-      <div class="stars">★★★★★</div>
-      <p class="rating-text">4.7 sobre 5 · Más de 200 pacientes satisfechos</p>
+  <img src="https://picsum.photos/seed/dental1/1200/800" alt="Consultorio odontológico moderno en Buenos Aires" class="hero-img">
+  <div class="hero-inner">
+    <div class="hero-badge">⭐ 4.7 — Más de 500 pacientes satisfechos</div>
+    <h1>Tu sonrisa merece el <span>mejor cuidado</span> en Buenos Aires</h1>
+    <p>Odontología de alta calidad con tecnología de vanguardia. Blanqueamiento, implantes, ortodoncia y más — en el corazón de Santa Fe.</p>
+    <div class="stars">★★★★★</div>
+    <p class="rating-text">4.7 / 5.0 · Av. Santa Fe 2345, Buenos Aires</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/541198765432?text=Hola%2C%20quiero%20consultar%20turnos" target="_blank" class="btn-wp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.174.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.862L.054 23.454a.75.75 0 0 0 .918.918l5.612-1.479A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.73 9.73 0 0 1-4.964-1.357l-.356-.21-3.688.97.984-3.598-.232-.37A9.718 9.718 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Reservar turno por WhatsApp
+      </a>
+      <a href="tel:541198765432" class="btn-outline">
+        <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.07 5.18 2 2 0 0 1 5.07 3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9.21 10.9a16 16 0 0 0 6.9 6.9l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Llamar ahora
+      </a>
     </div>
   </div>
 </section>
 
 <section class="services" id="servicios">
-  <div class="container">
-    <p class="section-tag fade-in">Nuestros tratamientos</p>
-    <h2 class="fade-in">Servicios odontológicos <br>que transforman sonrisas</h2>
-    <p class="section-sub fade-in">Ofrecemos una amplia gama de tratamientos con equipamiento de última generación para cuidar tu salud bucal.</p>
-    <div class="services-grid">
-      <div class="service-card fade-in">
-        <div class="icon-wrap"><svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2C7 2 3 6 3 11c0 3 1.5 5.5 4 7l1 4h8l1-4c2.5-1.5 4-4 4-7 0-5-4-9-9-9z" fill="white" opacity=".9"/></svg></div>
-        <h3>Blanqueamiento</h3>
-        <p>Recuperá el blanco natural de tus dientes con nuestro sistema de blanqueamiento profesional de última generación.</p>
+  <p class="section-label">Nuestros tratamientos</p>
+  <h2 class="section-title">Servicios odontológicos completos</h2>
+  <p class="section-sub">Atención personalizada con los mejores materiales y tecnología actualizada para tu bienestar.</p>
+  <div class="services-grid">
+    <div class="srv-card">
+      <div class="srv-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#0d2b5e" stroke-width="2"/><path d="M8 12l2.5 2.5L16 9" stroke="#4fc3f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
-      <div class="service-card fade-in">
-        <div class="icon-wrap"><svg width="28" height="28" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <h3>Ortodoncia</h3>
-        <p>Alineá tu dentadura con brackets tradicionales o alineadores invisibles. Resultados duraderos con seguimiento continuo.</p>
-      </div>
-      <div class="service-card fade-in">
-        <div class="icon-wrap"><svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="12" rx="4" fill="white" opacity=".9"/><rect x="10" y="15" width="4" height="6" rx="2" fill="white"/></svg></div>
-        <h3>Implantes</h3>
-        <p>Solución definitiva para dientes perdidos. Implantes de titanio con acabado natural que duran toda la vida.</p>
-      </div>
-      <div class="service-card fade-in">
-        <div class="icon-wrap"><svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M4 12s1-7 8-7 8 7 8 7-1 7-8 7-8-7-8-7z" stroke="white" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="white"/></svg></div>
-        <h3>Limpieza</h3>
-        <p>Profilaxis dental profesional para eliminar sarro y manchas. Recomendada cada 6 meses para una boca sana.</p>
-      </div>
-      <div class="service-card fade-in">
-        <div class="icon-wrap"><svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8C4 6.6 7.6 3 12 3s8 3.6 8 7.2C20 17.5 12 22 12 22z" fill="white" opacity=".9"/></svg></div>
-        <h3>Urgencias</h3>
-        <p>Atendemos urgencias odontológicas el mismo día. Dolor de muelas, piezas rotas y más, sin demoras.</p>
-      </div>
+      <h3>Blanqueamiento</h3>
+      <p>Recuperá el blanco natural de tus dientes con tratamientos seguros y resultados inmediatos.</p>
     </div>
-  </div>
-</section>
-
-<section id="nosotros">
-  <div class="container">
-    <div class="why-wrap">
-      <div class="fade-in">
-        <div class="why-img">
-          <img src="https://picsum.photos/seed/dental2/800/600" alt="Consultorio odontológico moderno del Dr. Martínez en Buenos Aires" loading="lazy">
-        </div>
+    <div class="srv-card">
+      <div class="srv-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="4" rx="2" stroke="#0d2b5e" stroke-width="2"/><path d="M7 10v8M12 10v6M17 10v8" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
-      <div class="fade-in">
-        <p class="section-tag">¿Por qué elegirnos?</p>
-        <h2>Más de una década cuidando sonrisas en Buenos Aires</h2>
-        <div class="why-points">
-          <div class="why-point">
-            <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/></svg></div>
-            <div><h3>Tecnología de vanguardia</h3><p>Equipamiento digital de última generación para diagnósticos precisos y tratamientos más cómodos.</p></div>
-          </div>
-          <div class="why-point">
-            <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="white" stroke-width="2"/><circle cx="9" cy="7" r="4" stroke="white" stroke-width="2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <div><h3>Equipo especializado</h3><p>Profesionales con certificaciones nacionales e internacionales, siempre actualizados en las últimas técnicas.</p></div>
-          </div>
-          <div class="why-point">
-            <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8C4 6.6 7.6 3 12 3s8 3.6 8 7.2C20 17.5 12 22 12 22z" stroke="white" stroke-width
+      <h3>Ortodoncia</h3>
+      <p>Brackets tradicionales e invisibles para una sonrisa alineada y armónica a cualquier edad.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="#0d2b5e" stroke-width="2"/></svg>
+      </div>
+      <h3>Implantes</h3>
+      <p>Solución permanente para dientes perdidos con implantes de titanio de máxima calidad.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#0d2b5e" stroke-width="2" stroke-linecap="round"/><path d="M6 16c.8 1.2 2.5 2 4 2h4c1.5 0 3.2-.8 4-2" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round"/></svg>
+      
