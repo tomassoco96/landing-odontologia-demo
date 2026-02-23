@@ -21,96 +21,86 @@
     </script>
 
     <style>
-        :root { --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.8); }
-        [data-theme="organic"] { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --text-main: #57534e; --font-display: '"Playfair Display"', serif; --overlay: rgba(68,64,60,0.7); }
-        [data-theme="vogue"] { --primary: #ffffff; --accent: #d4af37; --surface: #0c0a09; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif; --overlay: rgba(12,10,9,0.85); }
-        [data-theme="tech"] { --primary: #f8fafc; --accent: #06b6d4; --surface: #020617; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif; --overlay: rgba(2,6,23,0.8); }
-        [data-theme="friendly"] { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30,58,138,0.7); }
+        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.85); }
+        [data-theme="organic"] { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --text-main: #57534e; --font-display: '"Playfair Display"', serif; --overlay: rgba(68,64,60,0.8); }
+        [data-theme="vogue"] { --primary: #0c0a09; --accent: #d4af37; --surface: #0c0a09; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif; --overlay: rgba(12,10,9,0.9); }
+        [data-theme="tech"] { --primary: #020617; --accent: #06b6d4; --surface: #020617; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif; --overlay: rgba(2,6,23,0.9); }
+        [data-theme="friendly"] { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30,58,138,0.75); }
 
-        body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--surface); color: var(--text-main); }
         .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
-        .glass-header { backdrop-filter: blur(15px); background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .sticky-active { background: var(--primary); color: var(--surface); padding-top: 0.5rem; padding-bottom: 0.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        
-        /* FAQ TRANSITION */
-        .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 2rem; opacity: 1; margin-top: 1rem; }
-        .faq-icon { transition: transform 0.4s ease; }
+        .nav-scrolled { background: var(--primary) !important; padding: 0.75rem 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .faq-item.active .faq-answer { max-height: 200px; padding-top: 1rem; opacity: 1; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
-        
-        .hero-title { text-shadow: 0 4px 30px rgba(0,0,0,0.3); }
-        .highlight-bar { background: rgba(0,0,0,0.4); backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body data-theme="tech">
+<body data-theme="vogue">
 
-    <nav id="mainNav" class="fixed top-0 w-full z-50 py-5 transition-all duration-500 glass-header">
-        <div class="container mx-auto px-6 flex justify-between items-center text-white">
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 transition-all duration-500 bg-transparent px-6">
+        <div class="container mx-auto flex justify-between items-center text-white">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center text-white font-black text-xl shadow-lg">A</div>
-                <span class="font-display font-bold text-lg leading-tight">Ateneo Argentino de</span>
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl">A</div>
+                <span class="font-display font-bold text-lg">Ateneo Argentino de</span>
             </div>
-            <div class="hidden lg:flex items-center gap-10 text-[11px] uppercase tracking-widest font-extrabold opacity-70">
-                <a href="#servicios" class="hover:opacity-100 transition">Servicios</a>
-                <a href="#nosotros" class="hover:opacity-100 transition">Nosotros</a>
-                <a href="#preguntas" class="hover:opacity-100 transition">Preguntas</a>
-                <a href="#ubicacion" class="hover:opacity-100 transition">Ubicación</a>
-                <a href="https://wa.me/5491149622727" class="bg-accent text-white px-8 py-2.5 rounded-full hover:scale-105 active:scale-95 transition shadow-lg">CONTACTAR</a>
+            <div class="hidden lg:flex items-center gap-8 text-[11px] uppercase tracking-widest font-bold opacity-80">
+                <a href="#servicios" class="hover:text-accent transition">Servicios</a>
+                <a href="#nosotros" class="hover:text-accent transition">Nosotros</a>
+                <a href="#preguntas" class="hover:text-accent transition">Preguntas</a>
+                <a href="https://wa.me/541149622727" class="bg-accent text-white px-6 py-2.5 rounded-full shadow-lg hover:scale-105 transition uppercase">Contactar</a>
             </div>
         </div>
     </nav>
 
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffedbe47add?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover scale-105">
+        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover scale-105">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="container mx-auto px-6 relative z-10 text-center text-white">
-            <h1 class="font-display font-bold text-6xl md:text-9xl mb-6 leading-[0.9] tracking-tighter hero-title" data-aos="fade-up">Sonrisas que <br> <span class="text-accent italic">trascienden.</span></h1>
-            <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium" data-aos="fade-up" data-aos-delay="100">Odontología de alta precisión y calidez humana en Buenos Aires.</p>
-            <a href="https://wa.me/5491149622727" class="bg-accent text-white px-12 py-5 rounded-full font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest">RESERVAR TURNO ONLINE</a>
+            <h1 class="font-display font-bold text-5xl md:text-8xl mb-8 leading-none tracking-tighter" data-aos="fade-up">Diseñamos la <br> <span class='text-accent italic'>sonrisa que soñás.</span></h1>
+            <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">Recuperá tu confianza y funcionalidad con tratamientos mínimamente invasivos.</p>
+            <a href="https://wa.me/541149622727" class="bg-accent text-white px-12 py-5 rounded-full font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase">Reservar Turno Online</a>
         </div>
-        
-        <div class="absolute bottom-0 w-full py-10 highlight-bar z-20">
-            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-white">
-                <div class="flex items-center gap-4"><div class="text-accent"><i data-lucide="clock"></i></div><div class="text-[11px] font-bold uppercase tracking-widest leading-none">Lun-Vie: 9-19 hs</div></div>
-                <div class="flex items-center gap-4"><div class="text-accent"><i data-lucide="calendar"></i></div><div class="text-[11px] font-bold uppercase tracking-widest leading-none">Sábados: 9-13 hs</div></div>
-                <div class="flex items-center gap-4"><div class="text-accent"><i data-lucide="zap"></i></div><div class="text-[11px] font-bold uppercase tracking-widest leading-none">Urgencias Ya</div></div>
-                <div class="flex items-center gap-4"><div class="text-accent"><i data-lucide="credit-card"></i></div><div class="text-[11px] font-bold uppercase tracking-widest leading-none">Cuotas Sin Interés</div></div>
+        <div class="absolute bottom-0 w-full py-8 bg-black/40 backdrop-blur-md border-t border-white/10 text-white z-20">
+            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-[10px] font-bold uppercase tracking-widest text-center">
+                <div class="flex items-center justify-center gap-2"><i data-lucide="clock" class="text-accent w-4 h-4"></i> Lun-Vie: 9-19hs</div>
+                <div class="flex items-center justify-center gap-2"><i data-lucide="calendar" class="text-accent w-4 h-4"></i> Sáb: 9-13hs</div>
+                <div class="flex items-center justify-center gap-2 text-red-400"><i data-lucide="zap" class="w-4 h-4"></i> Urgencias Ya</div>
+                <div class="flex items-center justify-center gap-2 text-green-400"><i data-lucide="credit-card" class="w-4 h-4"></i> Financiación</div>
             </div>
         </div>
     </header>
 
-    <section class="py-24 relative z-30 -mt-16">
+    <section class="py-24 -mt-16 relative z-30">
         <div class="container mx-auto px-6">
-            <div class="bg-white rounded-[3rem] p-16 grid grid-cols-2 lg:grid-cols-4 gap-12 shadow-[0_50px_100px_rgba(0,0,0,0.1)] border border-slate-50" data-aos="fade-up">
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 animated-counter" data-target="500">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Pacientes Satisfechos</div></div>
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 animated-counter" data-target="15">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Años de experiencia</div></div>
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-blue-600 flex items-center justify-center gap-1">★<span class="animated-counter" data-target="3">0</span>.7</div><div class="text-[10px] font-bold uppercase text-slate-400">Calificación Google</div></div>
-                <div class="text-center"><div class="text-6xl font-black text-slate-900 mb-2 animated-counter" data-target="10">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Especialidades</div></div>
+            <div class="bg-white rounded-[3rem] p-16 grid grid-cols-2 lg:grid-cols-4 gap-12 shadow-2xl border border-slate-100" data-aos="fade-up">
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="500">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Pacientes Satisfechos</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="15">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Años de experiencia</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-blue-600 flex items-center justify-center gap-1">★<span class="counter" data-target="3">0</span>.7</div><div class="text-[10px] font-bold uppercase text-slate-400">Puntaje Google</div></div>
+                <div class="text-center"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="10">0</div><div class="text-[10px] font-bold uppercase text-slate-400">Especialidades</div></div>
             </div>
         </div>
     </section>
 
     <section id="servicios" class="py-32 bg-slate-50/50">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="font-display font-bold text-5xl md:text-7xl text-slate-900 mb-20 tracking-tighter" data-aos="fade-up">Cuidado integral para vos.</h2>
+            <h2 class="font-display font-bold text-5xl md:text-7xl text-slate-900 mb-20 tracking-tighter" data-aos="fade-up">Excelencia clínica.</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🦷</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Limpieza</h4><p class="text-[10px] opacity-40">Eliminación de sarro con ultrasonido.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🦷</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Limpieza</h4>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">✨</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Estética</h4><p class="text-[10px] opacity-40">Blanqueamiento LED avanzado.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">✨</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Estética</h4>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">😁</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Ortodoncia</h4><p class="text-[10px] opacity-40">Invisalign y Brackets estéticos.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">😁</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Ortodoncia</h4>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🔩</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Implantes</h4><p class="text-[10px] opacity-40">Recuperá tu funcionalidad total.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🔩</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Implantes</h4>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">👑</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Coronas</h4><p class="text-[10px] opacity-40">Restauración estética perfecta.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">👑</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Coronas</h4>
                 </div>
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 group" data-aos="fade-up" data-aos-delay="600">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🚨</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900 mb-2">Urgencias</h4><p class="text-[10px] opacity-40">Atención sin turno hoy mismo.</p>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-xl transition group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition">🚨</div><h4 class="font-bold text-xs uppercase tracking-widest text-slate-900">Urgencias</h4>
                 </div>
             </div>
         </div>
@@ -119,82 +109,49 @@
     <section id="nosotros" class="py-32">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
             <div class="relative group" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1588776814546-1ffedbe47add?w=1600&q=80" class="rounded-[3rem] shadow-2xl w-full h-[600px] object-cover border-[16px] border-white">
-                <div class="absolute bottom-10 left-10 bg-white p-10 rounded-3xl shadow-2xl font-black text-accent text-5xl">+15 años<br><span class="text-xs text-slate-400 font-bold tracking-widest uppercase">Experiencia</span></div>
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=1600&q=80" class="rounded-[3rem] shadow-2xl w-full h-[600px] object-cover border-[16px] border-white">
+                <div class="absolute bottom-10 left-10 bg-white p-10 rounded-3xl shadow-2xl font-black text-accent text-5xl">+15 años<br><span class="text-xs text-slate-400 font-bold uppercase tracking-widest">Experiencia</span></div>
             </div>
             <div data-aos="fade-left">
-                <h2 class="font-display font-bold text-6xl mb-12 text-slate-900 leading-none tracking-tighter">Atención que marca <br> la diferencia.</h2>
+                <h2 class="font-display font-bold text-6xl mb-12 text-slate-900 leading-tight tracking-tighter">La diferencia está <br> en el detalle.</h2>
                 <div class="space-y-8">
-                    <div class="flex gap-8 p-10 bg-slate-50 rounded-[2.5rem] border-l-8 border-accent shadow-sm">
-                        <div class="text-4xl font-black text-accent/20">01</div>
-                        <div><h4 class="font-black text-xl mb-2">Tecnología de vanguardia</h4><p class="text-slate-500">Equipos digitales de última generación para diagnósticos sin errores.</p></div>
+                    <div class="flex gap-8 p-10 bg-slate-50 rounded-[2.5rem] border-l-8 border-accent">
+                        <div class="text-3xl font-black text-accent opacity-20">01</div>
+                        <div><h4 class="font-bold text-xl mb-2">Financiación</h4><p class="text-slate-500">Planes a medida y cuotas sin interés para tu tratamiento.</p></div>
                     </div>
-                    <div class="flex gap-8 p-10 bg-slate-50 rounded-[2.5rem] border-l-8 border-accent shadow-sm">
-                        <div class="text-4xl font-black text-accent/20">02</div>
-                        <div><h4 class="font-black text-xl mb-2">Financiación accesible</h4><p class="text-slate-500">Planes de pago flexibles y cuotas sin interés para cuidar tu bolsillo.</p></div>
+                    <div class="flex gap-8 p-10 bg-slate-50 rounded-[2.5rem] border-l-8 border-accent">
+                        <div class="text-3xl font-black text-accent opacity-20">02</div>
+                        <div><h4 class="font-bold text-xl mb-2">Urgencias 24hs</h4><p class="text-slate-500">Atención inmediata para dolores y emergencias dentales.</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="preguntas" class="py-32 bg-slate-900 text-white relative overflow-hidden">
+    <section id="preguntas" class="py-32 bg-slate-900 text-white overflow-hidden relative">
         <div class="container mx-auto px-6 max-w-4xl relative z-10">
             <h2 class="font-display font-bold text-6xl mb-20 tracking-tighter text-center">Resolvemos tus dudas.</h2>
             <div class="space-y-4">
-                <div class="faq-item group bg-white/5 border border-white/10 rounded-[2rem] p-8 cursor-pointer hover:bg-white/10 transition" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold text-xl">¿Cómo saco un turno?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 opacity-0 text-white/60">Podés escribirnos por WhatsApp o llamarnos directamente. Coordinamos tu cita en minutos.</div>
+                <div class="faq-item group bg-white/5 border border-white/10 rounded-[2rem] p-8 cursor-pointer transition hover:bg-white/10" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-xl">¿Cómo saco un turno?<span class="faq-icon transition-transform font-black text-3xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Podés agendar por WhatsApp o llamando directamente. Respondemos al instante.</div>
                 </div>
-                <div class="faq-item group bg-white/5 border border-white/10 rounded-[2rem] p-8 cursor-pointer hover:bg-white/10 transition" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold text-xl">¿Atienden obras sociales?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 opacity-0 text-white/60">Sí, trabajamos con OSDE, Swiss Medical, Galeno y las principales prepagas del país.</div>
-                </div>
-                <div class="faq-item group bg-white/5 border border-white/10 rounded-[2rem] p-8 cursor-pointer hover:bg-white/10 transition" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold text-xl">¿Qué formas de pago aceptan?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 opacity-0 text-white/60">Aceptamos efectivo, tarjetas de débito/crédito y transferencias. Consultanos por cuotas sin interés.</div>
+                <div class="faq-item group bg-white/5 border border-white/10 rounded-[2rem] p-8 cursor-pointer transition hover:bg-white/10" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-xl">¿Atienden obras sociales?<span class="faq-icon transition-transform font-black text-3xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Sí, trabajamos con las principales prepagas (OSDE, Swiss Medical, Galeno) y PAMI.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 border-b border-slate-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-[10px] font-black uppercase tracking-[0.5em] text-slate-400 mb-12">Obras sociales & Prepagas</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <span class="px-10 py-5 bg-slate-50 rounded-full font-bold text-[11px] border border-slate-200 text-slate-500 uppercase tracking-widest">OSDE</span>
-                <span class="px-10 py-5 bg-slate-50 rounded-full font-bold text-[11px] border border-slate-200 text-slate-500 uppercase tracking-widest">SWISS MEDICAL</span>
-                <span class="px-10 py-5 bg-slate-50 rounded-full font-bold text-[11px] border border-slate-200 text-slate-500 uppercase tracking-widest">GALENO</span>
-                <span class="px-10 py-5 bg-slate-50 rounded-full font-bold text-[11px] border border-slate-200 text-slate-500 uppercase tracking-widest">PAMI</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="ubicacion" class="py-40 bg-slate-950 text-white overflow-hidden relative">
-        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-24 items-center">
-            <div>
-                <h2 class="font-display font-bold text-7xl md:text-8xl mb-12 leading-none tracking-tighter" data-aos="fade-right">Transformá tu <br> sonrisa hoy.</h2>
-                <div class="space-y-6 mb-16">
-                    <div class="flex items-center gap-6 group"><div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-accent"><i data-lucide="map-pin"></i></div><span class="text-2xl font-bold opacity-80">Dr. Tomás Manuel de Anchorena 1176, ELB, Buenos Aires</span></div>
-                    <div class="flex items-center gap-6 group"><div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-accent"><i data-lucide="phone"></i></div><span class="text-2xl font-bold opacity-80">541149622727</span></div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-5">
-                    <a href="https://wa.me/5491149622727" class="bg-accent px-12 py-6 rounded-full font-black text-xl shadow-2xl hover:scale-105 transition text-center">WhatsApp Directo</a>
-                </div>
-            </div>
-            <div class="h-[600px] rounded-[4rem] overflow-hidden border-8 border-white/5 shadow-2xl">
-                <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Dr.%20Tom%C3%A1s%20Manuel%20de%20Anchorena%201176%2C%20ELB%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-24 bg-black border-t border-white/5 text-white">
+    <footer id="ubicacion" class="py-32 bg-black text-white">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-20">
-            <div class="col-span-1"><div class="font-display font-bold text-3xl mb-8">Ateneo Argentino de Odontología</div><p class="text-white/40 text-sm leading-relaxed uppercase tracking-tighter">Atención integral, tecnología avanzada y la calidez que merecés.</p></div>
-            <div><h4 class="font-black text-[10px] text-accent uppercase tracking-widest mb-8">Servicios</h4><ul class="text-white/30 text-xs space-y-4 uppercase tracking-widest font-bold"><li>Limpieza Dental</li><li>Blanqueamiento</li><li>Ortodoncia</li><li>Implantes</li></ul></div>
-            <div><h4 class="font-black text-[10px] text-accent uppercase tracking-widest mb-8">Contacto</h4><ul class="text-white/30 text-xs space-y-4 uppercase tracking-widest font-bold"><li>541149622727</li><li>WhatsApp</li><li>Buenos Aires</li></ul></div>
-            <div><h4 class="font-black text-[10px] text-accent uppercase tracking-widest mb-8">Horarios</h4><p class="text-white/30 text-xs font-bold uppercase tracking-widest">Lun–Vie: 9 a 19 hs<br>Sáb: 9 a 13 hs</p></div>
+            <div class="col-span-1"><div class="font-display font-bold text-3xl text-accent mb-8">Ateneo Argentino de Odontología</div><p class="text-white/40 text-sm leading-relaxed uppercase tracking-tighter">Odontología integral y tecnología digital en Buenos Aires.</p></div>
+            <div><h4 class="font-black text-[11px] text-accent uppercase tracking-widest mb-8">Servicios</h4><ul class="text-white/30 text-xs space-y-4 uppercase font-bold"><li>Limpieza</li><li>Implantes</li><li>Ortodoncia</li><li>Coronas</li></ul></div>
+            <div><h4 class="font-black text-[11px] text-accent uppercase tracking-widest mb-8">Contacto</h4><ul class="text-white/30 text-xs space-y-4 uppercase font-bold"><li>Dr. Tomás Manuel de Anchorena 1176, ELB</li><li>541149622727</li><li>Buenos Aires</li></ul></div>
+            <div><h4 class="font-black text-[11px] text-accent uppercase tracking-widest mb-8">Horarios</h4><p class="text-white/30 text-xs font-bold uppercase">Lun–Vie: 9 a 19 hs<br>Sáb: 9 a 13 hs</p></div>
         </div>
+        <div class="container mx-auto px-6 mt-32 pt-12 border-t border-white/5 text-center text-[10px] text-white/20 uppercase tracking-[0.5em]">© 2026 Ateneo Argentino de Odontología · Todos los derechos reservados</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -202,38 +159,27 @@
         lucide.createIcons();
         AOS.init({ once: false, duration: 1000 });
 
-        // STICKY NAV EFFECT
         window.onscroll = function() {
-            const nav = document.getElementById("mainNav");
-            if (window.pageYOffset > 50) {
-                nav.classList.add("sticky-active");
-                nav.classList.remove("glass-header", "py-5");
-            } else {
-                nav.classList.remove("sticky-active");
-                nav.classList.add("glass-header", "py-5");
-            }
+            const nav = document.getElementById("navbar");
+            if (window.pageYOffset > 50) nav.classList.add("nav-scrolled");
+            else nav.classList.remove("nav-scrolled");
         };
 
-        // COUNTER ANIMATION
-        const observer = new IntersectionObserver((entries) => {
+        const obs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = parseInt(entry.target.getAttribute('data-target'));
-                    let current = 0;
+                    let count = 0;
                     const timer = setInterval(() => {
-                        current += Math.ceil(target / 40);
-                        if (current >= target) {
-                            entry.target.innerText = target;
-                            clearInterval(timer);
-                        } else {
-                            entry.target.innerText = current;
-                        }
+                        count += Math.ceil(target / 40);
+                        if (count >= target) { entry.target.innerText = target; clearInterval(timer); }
+                        else entry.target.innerText = count;
                     }, 30);
-                    observer.unobserve(entry.target);
+                    obs.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.8 });
-        document.querySelectorAll('.animated-counter').forEach(c => observer.observe(c));
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter').forEach(c => obs.observe(c));
     </script>
 </body>
 </html>
