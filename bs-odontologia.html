@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BS Odontología | Odontología en Buenos Aires</title>
-    <meta name="description" content="Atención profesional en Buenos Aires. Implantes, estética y ortodoncia. Turnos disponibles.">
+    
+    <title>BS Odontología | Dentista en Buenos Aires</title>
+    <meta name="description" content="Consultorio odontológico BS Odontología en Buenos Aires. Especialistas en implantes, ortodoncia y estética dental. Solicitá tu turno hoy.">
+    <meta name="keywords" content="dentista Buenos Aires, odontologo, implantes dentales, urgencias dentales Buenos Aires, ortodoncia, blanqueamiento">
+    <meta name="author" content="BS Odontología">
+    <link rel="canonical" href="https://landing-odontologia-demo.vercel.app/bs-odontologia.html">
+    
+    <meta property="og:title" content="BS Odontología - Tu sonrisa en las mejores manos">
+    <meta property="og:description" content="Atención profesional en Av. Sta. Fe 3242 Dpto 7 - A, Cdad. Autónoma de Buenos Aires, Buenos Aires. Tecnología y calidez humana.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1609840114035-1c29046a8af3?w=1600&q=80">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "BS Odontología",
+      "image": "https://images.unsplash.com/photo-1609840114035-1c29046a8af3?w=1600&q=80",
+      "telephone": "541140419319",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Sta. Fe 3242 Dpto 7 - A, Cdad. Autónoma de Buenos Aires",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.6037", 
+        "longitude": "-58.3816"
+      },
+      "url": "https://landing-odontologia-demo.vercel.app/bs-odontologia.html",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -18,20 +58,9 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['var(--font-body)'],
-                        display: ['var(--font-display)'],
-                    },
-                    colors: {
-                        primary: 'var(--primary)',
-                        secondary: 'var(--secondary)',
-                        accent: 'var(--accent)',
-                        surface: 'var(--surface)',
-                        text: 'var(--text-main)',
-                    },
-                    borderRadius: {
-                        'theme': 'var(--radius)',
-                    }
+                    fontFamily: { sans: ['var(--font-body)'], display: ['var(--font-display)'] },
+                    colors: { primary: 'var(--primary)', secondary: 'var(--secondary)', accent: 'var(--accent)', surface: 'var(--surface)', text: 'var(--text-main)' },
+                    borderRadius: { 'theme': 'var(--radius)' }
                 }
             }
         }
@@ -40,141 +69,204 @@
     <style>
         :root { --transition: all 0.5s ease; }
         body { transition: var(--transition); background-color: var(--surface); color: var(--text-main); font-family: var(--font-body); }
-
-        /* THEMES CONFIGURATION */
-        [data-theme="architect"] { --primary: #000000; --secondary: #F3F4F6; --accent: #2563EB; --surface: #FFFFFF; --text-main: #111827; --font-display: 'Inter', sans-serif; --font-body: 'Inter', sans-serif; --radius: 0px; --shadow: none; --hero-overlay: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 50%, transparent 100%); }
-        [data-theme="organic"] { --primary: #57534E; --secondary: #E7E5E4; --accent: #65A30D; --surface: #FAFAF9; --text-main: #44403C; --font-display: 'DM Sans', sans-serif; --font-body: 'DM Sans', sans-serif; --radius: 1.5rem; --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); --hero-overlay: linear-gradient(to right, rgba(250,250,249,0.9), rgba(250,250,249,0.4)); }
-        [data-theme="vogue"] { --primary: #FFFFFF; --secondary: #1C1917; --accent: #D4AF37; --surface: #0C0A09; --text-main: #FAFAF9; --font-display: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif; --radius: 0px; --shadow: 0 0 0 1px #333; --hero-overlay: linear-gradient(to top, #0C0A09 0%, transparent 50%); }
+        
+        /* THEMES */
+        [data-theme="architect"] { --primary: #000000; --secondary: #F3F4F6; --accent: #2563EB; --surface: #FFFFFF; --text-main: #111827; --font-display: 'Inter', sans-serif; --font-body: 'Inter', sans-serif; --radius: 0px; --shadow: none; --hero-overlay: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.9) 50%, transparent 100%); }
+        [data-theme="organic"] { --primary: #57534E; --secondary: #E7E5E4; --accent: #65A30D; --surface: #FAFAF9; --text-main: #44403C; --font-display: 'DM Sans', sans-serif; --font-body: 'DM Sans', sans-serif; --radius: 1.5rem; --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); --hero-overlay: linear-gradient(to right, rgba(250,250,249,0.95), rgba(250,250,249,0.5)); }
+        [data-theme="vogue"] { --primary: #FFFFFF; --secondary: #1C1917; --accent: #D4AF37; --surface: #0C0A09; --text-main: #FAFAF9; --font-display: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif; --radius: 0px; --shadow: 0 0 0 1px #333; --hero-overlay: linear-gradient(to top, #0C0A09 0%, transparent 60%); }
         [data-theme="tech"] { --primary: #F8FAFC; --secondary: #0F172A; --accent: #06B6D4; --surface: #020617; --text-main: #E2E8F0; --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif; --radius: 0.5rem; --shadow: 0 0 20px rgba(6,182,212,0.15); --hero-overlay: radial-gradient(circle at center, transparent 0%, #020617 100%); }
-        [data-theme="friendly"] { --primary: #1E3A8A; --secondary: #DBEAFE; --accent: #F59E0B; --surface: #FFFFFF; --text-main: #1E293B; --font-display: 'Quicksand', sans-serif; --font-body: 'Quicksand', sans-serif; --radius: 2rem; --shadow: 4px 4px 0px #F59E0B; --hero-overlay: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.7)); }
+        [data-theme="friendly"] { --primary: #1E3A8A; --secondary: #DBEAFE; --accent: #F59E0B; --surface: #FFFFFF; --text-main: #1E293B; --font-display: 'Quicksand', sans-serif; --font-body: 'Quicksand', sans-serif; --radius: 2rem; --shadow: 4px 4px 0px #F59E0B; --hero-overlay: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.8)); }
 
         .btn-hover { transition: all 0.3s ease; }
         .btn-hover:hover { transform: translateY(-3px); filter: brightness(1.1); }
-        .demo-bar { position: fixed; top: 0; width: 100%; background: #fbbf24; color: #78350f; font-size: 10px; font-weight: bold; text-align: center; padding: 2px 0; z-index: 9999; text-transform: uppercase; letter-spacing: 1px; }
+        .demo-bar { position: fixed; top: 0; width: 100%; background: #fbbf24; color: #78350f; font-size: 11px; font-weight: bold; text-align: center; padding: 4px 0; z-index: 9999; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body data-theme="organic">
 
-    <div class="demo-bar">Vista Previa · Sitio Web Generado para BS Odontología</div>
+    <div class="demo-bar">Sitio Web Demo · Generado Exclusivamente para BS Odontología</div>
 
-    <nav class="fixed top-5 w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-primary/5 py-4">
+    <nav class="fixed top-6 w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-primary/5 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-accent rounded-theme flex items-center justify-center text-surface font-black text-xl">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent rounded-theme flex items-center justify-center text-surface font-black text-xl shadow-lg">
                     B
                 </div>
-                <span class="font-display font-bold text-lg md:text-xl tracking-tight text-primary truncate max-w-[200px] md:max-w-none">BS Odontología</span>
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-lg leading-none text-primary tracking-tight">BS Odontología</span>
+                    <span class="text-[10px] uppercase tracking-widest opacity-60 font-sans">Odontología</span>
+                </div>
             </div>
-            <a href="https://wa.me/5491140419319" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-surface rounded-theme font-bold text-sm btn-hover border border-primary">
-                <i data-lucide="calendar" class="w-4 h-4"></i>
-                AGENDAR
-            </a>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#servicios" class="text-sm font-bold text-text opacity-70 hover:opacity-100 transition">Tratamientos</a>
+                <a href="#ubicacion" class="text-sm font-bold text-text opacity-70 hover:opacity-100 transition">Ubicación</a>
+                <a href="https://wa.me/5491140419319" class="flex items-center gap-2 px-6 py-2 bg-primary text-surface rounded-theme font-bold text-sm btn-hover border border-primary shadow-lg">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    Contactar Ahora
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+    <header class="relative min-h-[95vh] flex items-center overflow-hidden pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=1600&q=80" class="w-full h-full object-cover opacity-100" alt="Consultorio">
+            <img src="https://images.unsplash.com/photo-1609840114035-1c29046a8af3?w=1600&q=80" class="w-full h-full object-cover opacity-100 transform scale-105" alt="Consultorio Dental">
             <div class="absolute inset-0" style="background: var(--hero-overlay);"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" data-aos-duration="1000">
-                <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 text-accent rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 text-accent rounded-full text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-sm">
                     <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
-                    Turnos Disponibles
+                    Turnos Disponibles Hoy
                 </div>
                 
-                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-primary mb-8">
-                    Tu Sonrisa,<br>
-                    <span class="text-accent">Nuestra Pasión.</span>
+                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-primary mb-8 drop-shadow-sm">
+                    El futuro de tu<br><span class='text-accent'>salud bucal.</span>
                 </h1>
                 
-                <p class="font-sans text-lg md:text-xl text-text opacity-80 max-w-lg mb-10 leading-relaxed">
-                    Experiencia odontológica de primer nivel en Buenos Aires. Tecnología, confort y resultados que transforman vidas.
+                <p class="font-sans text-lg md:text-xl text-text opacity-80 max-w-lg mb-10 leading-relaxed font-medium">
+                    Visitá nuestro consultorio en Av. Sta. Fe 3242 Dpto 7 - A, Cdad. Autónoma de Buenos Aires. Diagnósticos precisos y tratamientos mínimamente invasivos.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="https://wa.me/5491140419319?text=Hola%2C%20quisiera%20reservar%20un%20turno" class="px-8 py-4 bg-accent text-surface rounded-theme font-bold text-lg text-center btn-hover shadow-[var(--shadow)] flex items-center justify-center gap-2">
                         <i data-lucide="message-circle"></i>
-                        WhatsApp
+                        Contactar Ahora
                     </a>
-                    <a href="tel:541140419319" class="px-8 py-4 bg-transparent border-2 border-primary/20 text-primary rounded-theme font-bold text-lg text-center hover:bg-primary/5 transition flex items-center justify-center gap-2">
+                    <a href="tel:541140419319" class="px-8 py-4 bg-transparent border-2 border-primary/20 text-primary rounded-theme font-bold text-lg text-center hover:bg-primary/5 transition flex items-center justify-center gap-2 backdrop-blur-sm">
                         <i data-lucide="phone"></i>
-                        Llamar
+                        Llamar ahora
                     </a>
                 </div>
 
-                <div class="mt-12 flex items-center gap-4 text-sm font-medium opacity-70">
-                    <div>
-                        <span class="text-accent font-bold text-lg">5 ★★★★★</span><br>
-                        Calificación basada en 47 pacientes reales
+                <div class="mt-12 flex items-center gap-6 text-sm font-medium opacity-90 border-t border-primary/10 pt-6">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle" class="text-accent w-5 h-5"></i>
+                        Diagnóstico Digital
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="check-circle" class="text-accent w-5 h-5"></i>
+                        Financiación
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="py-24 bg-secondary/30">
+    <section id="servicios" class="py-24 bg-secondary/30 relative">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div class="max-w-xl">
-                    <h2 class="font-display font-bold text-4xl text-primary mb-4" data-aos="fade-up">Nuestros Tratamientos</h2>
-                    <p class="text-text opacity-70 text-lg" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para toda la familia.</p>
+                    <span class="text-accent font-bold tracking-widest uppercase text-sm mb-2 block">Lo que hacemos</span>
+                    <h2 class="font-display font-bold text-4xl md:text-5xl text-primary mb-4" data-aos="fade-up">Excelencia Clínica</h2>
                 </div>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="gem"></i></div>
+                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-8 text-3xl group-hover:scale-110 transition"><i data-lucide="gem"></i></div>
                     <h3 class="font-display font-bold text-2xl text-primary mb-4">Estética Dental</h3>
-                    <p class="text-text opacity-70 leading-relaxed">Blanqueamientos y carillas para una sonrisa radiante y natural.</p>
+                    <p class="text-text opacity-70 leading-relaxed mb-6">Carillas de porcelana, diseño de sonrisa digital y blanqueamientos premium.</p>
+                    <a href="#" class="text-accent font-bold text-sm uppercase tracking-wider flex items-center gap-2">Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
                 <div class="bg-primary text-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent opacity-20 rounded-full blur-3xl -mr-10 -mt-10"></div>
-                    <div class="w-14 h-14 bg-surface/20 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="cpu"></i></div>
-                    <h3 class="font-display font-bold text-2xl text-white mb-4">Implantes</h3>
-                    <p class="text-gray-300 leading-relaxed">Recupera tu funcionalidad con tecnología de vanguardia.</p>
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-accent opacity-20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                    <div class="w-16 h-16 bg-surface/20 text-accent rounded-theme flex items-center justify-center mb-8 text-3xl"><i data-lucide="cpu"></i></div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-4">Implantes & Cirugía</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Recupera tu funcionalidad completa. Implantes de carga inmediata y sin dolor.</p>
+                    <a href="#" class="text-white font-bold text-sm uppercase tracking-wider flex items-center gap-2">Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
-                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="shield-check"></i></div>
-                    <h3 class="font-display font-bold text-2xl text-primary mb-4">General</h3>
-                    <p class="text-text opacity-70 leading-relaxed">Limpiezas, caries y prevención para mantener tu boca sana.</p>
+                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-8 text-3xl group-hover:scale-110 transition"><i data-lucide="shield-check"></i></div>
+                    <h3 class="font-display font-bold text-2xl text-primary mb-4">Ortodoncia</h3>
+                    <p class="text-text opacity-70 leading-relaxed mb-6">Alineadores invisibles (Invisalign) y brackets estéticos de zafiro.</p>
+                    <a href="#" class="text-accent font-bold text-sm uppercase tracking-wider flex items-center gap-2">Ver más <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-0">
-        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-            <div class="bg-primary text-surface p-12 lg:p-24 flex flex-col justify-center">
-                <h2 class="font-display font-bold text-4xl mb-6">Visitanos hoy</h2>
-                <div class="space-y-6 text-lg">
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="map-pin" class="text-accent mt-1"></i>
-                        <div><span class="block font-bold">Dirección</span><span class="opacity-70">Av. Sta. Fe 3242 Dpto 7 - A, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i data-lucide="phone" class="text-accent mt-1"></i>
-                        <div><span class="block font-bold">Teléfono</span><span class="opacity-70">541140419319</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-secondary relative h-[400px] lg:h-auto">
-                <iframe width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Sta.%20Fe%203242%20Dpto%207%20-%20A%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
-                <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-20 pointer-events-none"></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-surface border-t border-primary/10 pt-20 pb-10">
+    <section class="py-24 bg-surface border-y border-primary/5">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="font-display font-black text-2xl text-primary mb-8">BS Odontología</h3>
-            <p class="text-xs opacity-40">© 2025 Todos los derechos reservados.</p>
+            <h2 class="font-display font-bold text-3xl text-primary mb-12">Pacientes Felices en Google</h2>
+            <div class="inline-flex items-center gap-3 bg-secondary/50 px-8 py-4 rounded-full mb-12">
+                <span class="text-4xl font-bold text-primary">5</span>
+                <div class="flex flex-col items-start">
+                    <div class="flex text-yellow-500 text-lg">★★★★★</div>
+                    <span class="text-xs font-bold uppercase tracking-widest opacity-60">Basado en 69 reseñas</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 rounded-theme bg-secondary/20 border border-primary/5">
+                    <div class="text-yellow-500 text-sm mb-4">★★★★★</div>
+                    <p class="italic opacity-70 mb-4">"Excelente atención. Me explicaron todo el procedimiento y me sentí muy tranquila."</p>
+                    <div class="font-bold text-sm">— María G.</div>
+                </div>
+                <div class="p-6 rounded-theme bg-secondary/20 border border-primary/5">
+                    <div class="text-yellow-500 text-sm mb-4">★★★★★</div>
+                    <p class="italic opacity-70 mb-4">"El consultorio es impecable y la tecnología que usan es increíble. Recomendado."</p>
+                    <div class="font-bold text-sm">— Carlos R.</div>
+                </div>
+                <div class="p-6 rounded-theme bg-secondary/20 border border-primary/5">
+                    <div class="text-yellow-500 text-sm mb-4">★★★★★</div>
+                    <p class="italic opacity-70 mb-4">"Llegué por una urgencia y me atendieron en el momento. Muy agradecido."</p>
+                    <div class="font-bold text-sm">— Lucas M.</div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <a href="https://wa.me/5491140419319" class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-40 animate-bounce">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    <section id="ubicacion" class="py-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+            <div class="bg-primary text-surface p-12 lg:p-24 flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent opacity-10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+                
+                <h2 class="font-display font-bold text-4xl mb-8 relative z-10">Información de Contacto</h2>
+                
+                <div class="space-y-8 text-lg relative z-10">
+                    <div class="flex items-start gap-6 group">
+                        <div class="w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-surface transition"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <span class="block font-bold text-sm uppercase tracking-widest opacity-50 mb-1">Dirección</span>
+                            <span class="text-xl">Av. Sta. Fe 3242 Dpto 7 - A, Cdad. Autónoma de Buenos Aires, Buenos Aires</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 group">
+                         <div class="w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-surface transition"><i data-lucide="phone"></i></div>
+                        <div>
+                            <span class="block font-bold text-sm uppercase tracking-widest opacity-50 mb-1">Teléfono</span>
+                            <span class="text-xl">541140419319</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 group">
+                         <div class="w-12 h-12 rounded-full bg-surface/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-surface transition"><i data-lucide="clock"></i></div>
+                        <div>
+                            <span class="block font-bold text-sm uppercase tracking-widest opacity-50 mb-1">Horarios</span>
+                            <span class="text-xl">Lun - Vie: 09:00 - 19:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-12 border-t border-surface/10 relative z-10">
+                    <p class="text-sm opacity-50 mb-4">© 2025 BS Odontología. Todos los derechos reservados.</p>
+                    <div class="flex gap-4 text-xs opacity-40">
+                        <a href="#" class="hover:text-white transition">Política de Privacidad</a>
+                        <a href="#" class="hover:text-white transition">Términos de Uso</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary relative h-[400px] lg:h-auto group">
+                <iframe width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Sta.%20Fe%203242%20Dpto%207%20-%20A%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed" class="group-hover:filter-none transition duration-700"></iframe>
+                <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-20 pointer-events-none group-hover:opacity-0 transition duration-700"></div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5491140419319" class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-40 animate-bounce group">
+        <i data-lucide="message-circle" class="w-8 h-8 group-hover:rotate-12 transition"></i>
     </a>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
