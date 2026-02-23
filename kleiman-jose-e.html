@@ -1,221 +1,219 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultorio Odontológico | Diseño de Sonrisa</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>
-    :root {
-        --primary: #0f172a; /* Navy Dark */
-        --accent: #06b6d4;  /* Cyan */
-        --white: #ffffff;
-        --light: #f8fafc;
-        --text: #334155;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Odontológico | Odontología en Buenos Aires</title>
+    <meta name="description" content="Atención profesional en Buenos Aires. Implantes, estética y ortodoncia. Turnos disponibles.">
     
-    /* WATERMARK STRIP (Más elegante que el texto rotado) */
-    .demo-strip {
-        position: fixed; top: 0; left: 0; width: 100%;
-        background: repeating-linear-gradient(45deg, #fbbf24, #fbbf24 10px, #f59e0b 10px, #f59e0b 20px);
-        color: #78350f; font-weight: 800; text-align: center; font-size: 12px;
-        padding: 4px 0; z-index: 9999; letter-spacing: 1px; text-transform: uppercase;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     
-    /* NAV */
-    nav { position: absolute; top: 40px; width: 100%; z-index: 10; padding: 0 5%; }
-    .nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-    .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); font-weight: 700; background: rgba(255,255,255,0.9); padding: 5px 15px; border-radius: 4px; }
-    
-    /* HERO SECTION */
-    header {
-        position: relative; height: 90vh; min-height: 600px;
-        background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400&q=80');
-        background-size: cover; background-position: center;
-        display: flex; align-items: center;
-    }
-    .hero-content { padding: 0 5%; max-width: 1200px; margin: 0 auto; width: 100%; }
-    .hero-text { max-width: 600px; }
-    
-    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.2rem); line-height: 1.1; color: var(--primary); margin-bottom: 24px; }
-    p.lead { font-size: 1.15rem; color: #475569; margin-bottom: 32px; line-height: 1.6; }
-    
-    /* STATS REALES */
-    .google-badge {
-        display: inline-flex; align-items: center; gap: 8px;
-        background: #fff; padding: 8px 16px; border-radius: 50px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 24px;
-        font-weight: 600; color: var(--text); font-size: 0.9rem;
-    }
-    .star { color: #facc15; }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=DM+Sans:wght@400;500;700&family=Inter:wght@300;900&family=Outfit:wght@300;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@400;700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
 
-    /* BOTONES */
-    .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: transform 0.2s; }
-    .btn:hover { transform: translateY(-2px); }
-    
-    .btn-wa { background: #25D366; color: white; box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
-    .btn-call { background: var(--primary); color: white; }
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['var(--font-body)'],
+                        display: ['var(--font-display)'],
+                    },
+                    colors: {
+                        primary: 'var(--primary)',
+                        secondary: 'var(--secondary)',
+                        accent: 'var(--accent)',
+                        surface: 'var(--surface)',
+                        text: 'var(--text-main)',
+                    },
+                    borderRadius: {
+                        'theme': 'var(--radius)',
+                    }
+                }
+            }
+        }
+    </script>
 
-    /* SECCIONES */
-    section { padding: 80px 5%; }
-    .container { max-width: 1100px; margin: 0 auto; }
-    .section-title { text-align: center; margin-bottom: 60px; }
-    .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); }
-    .subtitle { color: #64748b; margin-top: 10px; }
+    <style>
+        /* DEFINICIÓN DE LOS 5 ARQUETIPOS VISUALES */
+        :root { --transition: all 0.5s ease; }
+        body { transition: var(--transition); background-color: var(--surface); color: var(--text-main); font-family: var(--font-body); }
 
-    /* TARJETAS DE SERVICIOS */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .card { padding: 40px 30px; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; text-align: center; transition: 0.3s; }
-    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-    .icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        /* THE ARCHITECT */
+        [data-theme="architect"] {
+            --primary: #000000; --secondary: #F3F4F6; --accent: #2563EB; --surface: #FFFFFF; --text-main: #111827;
+            --font-display: 'Inter', sans-serif; --font-body: 'Inter', sans-serif;
+            --radius: 0px; --shadow: none;
+            --hero-overlay: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.8) 50%, transparent 100%);
+        }
+        /* ORGANIC SPA */
+        [data-theme="organic"] {
+            --primary: #57534E; --secondary: #E7E5E4; --accent: #65A30D; --surface: #FAFAF9; --text-main: #44403C;
+            --font-display: 'DM Sans', sans-serif; --font-body: 'DM Sans', sans-serif;
+            --radius: 1.5rem; --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --hero-overlay: linear-gradient(to right, rgba(250,250,249,0.9), rgba(250,250,249,0.4));
+        }
+        /* VOGUE SMILE */
+        [data-theme="vogue"] {
+            --primary: #FFFFFF; --secondary: #1C1917; --accent: #D4AF37; --surface: #0C0A09; --text-main: #FAFAF9;
+            --font-display: 'Playfair Display', serif; --font-body: 'DM Sans', sans-serif;
+            --radius: 0px; --shadow: 0 0 0 1px #333;
+            --hero-overlay: linear-gradient(to top, #0C0A09 0%, transparent 50%);
+        }
+        /* FUTURE TECH */
+        [data-theme="tech"] {
+            --primary: #F8FAFC; --secondary: #0F172A; --accent: #06B6D4; --surface: #020617; --text-main: #E2E8F0;
+            --font-display: 'Space Grotesk', sans-serif; --font-body: 'Inter', sans-serif;
+            --radius: 0.5rem; --shadow: 0 0 20px rgba(6,182,212,0.15);
+            --hero-overlay: radial-gradient(circle at center, transparent 0%, #020617 100%);
+        }
+        /* FRIENDLY */
+        [data-theme="friendly"] {
+            --primary: #1E3A8A; --secondary: #DBEAFE; --accent: #F59E0B; --surface: #FFFFFF; --text-main: #1E293B;
+            --font-display: 'Quicksand', sans-serif; --font-body: 'Quicksand', sans-serif;
+            --radius: 2rem; --shadow: 4px 4px 0px #F59E0B;
+            --hero-overlay: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.7));
+        }
 
-    /* TESTIMONIOS (Estilo Demo mejorado) */
-    #testimonios { background: var(--primary); color: white; }
-    #testimonios h2 { color: white; }
-    .testi-card { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 12px; text-align: left; }
-    .testi-text { font-style: italic; opacity: 0.9; line-height: 1.6; margin-bottom: 20px; display: block; }
-    .testi-user { font-weight: 700; display: flex; align-items: center; gap: 10px; }
-    .testi-avatar { width: 40px; height: 40px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-    
-    .demo-notice {
-        text-align: center; margin-top: 40px; padding: 15px; 
-        border: 1px dashed rgba(255,255,255,0.3); border-radius: 8px;
-        color: rgba(255,255,255,0.6); font-size: 0.9rem;
-    }
-
-    /* UBICACION */
-    .map-wrap { height: 400px; width: 100%; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin-top: 40px; }
-    
-    /* WA FLOTANTE */
-    .wa-float { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 100; transition: 0.3s; }
-    .wa-float:hover { transform: scale(1.1); }
-    .wa-float svg { width: 32px; height: 32px; fill: white; }
-
-    @media (max-width: 768px) {
-        h1 { font-size: 2.5rem; }
-        header { background-position: 70% center; }
-        .hero-text { background: rgba(255,255,255,0.9); padding: 30px; border-radius: 20px; backdrop-filter: blur(10px); }
-    }
-</style>
-</head>
-<body>
-
-<div class="demo-strip">VISTA PREVIA DE SU NUEVO SITIO WEB · VERSIÓN DEMO</div>
-
-<nav>
-    <div class="nav-content">
-        <div class="logo">Consultorio Odontológico</div>
-        <a href="tel:" style="text-decoration:none; color:var(--primary); font-weight:700;">📞 Consultar</a>
-    </div>
-</nav>
-
-<header>
-    <div class="hero-content">
-        <div class="hero-text">
-            <div class="google-badge">
-                <span class="star">★</span> 5.0 en Google · 15 Reseñas
-            </div>
-            
-            <h1>Cuidamos tu sonrisa en Buenos Aires</h1>
-            <p class="lead">Atención odontológica integral con la última tecnología y la calidez que merecés. Ubicados en .</p>
-            
-            <div class="btn-group">
-                <a href="https://wa.me/" class="btn btn-wa">
-                   💬 Turnos por WhatsApp
-                </a>
-                <a href="tel:" class="btn btn-call">
-                   Llamar ahora
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section id="servicios">
-    <div class="container">
-        <div class="section-title">
-            <h2>Tratamientos Profesionales</h2>
-            <p class="subtitle">Todo lo que necesitás para tu salud bucal</p>
-        </div>
-        <div class="grid-3">
-            <div class="card">
-                <span class="icon">🦷</span>
-                <h3>Implantes</h3>
-                <p>Soluciones definitivas para recuperar tu sonrisa con aspecto natural.</p>
-            </div>
-            <div class="card">
-                <span class="icon">✨</span>
-                <h3>Estética</h3>
-                <p>Blanqueamientos y carillas para una sonrisa radiante.</p>
-            </div>
-            <div class="card">
-                <span class="icon">🛡️</span>
-                <h3>General</h3>
-                <p>Limpiezas y controles periódicos para prevenir problemas.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="testimonios">
-    <div class="container">
-        <div class="section-title">
-            <h2>Experiencias Reales</h2>
-            <p class="subtitle" style="color:rgba(255,255,255,0.7)">
-                Este consultorio tiene una calificación de <strong>5.0/5.0</strong>. <br>
-                Así es como se verán los comentarios de sus pacientes:
-            </p>
-        </div>
-        <div class="grid-3">
-            <div class="testi-card">
-                <span class="testi-text">"Llegué con mucho miedo y salí completamente tranquila. El tratamiento quedó increíble, estoy feliz con el resultado."</span>
-                <div class="testi-user"><div class="testi-avatar">M</div> María Laura G.</div>
-            </div>
-            <div class="testi-card">
-                <span class="testi-text">"Excelente atención y profesionalismo. Me explicaron todo el proceso y me sentí muy cómodo."</span>
-                <div class="testi-user"><div class="testi-avatar">C</div> Carlos R.</div>
-            </div>
-            <div class="testi-card">
-                <span class="testi-text">"El equipo siempre resuelve mis dudas y la atención es muy personalizada. Muy recomendable."</span>
-                <div class="testi-user"><div class="testi-avatar">S</div> Sofía V.</div>
-            </div>
-        </div>
+        .btn-hover { transition: all 0.3s ease; }
+        .btn-hover:hover { transform: translateY(-3px); filter: brightness(1.1); }
         
-        <div class="demo-notice">
-            ⚠ <strong>NOTA:</strong> Estos testimonios son marcadores de posición para la demostración. 
-            En la versión final, se conectarán automáticamente sus 15 reseñas reales de Google Maps.
-        </div>
-    </div>
-</section>
+        /* Watermark discreto */
+        .demo-bar { position: fixed; top: 0; width: 100%; background: #fbbf24; color: #78350f; font-size: 10px; font-weight: bold; text-align: center; padding: 2px 0; z-index: 9999; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body data-theme="organic">
 
-<section id="ubicacion">
-    <div class="container">
-        <div class="section-title">
-            <h2>Visitanos</h2>
-            <p class="subtitle">, Buenos Aires</p>
-        </div>
-        <div class="map-wrap">
-            <iframe 
-                width="100%" 
-                height="100%" 
-                frameborder="0" 
-                scrolling="no" 
-                marginheight="0" 
-                marginwidth="0" 
-                src="https://maps.google.com/maps?q=%2C%20Buenos%20Aires%2C%20Argentina&t=&z=15&ie=UTF8&iwloc=&output=embed">
-            </iframe>
-        </div>
-    </div>
-</section>
+    <div class="demo-bar">Vista Previa · Sitio Web Generado para Consultorio Odontológico</div>
 
-<a href="https://wa.me/" class="wa-float">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
+    <nav class="fixed top-5 w-full z-50 transition-all duration-300 backdrop-blur-md border-b border-primary/5 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-accent rounded-theme flex items-center justify-center text-surface font-black text-xl logo-box">
+                    C
+                </div>
+                <span class="font-display font-bold text-lg md:text-xl tracking-tight text-primary truncate max-w-[200px] md:max-w-none">Consultorio Odontológico</span>
+            </div>
+            <a href="https://wa.me/" class="hidden md:flex items-center gap-2 px-6 py-2 bg-primary text-surface rounded-theme font-bold text-sm btn-hover border border-primary">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                AGENDAR
+            </a>
+        </div>
+    </nav>
 
+    <header class="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=1600&q=80" class="w-full h-full object-cover opacity-100" alt="Consultorio">
+            <div class="absolute inset-0" style="background: var(--hero-overlay);"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 text-accent rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+                    <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                    Turnos Disponibles
+                </div>
+                
+                <h1 class="font-display font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-primary mb-8">
+                    Tu Sonrisa,<br>
+                    <span class="text-accent">Nuestra Pasión.</span>
+                </h1>
+                
+                <p class="font-sans text-lg md:text-xl text-text opacity-80 max-w-lg mb-10 leading-relaxed">
+                    Experiencia odontológica de primer nivel en Buenos Aires. Tecnología, confort y resultados que transforman vidas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/?text=Hola%2C%20quisiera%20reservar%20un%20turno" class="px-8 py-4 bg-accent text-surface rounded-theme font-bold text-lg text-center btn-hover shadow-[var(--shadow)] flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle"></i>
+                        WhatsApp
+                    </a>
+                    <a href="tel:" class="px-8 py-4 bg-transparent border-2 border-primary/20 text-primary rounded-theme font-bold text-lg text-center hover:bg-primary/5 transition flex items-center justify-center gap-2">
+                        <i data-lucide="phone"></i>
+                        Llamar
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center gap-4 text-sm font-medium opacity-70">
+                    <div>
+                        <span class="text-accent font-bold text-lg">5.0 ★★★★★</span><br>
+                        Calificación basada en 45 pacientes reales
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-secondary/30">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-xl">
+                    <h2 class="font-display font-bold text-4xl text-primary mb-4" data-aos="fade-up">Nuestros Tratamientos</h2>
+                    <p class="text-text opacity-70 text-lg" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para toda la familia.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="gem"></i></div>
+                    <h3 class="font-display font-bold text-2xl text-primary mb-4">Estética Dental</h3>
+                    <p class="text-text opacity-70 leading-relaxed">Blanqueamientos y carillas para una sonrisa radiante y natural.</p>
+                </div>
+                <div class="bg-primary text-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent opacity-20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                    <div class="w-14 h-14 bg-surface/20 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="cpu"></i></div>
+                    <h3 class="font-display font-bold text-2xl text-white mb-4">Implantes</h3>
+                    <p class="text-gray-300 leading-relaxed">Recupera tu funcionalidad con tecnología de vanguardia.</p>
+                </div>
+                <div class="bg-surface p-10 rounded-theme shadow-[var(--shadow)] border border-primary/5 hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-accent/10 text-accent rounded-theme flex items-center justify-center mb-6 text-2xl"><i data-lucide="shield-check"></i></div>
+                    <h3 class="font-display font-bold text-2xl text-primary mb-4">General</h3>
+                    <p class="text-text opacity-70 leading-relaxed">Limpiezas, caries y prevención para mantener tu boca sana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+            <div class="bg-primary text-surface p-12 lg:p-24 flex flex-col justify-center">
+                <h2 class="font-display font-bold text-4xl mb-6">Visitanos hoy</h2>
+                <div class="space-y-6 text-lg">
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="map-pin" class="text-accent mt-1"></i>
+                        <div><span class="block font-bold">Dirección</span><span class="opacity-70">, Buenos Aires</span></div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="phone" class="text-accent mt-1"></i>
+                        <div><span class="block font-bold">Teléfono</span><span class="opacity-70">Consultar</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-secondary relative h-[400px] lg:h-auto">
+                <iframe width="100%" height="100%" style="border:0; filter: grayscale(100%) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
+                <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-20 pointer-events-none"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-surface border-t border-primary/10 pt-20 pb-10">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="font-display font-black text-2xl text-primary mb-8">Consultorio Odontológico</h3>
+            <p class="text-xs opacity-40">© 2025 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/" class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition z-40 animate-bounce">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true, offset: 50, duration: 800 });
+    </script>
 </body>
 </html>
