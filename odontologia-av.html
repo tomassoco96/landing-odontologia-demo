@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odontología AV | Experiencia Premium</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['var(--font-display)'] },
+                    colors: { primary: 'var(--primary)', accent: 'var(--accent)', surface: 'var(--surface)', text: 'var(--text-main)' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root { --transition: all 0.5s ease; }
+        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.85); --radius: 0px; }
+        [data-theme="organic"] { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --text-main: #57534e; --font-display: '"Playfair Display"', serif; --overlay: rgba(68, 64, 60, 0.75); --radius: 2rem; }
+        [data-theme="vogue"] { --primary: #0c0a09; --accent: #d4af37; --surface: #0c0a09; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif; --overlay: rgba(12, 10, 9, 0.9); --radius: 0px; }
+        [data-theme="tech"] { --primary: #020617; --accent: #06b6d4; --surface: #020617; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif; --overlay: radial-gradient(circle, rgba(2,6,23,0.9) 0%, rgba(2,6,23,0.6) 100%); --radius: 0.75rem; }
+        [data-theme="friendly"] { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30, 58, 138, 0.7); --radius: 3rem; }
+
+        body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
+        .nav-scrolled { background: var(--primary) !important; padding: 12px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
+        .faq-icon { transition: transform 0.4s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
+        
+        .floating-icon { animation: float 3s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body data-theme="organic">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 transition-all duration-500 text-white px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg" style="border-radius: var(--radius)">O</div>
+                <span class="font-display font-bold text-lg">Odontología AV</span>
+            </div>
+            <div class="hidden lg:flex gap-8 text-[10px] uppercase tracking-[0.3em] font-extrabold opacity-70">
+                <a href="#servicios" class="hover:text-accent transition">Servicios</a>
+                <a href="#nosotros" class="hover:text-accent transition">Nosotros</a>
+                <a href="#preguntas" class="hover:text-accent transition">Preguntas</a>
+                <a href="https://wa.me/541126683890" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase" style="border-radius: var(--radius)">CONTACTAR</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover scale-105">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white">
+            <h1 class="font-display font-bold text-6xl md:text-9xl mb-8 leading-none tracking-tighter" data-aos="fade-up">Excelencia Dental<br><span class='text-accent'>a tu medida.</span></h1>
+            <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium" data-aos="fade-up" data-aos-delay="100">En Odontología AV priorizamos tu bienestar. Recuperá tu confianza para sonreír con nuestro equipo de expertos.</p>
+            <a href="https://wa.me/541126683890" class="bg-accent text-white px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
+        </div>
+        
+        <div class="absolute bottom-0 w-full py-10 bg-black/40 backdrop-blur-2xl border-t border-white/10 text-white z-20">
+            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-[10px] font-black uppercase tracking-widest text-center">
+                <div class="flex items-center justify-center gap-3"><i data-lucide="clock" class="text-accent w-5 h-5"></i> Lun-Vie: 9-19hs</div>
+                <div class="flex items-center justify-center gap-3"><i data-lucide="calendar" class="text-accent w-5 h-5"></i> Sábados: 9-13hs</div>
+                <div class="flex items-center justify-center gap-3 text-red-400"><i data-lucide="zap" class="w-5 h-5"></i> Urgencias</div>
+                <div class="flex items-center justify-center gap-3 text-green-400"><i data-lucide="credit-card" class="w-5 h-5"></i> Cuotas</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 relative z-30 -mt-16">
+        <div class="container mx-auto px-6">
+            <div class="bg-white p-16 grid grid-cols-2 lg:grid-cols-4 gap-12 shadow-[0_50px_100px_rgba(0,0,0,0.12)] border border-slate-50" style="border-radius: var(--radius)" data-aos="fade-up">
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="500">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Pacientes</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="15">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Años de Exp.</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-blue-600 flex items-center justify-center gap-2">★<span class="counter" data-target="5">0</span>.0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Google</div></div>
+                <div class="text-center"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="10">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Especialidades</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-32 bg-slate-50/50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-display font-bold text-5xl md:text-7xl text-slate-900 mb-20 tracking-tighter" data-aos="fade-up">Cuidado integral.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🦷</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Limpieza</h4>
+                </div>
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">✨</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Estética</h4>
+                </div>
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">😁</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Ortodoncia</h4>
+                </div>
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🔩</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Implantes</h4>
+                </div>
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">👑</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Coronas</h4>
+                </div>
+                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="600">
+                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🚨</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Urgencias</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preguntas" class="py-32 bg-slate-900 text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="font-display font-bold text-6xl mb-20 tracking-tighter text-center">Resolvemos tus dudas.</h2>
+            <div class="space-y-4">
+                <div class="faq-item group bg-white/5 border border-white/10 p-8 cursor-pointer hover:bg-white/10 transition duration-300" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-xl">¿Cómo saco un turno?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Hacé clic en el botón de WhatsApp o llamanos directamente. Te damos el turno más cercano hoy mismo.</div>
+                </div>
+                <div class="faq-item group bg-white/5 border border-white/10 p-8 cursor-pointer hover:bg-white/10 transition duration-300" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-xl">¿Atienden obras sociales?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Sí, trabajamos con OSDE, Swiss Medical, Galeno y las principales prepagas del país. Consultanos por la tuya.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="ubicacion" class="py-40 bg-slate-950 text-white overflow-hidden relative">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center relative z-10">
+            <div>
+                <h2 class="font-display font-bold text-7xl md:text-8xl mb-12 leading-none tracking-tighter" data-aos="fade-right">Transformá tu <br> sonrisa hoy.</h2>
+                <div class="space-y-6 mb-16">
+                    <div class="flex items-center gap-6 opacity-80 group"><i data-lucide="map-pin" class="text-accent group-hover:scale-125 transition"></i> <span class="text-2xl font-bold">Sinclair 2976, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
+                    <div class="flex items-center gap-6 opacity-80 group"><i data-lucide="phone" class="text-accent group-hover:scale-125 transition"></i> <span class="text-2xl font-bold">541126683890</span></div>
+                </div>
+                <a href="https://wa.me/541126683890" class="bg-[#25D366] px-14 py-6 font-black text-xl shadow-2xl hover:scale-105 transition block text-center uppercase tracking-widest" style="border-radius: var(--radius)">WhatsApp Directo</a>
+            </div>
+            <div class="h-[600px] overflow-hidden border-8 border-white/5 shadow-2xl relative" style="border-radius: var(--radius)">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Sinclair%202976%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-32 pt-12 border-t border-white/5 text-center text-[10px] text-white/20 uppercase tracking-[0.5em]">© 2026 Odontología AV · Todos los derechos reservados</div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: false, duration: 1000 });
+
+        window.onscroll = function() {
+            const nav = document.getElementById("navbar");
+            if (window.pageYOffset > 50) nav.classList.add("nav-scrolled");
+            else nav.classList.remove("nav-scrolled");
+        };
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    let count = 0;
+                    const timer = setInterval(() => {
+                        count += Math.ceil(target / 40);
+                        if (count >= target) { entry.target.innerText = target; clearInterval(timer); }
+                        else entry.target.innerText = count;
+                    }, 30);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter').forEach(c => obs.observe(c));
+    </script>
+</body>
+</html>
