@@ -33,6 +33,7 @@
         .nav-scrolled { background: var(--primary) !important; padding: 12px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
+        .glass-info { background: rgba(0,0,0,0.4); backdrop-filter: blur(15px); border-top: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
 <body data-theme="organic">
@@ -47,55 +48,56 @@
         </div>
     </nav>
 
-    <header class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <header class="relative h-screen flex flex-col justify-center overflow-hidden">
         <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 hero-overlay"></div>
-        <div class="container mx-auto px-6 relative z-10 text-white" data-aos="fade-up">
-            <h1 class="font-display font-black text-6xl md:text-9xl mb-8 leading-[0.9] tracking-tighter">Tu salud bucal<br><span class='text-accent'>en buenas manos.</span></h1>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mb-20" data-aos="fade-up">
+            <h1 class="font-display font-black text-6xl md:text-9xl mb-8 leading-[0.9] tracking-tighter">Tecnología dental<br><span class='text-accent'>de vanguardia.</span></h1>
             <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium">Odontología de precisión en Buenos Aires. Tecnología avanzada y trato humano para transformar tu salud bucal sin dolor.</p>
             <a href="https://wa.me/541156010050" class="bg-accent text-white px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
         </div>
-    </header>
 
-    <div class="w-full bg-primary text-white py-8 relative z-20">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-3">
-                <span class="text-3xl">📅</span>
-                <div><span class="font-bold block text-xs uppercase opacity-60 tracking-wider">Lun–Vie</span><span class="font-display font-bold text-xl leading-none">9:00 a 19:00 hs</span></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-3">
-                <span class="text-3xl">🕒</span>
-                <div><span class="font-bold block text-xs uppercase opacity-60 tracking-wider">Sábados</span><span class="font-display font-bold text-xl leading-none">9:00 a 13:00 hs</span></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-3">
-                <span class="text-3xl">🚨</span>
-                <div><span class="font-bold block text-xs uppercase opacity-60 tracking-wider">Urgencias</span><span class="font-display font-bold text-xl leading-none text-accent">Atención inmediata</span></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center md:items-start gap-3">
-                <span class="text-3xl">💳</span>
-                <div><span class="font-bold block text-xs uppercase opacity-60 tracking-wider">Financiación</span><span class="font-display font-bold text-xl leading-none">Cuotas sin interés</span></div>
+        <div class="absolute bottom-0 w-full glass-info py-8 z-20 text-white">
+            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <span class="text-2xl">📅</span>
+                    <div><p class="text-[10px] font-bold uppercase opacity-60 tracking-wider">Lun–Vie</p><p class="font-bold text-sm md:text-base">9:00 a 19:00 hs</p></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <span class="text-2xl">🕒</span>
+                    <div><p class="text-[10px] font-bold uppercase opacity-60 tracking-wider">Sábados</p><p class="font-bold text-sm md:text-base">9:00 a 13:00 hs</p></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <span class="text-2xl">🚨</span>
+                    <div><p class="text-[10px] font-bold uppercase opacity-60 tracking-wider">Urgencias</p><p class="font-bold text-sm md:text-base text-accent">Atención inmediata</p></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <span class="text-2xl">💳</span>
+                    <div><p class="text-[10px] font-bold uppercase opacity-60 tracking-wider">Financiación</p><p class="font-bold text-sm md:text-base">Cuotas sin interés</p></div>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <section class="py-16 relative z-10 bg-slate-50/50">
+    <section class="py-20 relative z-10 bg-slate-50/50">
         <div class="container mx-auto px-6">
             <div class="bg-white p-12 grid grid-cols-2 lg:grid-cols-4 gap-12 shadow-xl border border-slate-100" style="border-radius: var(--radius)">
                 <div class="text-center">
-                    <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+500</div>
-                    <div class="text-xs font-bold uppercase text-slate-400 tracking-widest leading-tight">Pacientes<br>satisfechos</div>
+                    <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="500">0</span></div>
+                    <div class="text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Pacientes<br>satisfechos</div>
                 </div>
-                <div class="text-center">
-                     <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+15</div>
-                    <div class="text-xs font-bold uppercase text-slate-400 tracking-widest leading-tight">Años de<br>experiencia</div>
+                <div class="text-center border-l border-slate-50">
+                     <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="15">0</span></div>
+                    <div class="text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Años de<br>experiencia</div>
                 </div>
-                <div class="text-center">
-                    <div class="font-display font-black text-5xl text-accent mb-2 leading-none flex items-center justify-center gap-1"><span class="text-3xl">★</span>4.7<span class="text-3xl">★</span></div>
-                    <div class="text-xs font-bold uppercase text-slate-400 tracking-widest leading-tight">Calificación<br>en Google</div>
+                <div class="text-center border-l border-slate-50">
+                    <div class="font-display font-black text-5xl text-accent mb-2 leading-none flex items-center justify-center gap-1">★<span class="counter" data-target="49">0</span>★</div>
+                    <div class="text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Calificación<br>en Google</div>
                 </div>
-                <div class="text-center">
-                     <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+10</div>
-                    <div class="text-xs font-bold uppercase text-slate-400 tracking-widest leading-tight">Especialidades<br>disponibles</div>
+                <div class="text-center border-l border-slate-50">
+                     <div class="font-display font-black text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="10">0</span></div>
+                    <div class="text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Especialidades<br>disponibles</div>
                 </div>
             </div>
         </div>
@@ -108,29 +110,29 @@
                 <p class="text-slate-500 font-medium max-w-2xl mx-auto">Todo lo que necesitás para mantener tu sonrisa saludable en un solo lugar, con la mejor tecnología.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up">
-                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza Dental</h4><p class="text-sm opacity-60 leading-relaxed">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses para mantener tu salud bucal.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up">
+                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza Dental</h4><p class="text-sm opacity-60">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses.</p>
                 </div>
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60 leading-relaxed">Recuperá el blanco natural de tus dientes con tecnología LED de última generación. Resultados visibles desde la primera sesión.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60">Recuperá el blanco natural con tecnología LED. Resultados visibles hoy.</p>
                 </div>
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Ortodoncia</h4><p class="text-sm opacity-60 leading-relaxed">Brackets tradicionales o alineadores invisibles. Corregimos tu sonrisa con precisión y comodidad.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Ortodoncia</h4><p class="text-sm opacity-60">Brackets tradicionales o alineadores invisibles. Precisión y comodidad.</p>
                 </div>
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Implantes</h4><p class="text-sm opacity-60 leading-relaxed">Reemplazamos dientes perdidos con implantes de titanio de por vida. Estética natural garantizada.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Implantes</h4><p class="text-sm opacity-60">Reemplazo de dientes con titanio de por vida. Estética natural garantizada.</p>
                 </div>
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Coronas y Carillas</h4><p class="text-sm opacity-60 leading-relaxed">Restauramos y embellecemos dientes dañados con materiales de alta calidad estética.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Coronas y Carillas</h4><p class="text-sm opacity-60">Materiales de alta calidad para restaurar y embellecer dientes dañados.</p>
                 </div>
-                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2">Urgencias</h4><p class="text-sm opacity-60 leading-relaxed">Atención inmediata para dolores y emergencias dentales. Escribinos por WhatsApp y te atendemos ya.</p>
+                <div class="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-xl transition" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2">Urgencias</h4><p class="text-sm opacity-60">Atención inmediata para dolores dentales. Escribinos ahora mismo.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 overflow-hidden bg-slate-50/50">
+    <section class="py-24 overflow-hidden bg-slate-50/50 border-y border-slate-100">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
@@ -142,12 +144,12 @@
                 </div>
                 <div class="w-full lg:w-1/2" data-aos="fade-left">
                     <span class="text-accent font-bold text-xs uppercase tracking-[0.4em] block mb-4">¿Por qué elegirnos?</span>
-                    <h2 class="font-display font-bold text-5xl text-slate-900 mb-12 tracking-tighter">Atención que marca <br> la diferencia.</h2>
+                    <h2 class="font-display font-bold text-5xl text-slate-900 mb-12 tracking-tighter leading-tight">Atención que marca <br> la diferencia.</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div><div class="text-accent font-black text-xl mb-2">01</div><h4 class="font-bold mb-2">Experiencia comprobada</h4><p class="text-sm opacity-60 font-medium">Más de 15 años transformando sonrisas en Buenos Aires. Resultados reales que hablan por sí solos.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-2">02</div><h4 class="font-bold mb-2">Tecnología de vanguardia</h4><p class="text-sm opacity-60 font-medium">Equipos digitales de última generación para diagnósticos precisos y tratamientos menos invasivos.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-2">03</div><h4 class="font-bold mb-2">Financiación accesible</h4><p class="text-sm opacity-60 font-medium">Planes de pago flexibles, cuotas sin interés y múltiples formas de pago para que cuides tu salud sin estrés.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-2">04</div><h4 class="font-bold mb-2">Ubicación estratégica</h4><p class="text-sm opacity-60 font-medium">En Av. Lisandro de la Torre 4761, Cdad. Autónoma de Buenos Aires, con fácil acceso en transporte público y amplia disponibilidad de turnos.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">01</div><h4 class="font-bold mb-1">Experiencia comprobada</h4><p class="text-sm opacity-60 font-medium leading-relaxed">Más de 15 años transformando sonrisas en Buenos Aires con resultados reales.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">02</div><h4 class="font-bold mb-1">Tecnología de vanguardia</h4><p class="text-sm opacity-60 font-medium leading-relaxed">Equipos digitales de última generación para diagnósticos precisos.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">03</div><h4 class="font-bold mb-1">Financiación accesible</h4><p class="text-sm opacity-60 font-medium leading-relaxed">Planes de pago flexibles y cuotas sin interés para cuidar tu salud sin estrés.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">04</div><h4 class="font-bold mb-1">Ubicación estratégica</h4><p class="text-sm opacity-60 font-medium leading-relaxed">Fácil acceso en transporte público y amplia disponibilidad de turnos en Buenos Aires.</p></div>
                     </div>
                 </div>
             </div>
@@ -159,57 +161,75 @@
             <h2 class="font-display font-bold text-5xl mb-16 tracking-tighter">Preguntas frecuentes.</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold">¿Cómo saco turno?<span class="faq-icon text-accent">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Podés escribirnos por WhatsApp o llamarnos directamente. Respondemos en minutos y coordinamos el horario que mejor te quede.</div>
+                    <div class="flex justify-between items-center font-bold">¿Cómo saco turno?<span class="faq-icon text-accent font-black text-xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50 leading-relaxed">Podés escribirnos por WhatsApp o llamarnos directamente. Respondemos en minutos y coordinamos el horario que mejor te quede.</div>
                 </div>
                 <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold leading-tight">¿Atienden obras sociales y prepagas?<span class="faq-icon text-accent ml-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Sí, atendemos las principales obras sociales y prepagas. Consultanos por la tuya y te confirmamos al instante. También atendemos particulares con planes de pago accesibles.</div>
+                    <div class="flex justify-between items-center font-bold leading-tight">¿Atienden obras sociales y prepagas?<span class="faq-icon text-accent font-black text-xl ml-2">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50 leading-relaxed">Sí, atendemos las principales obras sociales y prepagas. Consultanos por la tuya y te confirmamos al instante.</div>
                 </div>
                 <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold">¿El blanqueamiento duele?<span class="faq-icon text-accent">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">No duele. Puede haber una leve sensibilidad durante las primeras horas, completamente normal y pasajera. El procedimiento es seguro y rápido.</div>
+                    <div class="flex justify-between items-center font-bold text-left leading-tight">¿Aceptan tarjeta de crédito?<span class="faq-icon text-accent font-black text-xl ml-2">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50 leading-relaxed">Sí, aceptamos todas las tarjetas de crédito y débito. Además tenemos planes de cuotas sin interés en algunos tratamientos.</div>
                 </div>
                 <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold">¿Cuánto duran los implantes?<span class="faq-icon text-accent">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Con el cuidado adecuado, los implantes dentales pueden durar toda la vida. Son la solución más definitiva y natural para reemplazar dientes perdidos.</div>
-                </div>
-                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold">¿Tienen estacionamiento?<span class="faq-icon text-accent">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Contamos con estacionamiento cerca y somos de fácil acceso en transporte público. Consultanos la dirección exacta por WhatsApp.</div>
-                </div>
-                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold leading-tight">¿Aceptan tarjeta de crédito?<span class="faq-icon text-accent ml-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Sí, aceptamos todas las tarjetas de crédito y débito, efectivo y transferencia. Además tenemos planes de cuotas sin interés en algunos tratamientos.</div>
+                    <div class="flex justify-between items-center font-bold">¿El blanqueamiento duele?<span class="faq-icon text-accent font-black text-xl">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50 leading-relaxed">No duele. Puede haber una leve sensibilidad pasajera, pero el procedimiento es totalmente seguro y rápido.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="ubicacion" class="py-24 bg-slate-950 text-white overflow-hidden relative text-center">
+    <footer id="ubicacion" class="py-24 bg-slate-950 text-white text-center">
         <div class="container mx-auto px-6">
             <h2 class="font-display font-bold text-6xl mb-12 tracking-tighter">Transformá tu sonrisa hoy.</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-12 opacity-80 font-bold mb-12">
-                <div class="flex items-center justify-center gap-4"><i data-lucide="map-pin" class="text-accent"></i> <span>Av. Lisandro de la Torre 4761, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
-                <div class="flex items-center justify-center gap-4"><i data-lucide="phone" class="text-accent"></i> <span>541156010050</span></div>
+            <div class="flex flex-col md:flex-row justify-center gap-12 font-bold mb-12">
+                <div class="flex items-center justify-center gap-3 opacity-70"><i data-lucide="map-pin" class="text-accent w-5 h-5"></i> <span>Av. Lisandro de la Torre 4761, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
+                <div class="flex items-center justify-center gap-3 opacity-70"><i data-lucide="phone" class="text-accent w-5 h-5"></i> <span>541156010050</span></div>
             </div>
-            <a href="https://wa.me/541156010050" class="bg-[#25D366] px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition block md:inline-block text-center uppercase" style="border-radius: var(--radius)">WhatsApp Directo</a>
-            <div class="mt-20 h-[400px] shadow-2xl relative" style="border-radius: var(--radius); overflow: hidden;">
+            <a href="https://wa.me/541156010050" class="bg-[#25D366] px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition block md:inline-block uppercase tracking-widest" style="border-radius: var(--radius)">WhatsApp Directo</a>
+            <div class="mt-20 h-[400px] overflow-hidden shadow-2xl" style="border-radius: var(--radius);">
                 <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Lisandro%20de%20la%20Torre%204761%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
             </div>
-            <div class="mt-20 pt-8 border-t border-white/5 text-[10px] text-white/20 uppercase tracking-[0.4em]">© 2026 Odontologia · Todos los derechos reservados</div>
+            <p class="mt-20 text-[10px] opacity-20 uppercase tracking-[0.4em]">© 2026 Odontologia · Todos los derechos reservados</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         lucide.createIcons();
-        AOS.init({ once: false, duration: 1000 });
+        AOS.init({ once: true, duration: 1000 });
         window.onscroll = function() {
             const nav = document.getElementById("navbar");
             if (nav && window.pageYOffset > 50) nav.classList.add("nav-scrolled");
             else if (nav) nav.classList.remove("nav-scrolled");
         };
+
+        // MOTOR DE ANIMACIÓN DE NÚMEROS (COUNTERS)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    let count = 0;
+                    const speed = 2000 / target; // Ajusta el tiempo total de la animación
+
+                    const updateCount = () => {
+                        const increment = Math.ceil(target / 100);
+                        if (count < target) {
+                            count += increment;
+                            if (count > target) count = target;
+                            el.innerText = count;
+                            setTimeout(updateCount, 20);
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.8 });
+
+        document.querySelectorAll('.counter').forEach(c => observer.observe(c));
     </script>
 </body>
 </html>
