@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kleiman Jose E | Experiencia Premium</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -32,13 +31,8 @@
         body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; }
         .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
         .nav-scrolled { background: var(--primary) !important; padding: 12px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
-        .faq-icon { transition: transform 0.4s ease; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
-        
-        .floating-icon { animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
     </style>
 </head>
 <body data-theme="friendly">
@@ -49,12 +43,7 @@
                 <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg" style="border-radius: var(--radius)">K</div>
                 <span class="font-display font-bold text-lg">Kleiman Jose E</span>
             </div>
-            <div class="hidden lg:flex gap-8 text-[10px] uppercase tracking-[0.3em] font-extrabold opacity-70">
-                <a href="#servicios" class="hover:text-accent transition">Servicios</a>
-                <a href="#nosotros" class="hover:text-accent transition">Nosotros</a>
-                <a href="#preguntas" class="hover:text-accent transition">Preguntas</a>
-                <a href="https://wa.me/541146012481" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase" style="border-radius: var(--radius)">CONTACTAR</a>
-            </div>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase font-bold text-xs" style="border-radius: var(--radius)">CONTACTAR</a>
         </div>
     </nav>
 
@@ -62,102 +51,133 @@
         <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover scale-105">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="container mx-auto px-6 relative z-10 text-center text-white">
-            <h1 class="font-display font-bold text-6xl md:text-9xl mb-8 leading-none tracking-tighter" data-aos="fade-up">Tecnología dental<br><span class='text-accent'>de vanguardia.</span></h1>
-            <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium" data-aos="fade-up" data-aos-delay="100">Odontología de alta precisión y calidez humana en Buenos Aires. Transformamos vidas a través de la excelencia clínica.</p>
-            <a href="https://wa.me/541146012481" class="bg-accent text-white px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
-        </div>
-        
-        <div class="absolute bottom-0 w-full py-10 bg-black/40 backdrop-blur-2xl border-t border-white/10 text-white z-20">
-            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-[10px] font-black uppercase tracking-widest text-center">
-                <div class="flex items-center justify-center gap-3"><i data-lucide="clock" class="text-accent w-5 h-5"></i> Lun-Vie: 9-19hs</div>
-                <div class="flex items-center justify-center gap-3"><i data-lucide="calendar" class="text-accent w-5 h-5"></i> Sábados: 9-13hs</div>
-                <div class="flex items-center justify-center gap-3 text-red-400"><i data-lucide="zap" class="w-5 h-5"></i> Urgencias</div>
-                <div class="flex items-center justify-center gap-3 text-green-400"><i data-lucide="credit-card" class="w-5 h-5"></i> Cuotas</div>
-            </div>
+            <h1 class="font-display font-bold text-5xl md:text-9xl mb-8 leading-none tracking-tighter hero-title" data-aos="fade-up">Tecnología dental<br><span class='text-accent'>de vanguardia.</span></h1>
+            <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto mb-12 font-medium" data-aos="fade-up" data-aos-delay="100">Odontología de alta precisión y calidez humana en Buenos Aires.</p>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
         </div>
     </header>
 
-    <section class="py-24 relative z-30 -mt-16">
+    <section class="py-12 relative z-30 -mt-12">
         <div class="container mx-auto px-6">
-            <div class="bg-white p-16 grid grid-cols-2 lg:grid-cols-4 gap-12 shadow-[0_50px_100px_rgba(0,0,0,0.12)] border border-slate-50" style="border-radius: var(--radius)" data-aos="fade-up">
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="500">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Pacientes</div></div>
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="15">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Años de Exp.</div></div>
-                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-6xl font-black text-blue-600 flex items-center justify-center gap-2">★<span class="counter" data-target="5">0</span>.0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Google</div></div>
-                <div class="text-center"><div class="text-6xl font-black text-slate-900 mb-2 counter" data-target="10">0</div><div class="text-[11px] font-bold uppercase text-slate-400 tracking-widest">Especialidades</div></div>
+            <div class="bg-white p-10 grid grid-cols-2 lg:grid-cols-4 gap-8 shadow-2xl border border-slate-50" style="border-radius: var(--radius)" data-aos="fade-up">
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-4xl font-black text-slate-900 mb-1 counter" data-target="500">0</div><div class="text-[9px] font-bold uppercase text-slate-400">Pacientes</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-4xl font-black text-slate-900 mb-1 counter" data-target="15">0</div><div class="text-[9px] font-bold uppercase text-slate-400">Años Exp.</div></div>
+                <div class="text-center border-r border-slate-100 last:border-0"><div class="text-4xl font-black text-blue-600 flex items-center justify-center gap-1">★<span class="counter" data-target="5">0</span>.0</div><div class="text-[9px] font-bold uppercase text-slate-400">Google</div></div>
+                <div class="text-center"><div class="text-4xl font-black text-slate-900 mb-1 counter" data-target="10">0</div><div class="text-[9px] font-bold uppercase text-slate-400">Especialidades</div></div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-32 bg-slate-50/50">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="font-display font-bold text-5xl md:text-7xl text-slate-900 mb-20 tracking-tighter" data-aos="fade-up">Cuidado integral.</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🦷</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Limpieza</h4>
-                </div>
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">✨</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Estética</h4>
-                </div>
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">😁</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Ortodoncia</h4>
-                </div>
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="400">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🔩</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Implantes</h4>
-                </div>
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="500">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">👑</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Coronas</h4>
-                </div>
-                <div class="bg-white p-10 border border-slate-200 hover:shadow-2xl transition-all duration-500 group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="600">
-                    <div class="mb-6 text-4xl group-hover:scale-125 transition duration-500 floating-icon">🚨</div><h4 class="font-black text-[11px] uppercase tracking-widest text-slate-900">Urgencias</h4>
-                </div>
+    <section id="servicios" class="py-24 bg-slate-50/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display font-bold text-4xl md:text-6xl text-slate-900 mb-4 tracking-tighter">Cuidado integral.</h2>
+                <p class="text-slate-500 font-medium max-w-2xl mx-auto">Todo lo que necesitás para mantener tu sonrisa saludable en un solo lugar, con la mejor tecnología.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="preguntas" class="py-32 bg-slate-900 text-white relative overflow-hidden">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="font-display font-bold text-6xl mb-20 tracking-tighter text-center">Resolvemos tus dudas.</h2>
-            <div class="space-y-4">
-                <div class="faq-item group bg-white/5 border border-white/10 p-8 cursor-pointer hover:bg-white/10 transition duration-300" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold text-xl">¿Cómo saco un turno?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Hacé clic en el botón de WhatsApp o llamanos directamente. Te damos el turno más cercano hoy mismo.</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up">
+                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza Dental</h4><p class="text-sm opacity-60 leading-relaxed">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses para mantener tu salud bucal.</p>
                 </div>
-                <div class="faq-item group bg-white/5 border border-white/10 p-8 cursor-pointer hover:bg-white/10 transition duration-300" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex justify-between items-center font-bold text-xl">¿Atienden obras sociales?<span class="faq-icon text-accent font-black text-3xl">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-white/60">Sí, trabajamos con OSDE, Swiss Medical, Galeno y las principales prepagas del país. Consultanos por la tuya.</div>
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60 leading-relaxed">Recuperá el blanco natural de tus dientes con tecnología LED de última generación. Resultados visibles desde la primera sesión.</p>
+                </div>
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Ortodoncia</h4><p class="text-sm opacity-60 leading-relaxed">Brackets tradicionales o alineadores invisibles. Corregimos tu sonrisa con precisión y comodidad.</p>
+                </div>
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Implantes</h4><p class="text-sm opacity-60 leading-relaxed">Reemplazamos dientes perdidos con implantes de titanio de por vida. Estética natural garantizada.</p>
+                </div>
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Coronas y Carillas</h4><p class="text-sm opacity-60 leading-relaxed">Restauramos y embellecemos dientes dañados con materiales de alta calidad estética.</p>
+                </div>
+                <div class="bg-white p-8 border border-slate-200 hover:shadow-xl transition group" style="border-radius: var(--radius)" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2">Urgencias</h4><p class="text-sm opacity-60 leading-relaxed">Atención inmediata para dolores y emergencias dentales. Escribinos por WhatsApp y te atendemos ya.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="ubicacion" class="py-40 bg-slate-950 text-white overflow-hidden relative">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-24 items-center relative z-10">
+    <section class="py-24 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1600&q=80" class="w-full h-[500px] object-cover shadow-2xl" style="border-radius: var(--radius)">
+                    <div class="absolute bottom-6 left-6 bg-white p-6 shadow-2xl text-center" style="border-radius: var(--radius)">
+                        <div class="text-accent font-black text-3xl leading-none">+15 años</div>
+                        <div class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-1">de experiencia</div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <span class="text-accent font-bold text-xs uppercase tracking-[0.4em] block mb-4">¿Por qué elegirnos?</span>
+                    <h2 class="font-display font-bold text-5xl text-slate-900 mb-12 tracking-tighter">Atención que marca <br> la diferencia.</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div><div class="text-accent font-black text-xl mb-2">01</div><h4 class="font-bold mb-2">Experiencia comprobada</h4><p class="text-sm opacity-60">Más de 15 años transformando sonrisas en Buenos Aires. Resultados reales.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-2">02</div><h4 class="font-bold mb-2">Tecnología de punta</h4><p class="text-sm opacity-60">Equipos digitales para diagnósticos precisos y tratamientos menos invasivos.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-2">03</div><h4 class="font-bold mb-2">Financiación</h4><p class="text-sm opacity-60">Planes flexibles y cuotas sin interés para que cuides tu salud sin estrés.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-2">04</div><h4 class="font-bold mb-2">Ubicación</h4><p class="text-sm opacity-60">En Av. Riestra 5750, Cdad. Autónoma de Buenos Aires, con fácil acceso y amplia disponibilidad de turnos.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preguntas" class="py-24 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="font-display font-bold text-5xl mb-16 tracking-tighter text-center">Preguntas frecuentes.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold">¿Cómo saco turno?<span class="faq-icon text-accent">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Podés escribirnos por WhatsApp o llamarnos directamente. Respondemos en minutos y coordinamos el horario que mejor te quede.</div>
+                </div>
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-left leading-tight">¿Atienden obras sociales y prepagas?<span class="faq-icon text-accent ml-2">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Sí, atendemos las principales obras sociales y prepagas. Consultanos por la tuya y te confirmamos al instante. También atendemos particulares con planes de pago accesibles.</div>
+                </div>
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold">¿El blanqueamiento duele?<span class="faq-icon text-accent">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">No duele. Puede haber una leve sensibilidad durante las primeras horas, completamente normal y pasajera. El procedimiento es seguro y rápido.</div>
+                </div>
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold">¿Cuánto duran los implantes?<span class="faq-icon text-accent">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Con el cuidado adecuado, los implantes dentales pueden durar toda la vida. Son la solución más definitiva y natural para reemplazar dientes perdidos.</div>
+                </div>
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold">¿Tienen estacionamiento?<span class="faq-icon text-accent">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Contamos con estacionamiento cerca y somos de fácil acceso en transporte público. Consultanos la dirección exacta por WhatsApp.</div>
+                </div>
+                <div class="faq-item bg-white/5 border border-white/10 p-6 cursor-pointer" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between items-center font-bold text-left leading-tight">¿Aceptan tarjeta de crédito?<span class="faq-icon text-accent ml-2">+</span></div>
+                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-sm text-white/50">Sí, aceptamos todas las tarjetas de crédito y débito, efectivo y transferencia. Además tenemos planes de cuotas sin interés en algunos tratamientos.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="ubicacion" class="py-24 bg-slate-950 text-white relative">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="font-display font-bold text-7xl md:text-8xl mb-12 leading-none tracking-tighter" data-aos="fade-right">Transformá tu <br> sonrisa hoy.</h2>
-                <div class="space-y-6 mb-16">
-                    <div class="flex items-center gap-6 opacity-80 group"><i data-lucide="map-pin" class="text-accent group-hover:scale-125 transition"></i> <span class="text-2xl font-bold">Av. Riestra 5750, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
-                    <div class="flex items-center gap-6 opacity-80 group"><i data-lucide="phone" class="text-accent group-hover:scale-125 transition"></i> <span class="text-2xl font-bold">541146012481</span></div>
+                <h2 class="font-display font-bold text-6xl mb-12 tracking-tighter">Transformá tu <br> sonrisa hoy.</h2>
+                <div class="space-y-6 opacity-70 font-bold mb-12">
+                    <div class="flex items-center gap-4"><i data-lucide="map-pin" class="text-accent"></i> <span>Av. Riestra 5750, Cdad. Autónoma de Buenos Aires, Buenos Aires</span></div>
+                    <div class="flex items-center gap-4"><i data-lucide="phone" class="text-accent"></i> <span>541146012481</span></div>
                 </div>
-                <a href="https://wa.me/541146012481" class="bg-[#25D366] px-14 py-6 font-black text-xl shadow-2xl hover:scale-105 transition block text-center uppercase tracking-widest" style="border-radius: var(--radius)">WhatsApp Directo</a>
+                <a href="https://wa.me/541146012481" class="bg-[#25D366] px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition block text-center uppercase" style="border-radius: var(--radius)">WhatsApp Directo</a>
             </div>
-            <div class="h-[600px] overflow-hidden border-8 border-white/5 shadow-2xl relative" style="border-radius: var(--radius)">
+            <div class="h-[500px] shadow-2xl relative" style="border-radius: var(--radius); overflow: hidden;">
                 <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Riestra%205750%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
             </div>
         </div>
-        <div class="container mx-auto px-6 mt-32 pt-12 border-t border-white/5 text-center text-[10px] text-white/20 uppercase tracking-[0.5em]">© 2026 Kleiman Jose E · Todos los derechos reservados</div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         lucide.createIcons();
         AOS.init({ once: false, duration: 1000 });
-
         window.onscroll = function() {
             const nav = document.getElementById("navbar");
             if (window.pageYOffset > 50) nav.classList.add("nav-scrolled");
             else nav.classList.remove("nav-scrolled");
         };
-
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
