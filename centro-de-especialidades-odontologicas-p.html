@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth" style="overflow-x: hidden; width: 100%;">
+<html lang="es" class="scroll-smooth" style="overflow-x: hidden;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -33,7 +33,7 @@
 
         body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; width: 100%; position: relative; }
         .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
-        .nav-scrolled { background: var(--surface) !important; padding: 10px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-scrolled { background: var(--primary) !important; padding: 10px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
         .faq-icon { transition: transform 0.4s ease; }
         .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
@@ -48,22 +48,22 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg" style="border-radius: var(--radius)">C</div>
-                <span class="font-display font-bold text-lg leading-tight">Centro De Especialidades</span>
+                <span class="font-display font-bold text-lg leading-tight text-white">Centro De Especialidades</span>
             </div>
             <a href="https://wa.me/541145837734" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase font-bold text-xs" style="border-radius: var(--radius)">CONTACTAR</a>
         </div>
     </nav>
 
-    <header class="relative h-screen flex flex-col justify-center overflow-hidden w-full">
+    <header class="relative h-screen flex flex-col justify-center overflow-hidden w-full px-4 md:px-0">
         <img src="https://images.unsplash.com/photo-1588776814546-1ffedbe47add?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 hero-overlay"></div>
         <div class="container mx-auto px-6 relative z-10 text-center text-white mb-20" data-aos="fade-up">
-            <h1 class="font-display font-bold text-5xl md:text-9xl mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter">Diseñamos la<br><span class='text-accent'>sonrisa que soñás.</span></h1>
+            <h1 class="font-display font-bold text-5xl md:text-9xl mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter text-white">Diseñamos la<br><span class='text-accent'>sonrisa que soñás.</span></h1>
             <p class="text-lg md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium text-balance text-white">Odontología de precisión en Buenos Aires. Tecnología avanzada y trato humano para transformar tu salud bucal sin dolor.</p>
             <a href="https://wa.me/541145837734" class="bg-accent text-white px-12 py-5 font-black text-base md:text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
         </div>
         <div class="absolute bottom-0 left-0 w-full glass-info py-6 md:py-8 z-20 text-white">
-            <div class="w-full px-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
+            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
                 <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>📅</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Lun–Vie</p><p class="font-bold text-[10px] md:text-sm">9:00 a 19:00 hs</p></div></div>
                 <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🕒</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Sábados</p><p class="font-bold text-[10px] md:text-sm">9:00 a 13:00 hs</p></div></div>
                 <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🚨</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Urgencias</p><p class="font-bold text-[10px] md:text-sm text-accent">Atención inmediata</p></div></div>
@@ -74,7 +74,7 @@
 
     <section class="py-12 md:py-20 bg-bgAlt">
         <div class="container mx-auto px-6">
-            <div class="bg-surface p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 shadow-xl border border-white/5" style="border-radius: var(--radius)">
+            <div class="bg-surface p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 shadow-xl border border-white/10" style="border-radius: var(--radius)">
                 <div class="text-center"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="500">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Pacientes<br>satisfechos</div></div>
                 <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="15">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Años de<br>experiencia</div></div>
                 <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-accent mb-2 leading-none flex items-center justify-center gap-1">★<span class="counter" data-target="49">0</span>★</div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Calificación<br>en Google</div></div>
@@ -91,22 +91,22 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                 <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2 text-text">Limpieza Dental</h4><p class="text-sm opacity-60">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses.</p>
+                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza Dental</h4><p class="text-sm opacity-60">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses.</p>
                 </div>
                 <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2 text-text">Blanqueamiento</h4><p class="text-sm opacity-60">LED de última generación. Resultados visibles hoy.</p>
+                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60">LED de última generación. Resultados visibles hoy.</p>
                 </div>
                 <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2 text-text">Ortodoncia</h4><p class="text-sm opacity-60">Alineadores invisibles o brackets tradicionales.</p>
+                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Ortodoncia</h4><p class="text-sm opacity-60">Alineadores invisibles o brackets tradicionales.</p>
                 </div>
                 <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2 text-text">Implantes</h4><p class="text-sm opacity-60">Titanio de por vida. La solución más natural y definitiva.</p>
+                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Implantes</h4><p class="text-sm opacity-60">Titanio de por vida. La solución más natural y definitiva.</p>
                 </div>
                 <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2 text-text">Coronas y Carillas</h4><p class="text-sm opacity-60">Materiales estéticos de alta calidad para restaurar tu sonrisa.</p>
+                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Coronas y Carillas</h4><p class="text-sm opacity-60">Materiales estéticos de alta calidad para restaurar tu sonrisa.</p>
                 </div>
                 <div class="bg-surface border-2 border-accent p-8 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2 text-accent">Urgencias</h4><p class="text-sm opacity-60 text-text">Atención inmediata. Escribinos ahora mismo por WhatsApp.</p>
+                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2 text-accent">Urgencias</h4><p class="text-sm opacity-60">Atención inmediata. Escribinos ahora mismo por WhatsApp.</p>
                 </div>
             </div>
         </div>
@@ -124,12 +124,12 @@
                 </div>
                 <div class="w-full lg:w-1/2 text-left" data-aos="fade-left">
                     <span class="text-accent font-bold text-xs uppercase tracking-[0.4em] block mb-4">¿Por qué elegirnos?</span>
-                    <h2 class="font-display font-bold text-4xl md:text-5xl text-text mb-12 tracking-tighter leading-tight text-balance">Atención que marca <br> la diferencia.</h2>
+                    <h2 class="font-display font-bold text-4xl md:text-5xl text-text mb-12 tracking-tighter leading-tight text-balance">Atención que marca <br class="hidden md:block"> la diferencia.</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div><div class="text-accent font-black text-xl mb-1">01</div><h4 class="font-bold mb-1 text-sm text-text">Experiencia comprobada</h4><p class="text-xs opacity-60">Más de 15 años transformando sonrisas reales.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">02</div><h4 class="font-bold mb-1 text-sm text-text">Tecnología de punta</h4><p class="text-xs opacity-60">Equipos digitales para diagnósticos precisos.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">03</div><h4 class="font-bold mb-1 text-sm text-text">Financiación accesible</h4><p class="text-xs opacity-60">Planes de pago flexibles y cuotas sin interés.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">04</div><h4 class="font-bold mb-1 text-sm text-text">Ubicación estratégica</h4><p class="text-xs opacity-60">Fácil acceso en transporte público en el corazón de Buenos Aires.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">01</div><h4 class="font-bold mb-1 text-sm">Experiencia comprobada</h4><p class="text-xs opacity-60">Más de 15 años transformando sonrisas reales.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">02</div><h4 class="font-bold mb-1 text-sm">Tecnología de punta</h4><p class="text-xs opacity-60">Equipos digitales para diagnósticos precisos.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">03</div><h4 class="font-bold mb-1 text-sm">Financiación accesible</h4><p class="text-xs opacity-60">Planes de pago flexibles y cuotas sin interés.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">04</div><h4 class="font-bold mb-1 text-sm">Ubicación estratégica</h4><p class="text-xs opacity-60">Fácil acceso en transporte público en el corazón de Buenos Aires.</p></div>
                     </div>
                 </div>
             </div>
@@ -228,10 +228,10 @@
             </div>
             <div class="flex flex-col lg:flex-row gap-12 items-stretch">
                 <div class="w-full lg:w-1/3 grid grid-cols-1 gap-4">
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2">📍 Dirección</p><p class="font-bold text-sm text-text">Paroissien 2440, Cdad. Autónoma de Buenos Aires, Buenos Aires</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2">📞 Teléfono</p><p class="font-bold text-sm text-text">541145837734</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2">💬 WhatsApp</p><p class="font-bold text-sm text-accent">Escribinos al instante</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2">🕐 Horarios</p><p class="text-xs font-bold leading-relaxed text-text">Lun–Vie: 9:00 a 19:00 hs<br>Sábados: 9:00 a 13:00 hs</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📍 Dirección</p><p class="font-bold text-sm text-text">Paroissien 2440, Cdad. Autónoma de Buenos Aires, Buenos Aires</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📞 Teléfono</p><p class="font-bold text-sm text-text">541145837734</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">💬 WhatsApp</p><p class="font-bold text-sm text-accent">Escribinos al instante</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">🕐 Horarios</p><p class="text-xs font-bold leading-relaxed text-text">Lun–Vie: 9:00 a 19:00 hs<br>Sábados: 9:00 a 13:00 hs</p></div>
                 </div>
                 <div class="w-full lg:w-2/3 h-[400px] lg:h-auto overflow-hidden shadow-2xl border border-white/5" style="border-radius: var(--radius);">
                     <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.1) contrast(1.1);" loading="lazy" src="https://maps.google.com/maps?q=Paroissien%202440%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
