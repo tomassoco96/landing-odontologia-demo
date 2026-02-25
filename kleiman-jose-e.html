@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kleiman Jose E | Experiencia Premium</title>
+    
+    <link rel="icon" href="https://fav.farm/🦷" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['var(--font-display)'] },
+                    colors: { primary: 'var(--primary)', accent: 'var(--accent)', surface: 'var(--surface)', text: 'var(--text-main)', bgAlt: 'var(--bg-alt)' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root { --transition: all 0.5s ease; }
+        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --bg-alt: #f8fafc; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.85); --radius: 0px; }
+        [data-theme="organic"] { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --bg-alt: #f5f5f4; --text-main: #57534e; --font-display: '"Playfair Display"', serif; --overlay: rgba(68, 64, 60, 0.75); --radius: 2rem; }
+        [data-theme="vogue"] { --primary: #0c0a09; --accent: #d4af37; --surface: #0c0a09; --bg-alt: #1c1917; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif; --overlay: rgba(12, 10, 9, 0.9); --radius: 0px; }
+        [data-theme="tech"] { --primary: #020617; --accent: #06b6d4; --surface: #020617; --bg-alt: #0f172a; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif; --overlay: radial-gradient(circle, rgba(2,6,23,0.9) 0%, rgba(2,6,23,0.6) 100%); --radius: 0.75rem; }
+        [data-theme="friendly"] { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --bg-alt: #eff6ff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30, 58, 138, 0.7); --radius: 3rem; }
+
+        body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+        .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
+        .nav-scrolled { background: var(--primary) !important; padding: 12px 0 !important; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
+        .faq-icon { transition: transform 0.4s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
+        .glass-info { background: rgba(0,0,0,0.6); backdrop-filter: blur(15px); border-top: 1px solid rgba(255,255,255,0.1); }
+    </style>
+</head>
+<body data-theme="friendly">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-4 transition-all duration-500 text-white px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center font-black text-lg shadow-lg" style="border-radius: var(--radius)">K</div>
+                <span class="font-display font-bold text-sm md:text-lg tracking-tight">Kleiman Jose E</span>
+            </div>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white px-4 py-2 shadow-lg uppercase font-bold text-[10px] md:text-xs" style="border-radius: var(--radius)">CONTACTAR</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-[90vh] md:h-screen flex flex-col justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mt-10 md:mt-0 mb-20" data-aos="fade-up">
+            <h1 class="font-display font-bold text-4xl md:text-9xl mb-6 md:mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter">Tecnología dental<br><span class='text-accent'>de vanguardia.</span></h1>
+            <p class="text-base md:text-2xl opacity-90 max-w-2xl mx-auto mb-8 md:mb-10 font-medium text-balance">Odontología de precisión en Buenos Aires. Tecnología avanzada y trato humano para transformar tu salud bucal sin dolor.</p>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white w-full md:w-auto px-8 py-4 md:px-12 md:py-5 font-black text-base md:text-lg shadow-2xl transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
+        </div>
+        
+        <div class="absolute bottom-0 w-full glass-info py-6 md:py-8 z-20 text-white">
+            <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-left">
+                <div class="flex items-center gap-2 md:gap-3"><span class="text-lg">📅</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Horarios</p><p class="font-bold text-[10px] md:text-sm">9:00 a 19:00 hs</p></div></div>
+                <div class="flex items-center gap-2 md:gap-3"><span class="text-lg">🚨</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Urgencias</p><p class="font-bold text-[10px] md:text-sm text-accent">Atención 24h</p></div></div>
+                <div class="flex items-center gap-2 md:gap-3"><span class="text-lg">🕒</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Sábados</p><p class="font-bold text-[10px] md:text-sm">9:00 a 13:00 hs</p></div></div>
+                <div class="flex items-center gap-2 md:gap-3"><span class="text-lg">💳</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Pagos</p><p class="font-bold text-[10px] md:text-sm">Cuotas sin interés</p></div></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 md:py-20 bg-bgAlt">
+        <div class="container mx-auto px-4">
+            <div class="bg-surface p-6 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 shadow-xl border border-slate-100" style="border-radius: var(--radius)">
+                <div class="text-center"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-1 leading-none">+<span class="counter" data-target="500">0</span></div><div class="text-[8px] md:text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Pacientes</div></div>
+                <div class="text-center border-l border-slate-100"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-1 leading-none">+<span class="counter" data-target="15">0</span></div><div class="text-[8px] md:text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Años Exp.</div></div>
+                <div class="text-center border-l border-slate-100"><div class="font-display font-black text-3xl md:text-5xl text-accent mb-1 leading-none">★<span class="counter" data-target="49">0</span></div><div class="text-[8px] md:text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Google</div></div>
+                <div class="text-center border-l border-slate-100"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-1 leading-none">+<span class="counter" data-target="10">0</span></div><div class="text-[8px] md:text-[10px] font-bold uppercase text-slate-400 tracking-widest leading-tight">Especialidades</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-16 md:py-24 bg-surface">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="font-display font-bold text-3xl md:text-6xl text-slate-900 mb-4 tracking-tighter">Cuidado integral.</h2>
+                <p class="text-slate-500 font-medium text-sm md:text-base max-w-2xl mx-auto">Todo lo que necesitás en un solo lugar, con tecnología de avanzada.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 text-left">
+                <div class="bg-bgAlt p-6 md:p-8 border border-slate-100 transition shadow-sm" style="border-radius: var(--radius)">
+                    <div class="text-2xl mb-4">🦷</div><h4 class="font-bold text-base mb-2">Limpieza Dental</h4><p class="text-xs opacity-60">Sarro y manchas eliminados con ultrasonido profesional.</p>
+                </div>
+                <div class="bg-bgAlt p-6 md:p-8 border border-slate-100 transition shadow-sm" style="border-radius: var(--radius)">
+                    <div class="text-2xl mb-4">✨</div><h4 class="font-bold text-base mb-2">Blanqueamiento</h4><p class="text-xs opacity-60">Tecnología LED para resultados brillantes en una sesión.</p>
+                </div>
+                <div class="bg-white border-2 border-accent p-6 md:p-8 shadow-md" style="border-radius: var(--radius)">
+                    <div class="text-2xl mb-4 text-accent">🚨</div><h4 class="font-bold text-base mb-2 text-accent">Urgencias</h4><p class="text-xs opacity-60 text-slate-600">Atención inmediata. Contactanos por WhatsApp ahora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-slate-950 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="font-display font-bold text-3xl md:text-7xl mb-8 tracking-tighter">Transformá tu sonrisa hoy.</h2>
+            <a href="https://wa.me/541146012481" class="bg-[#25D366] w-full md:w-auto px-10 py-4 font-black text-sm md:text-lg shadow-2xl uppercase tracking-widest inline-block" style="border-radius: var(--radius)">WhatsApp Directo</a>
+            <p class="text-[8px] opacity-20 uppercase tracking-[0.4em] mt-16 italic">© 2026 Kleiman Jose E · Buenos Aires, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true, duration: 800 });
+        window.onscroll = function() {
+            const nav = document.getElementById("navbar");
+            if (window.pageYOffset > 40) nav.classList.add("nav-scrolled");
+            else nav.classList.remove("nav-scrolled");
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    let count = 0;
+                    const updateCount = () => {
+                        const increment = Math.ceil(target / 50);
+                        if (count < target) {
+                            count += increment;
+                            if (count > target) count = target;
+                            el.innerText = count;
+                            setTimeout(updateCount, 30);
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter').forEach(c => observer.observe(c));
+    </script>
+</body>
+</html>
