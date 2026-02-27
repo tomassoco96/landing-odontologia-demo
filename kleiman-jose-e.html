@@ -1,682 +1,247 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth" style="overflow-x: hidden;">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultorio Odontológico Kleiman | Dr. José E. Kleiman</title>
-    <meta name="description" content="Implantes dentales y Rehabilitación Oral en CABA. Más de 22 años de experiencia. Implantes de carga inmediata. Turno por WhatsApp.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Consultorio Odontológico Kleiman | Implantes dentales y Rehabilitación Oral en CABA - Balvanera</title>
+    <meta name="description" content="Más de 22 años de experiencia en implantología. Tecnología de vanguardia y atención personalizada. Nuestros pacientes nos recomiendan.">
+    <link rel="icon" href="https://fav.farm/🦷" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['var(--font-display)'] },
+                    colors: { primary: 'var(--primary)', accent: 'var(--accent)', surface: 'var(--surface)', text: 'var(--text-main)', bgAlt: 'var(--bg-alt)' }
+                }
+            }
+        }
+    </script>
+
     <style>
-        /* CSS_ORIGINAL_PRESERVED */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --primary: #1a6eb5;
-            --primary-dark: #145a96;
-            --primary-light: #e8f2fb;
-            --accent: #27ae60;
-            --accent-dark: #1e8e4f;
-            --text-dark: #1a1a2e;
-            --text-mid: #444;
-            --text-light: #777;
-            --bg-light: #f7f9fc;
-            --white: #ffffff;
-            --border: #dde4ef;
-            --shadow-sm: 0 2px 8px rgba(26,110,181,0.08);
-            --shadow-md: 0 6px 24px rgba(26,110,181,0.13);
-            --shadow-lg: 0 16px 48px rgba(26,110,181,0.18);
-            --radius: 14px;
-            --radius-lg: 22px;
-            --transition: 0.25s cubic-bezier(.4,0,.2,1);
-        }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; display: block; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .btn-primary {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            color: var(--white); font-weight: 700; font-size: 1.05rem;
-            padding: 15px 32px; border-radius: 50px; border: none; cursor: pointer;
-            box-shadow: 0 4px 18px rgba(39,174,96,0.25); transition: var(--transition);
-            text-decoration: none;
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(39,174,96,0.35); }
-        .btn-secondary {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: transparent; color: var(--primary); font-weight: 600; font-size: 1rem;
-            padding: 13px 28px; border-radius: 50px; border: 2px solid var(--primary); cursor: pointer;
-            transition: var(--transition); text-decoration: none;
-        }
-        .btn-secondary:hover { background: var(--primary); color: var(--white); }
-        section { padding: 80px 0; }
-        .section-label { font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
-        .section-title { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--text-dark); line-height: 1.2; margin-bottom: 16px; }
-        .section-sub { font-size: 1.05rem; color: var(--text-light); max-width: 560px; }
-
-        /* NAV */
-        nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-            background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm);
-        }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-        .nav-logo { display: flex; align-items: center; gap: 12px; }
-        .nav-logo-icon {
-            width: 42px; height: 42px; border-radius: 10px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .nav-logo-icon svg { width: 24px; height: 24px; fill: white; }
-        .nav-logo-text { font-weight: 800; font-size: 1rem; color: var(--text-dark); line-height: 1.2; }
-        .nav-logo-text span { color: var(--primary); }
-        .nav-logo-sub { font-size: 0.72rem; color: var(--text-light); font-weight: 400; }
-        .nav-links { display: flex; align-items: center; gap: 28px; }
-        .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-mid); transition: var(--transition); }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-cta { font-size: 0.88rem !important; font-weight: 700 !important; color: var(--white) !important; background: var(--primary); padding: 9px 20px; border-radius: 50px; }
-        .nav-cta:hover { background: var(--primary-dark) !important; color: var(--white) !important; }
-        .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        @media(max-width:768px){
-            .nav-links { display: none; }
-            .nav-mobile-btn { display: block; }
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 100vh; padding-top: 68px;
-            background: linear-gradient(135deg, #0d3b6e 0%, #1a6eb5 50%, #1a8bc4 100%);
-            display: flex; align-items: center; position: relative; overflow: hidden;
-        }
-        .hero::before {
-            content: ''; position: absolute; inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); color: white; font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: 50px; margin-bottom: 22px; }
-        .hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #5dffa0; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
-        .hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 18px; }
-        .hero h1 span { color: #7de8b0; }
-        .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
-        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
-        .hero-stats { display: flex; gap: 28px; flex-wrap: wrap; }
-        .hero-stat { text-align: center; }
-        .hero-stat-num { font-size: 1.8rem; font-weight: 800; color: white; line-height: 1; }
-        .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 3px; }
-        .hero-img-wrap {
-            position: relative; display: flex; justify-content: center; align-items: center;
-        }
-        .hero-img-card {
-            background: rgba(255,255,255,0.12); backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-lg);
-            padding: 32px; text-align: center; max-width: 360px; width: 100%;
-        }
-        .hero-img-avatar {
-            width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 18px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
-            display: flex; align-items: center; justify-content: center;
-            border: 4px solid rgba(255,255,255,0.4); font-size: 3.5rem;
-            color: white; overflow: hidden;
-        }
-        .hero-img-name { font-size: 1.15rem; font-weight: 700; color: white; margin-bottom: 4px; }
-        .hero-img-spec { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
-        .hero-img-badges { display: flex; flex-direction: column; gap: 8px; }
-        .hero-img-badge-item {
-            display: flex; align-items: center; gap: 10px;
-            background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px;
-            color: rgba(255,255,255,0.9); font-size: 0.8rem;
-        }
-        .hero-img-badge-item svg { width: 16px; height: 16px; flex-shrink: 0; }
-        @media(max-width:768px){
-            .hero-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
-            .hero-btns { justify-content: center; }
-            .hero-stats { justify-content: center; }
-            .hero-img-wrap { order: -1; }
-        }
-
-        /* TRUST BAR */
-        .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 22px 0; }
-        .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
-        .trust-item { display: flex; align-items: center; gap: 9px; font-size: 0.88rem; font-weight: 600; color: var(--text-mid); }
-        .trust-item svg { width: 20px; height: 20px; color: var(--primary); }
-
-        /* SERVICES */
-        .services { background: var(--bg-light); }
-        .services-header { text-align: center; margin-bottom: 52px; }
-        .services-header .section-sub { margin: 0 auto; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .service-card {
-            background: var(--white); border-radius: var(--radius); padding: 30px;
-            border: 1px solid var(--border); box-shadow: var(--shadow-sm);
-            transition: var(--transition); position: relative; overflow: hidden;
-        }
-        .service-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0); transform-origin: left; transition: var(--transition);
-        }
-        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-        .service-card:hover::before { transform: scaleX(1); }
-        .service-icon {
-            width: 52px; height: 52px; border-radius: 12px; margin-bottom: 18px;
-            background: var(--primary-light); display: flex; align-items: center; justify-content: center;
-        }
-        .service-icon svg { width: 26px; height: 26px; color: var(--primary); }
-        .service-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
-        .service-desc { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
-
-        /* ABOUT */
-        .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-        .about-img-col { position: relative; }
-        .about-img-frame {
-            background: linear-gradient(135deg, var(--primary-light), #d0e8ff);
-            border-radius: var(--radius-lg); padding: 32px; text-align: center;
-            border: 1px solid var(--border);
-        }
-        .about-avatar {
-            width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 20px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            display: flex; align-items: center; justify-content: center;
-            font-size: 4rem; border: 5px solid white; box-shadow: var(--shadow-md);
-            overflow: hidden;
-        }
-        .about-name { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
-        .about-spec { font-size: 0.88rem; color: var(--primary); font-weight: 600; margin-top: 4px; margin-bottom: 20px; }
-        .about-badges { display: flex; flex-direction: column; gap: 10px; }
-        .about-badge {
-            display: flex; align-items: center; gap: 10px;
-            background: white; border-radius: 10px; padding: 10px 14px;
-            font-size: 0.83rem; font-weight: 500; color: var(--text-mid);
-            box-shadow: var(--shadow-sm); border: 1px solid var(--border);
-        }
-        .about-badge svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; }
-        .about-text-col { }
-        .about-desc { font-size: 1rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px; }
-        .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
-        .about-hl {
-            background: var(--bg-light); border-radius: var(--radius); padding: 18px;
-            border: 1px solid var(--border); text-align: center;
-        }
-        .about-hl-num { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
-        .about-hl-label { font-size: 0.8rem; color: var(--text-light); margin-top: 3px; }
-        @media(max-width:768px){ .about-inner { grid-template-columns: 1fr; gap: 36px; } }
-
-        /* OBRAS SOCIALES */
-        .os-section { background: var(--bg-light); }
-        .os-header { text-align: center; margin-bottom: 44px; }
-        .os-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-        .os-pill {
-            display: flex; align-items: center; gap: 9px;
-            background: var(--white); border: 1px solid var(--border);
-            border-radius: 50px; padding: 11px 22px; font-size: 0.92rem; font-weight: 600;
-            color: var(--text-mid); box-shadow: var(--shadow-sm); transition: var(--transition);
-        }
-        .os-pill:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
-        .os-pill svg { width: 18px; height: 18px; color: var(--accent); }
-        .pagos-section { margin-top: 52px; text-align: center; }
-        .pagos-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--text-dark); }
-        .pagos-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-        .pago-tag {
-            background: var(--white); border: 1px solid var(--border); border-radius: 8px;
-            padding: 8px 18px; font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
-            box-shadow: var(--shadow-sm);
-        }
-
-        /* REVIEWS */
-        .reviews { background: var(--white); }
-        .reviews-header { text-align: center; margin-bottom: 52px; }
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .review-card {
-            background: var(--bg-light); border-radius: var(--radius); padding: 28px;
-            border: 1px solid var(--border); box-shadow: var(--shadow-sm); position: relative;
-        }
-        .review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
-        .review-stars svg { width: 18px; height: 18px; fill: #f59e0b; }
-        .review-text { font-size: 0.97rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
-        .review-author { display: flex; align-items: center; gap: 12px; }
-        .review-avatar {
-            width: 42px; height: 42px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; color: white; font-size: 1rem;
-        }
-        .review-name { font-weight: 700; font-size: 0.92rem; }
-        .review-source { font-size: 0.78rem; color: var(--text-light); }
-
-        /* FAQ */
-        .faq { background: var(--bg-light); }
-        .faq-header { text-align: center; margin-bottom: 44px; }
-        .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
-        .faq-item {
-            background: var(--white); border-radius: var(--radius); border: 1px solid var(--border);
-            overflow: hidden; box-shadow: var(--shadow-sm);
-        }
-        .faq-q {
-            width: 100%; display: flex; align-items: center; justify-content: space-between;
-            padding: 20px 24px; font-size: 0.97rem; font-weight: 600; color: var(--text-dark);
-            background: none; border: none; cursor: pointer; text-align: left; gap: 16px;
-            transition: var(--transition);
-        }
-        .faq-q:hover { color: var(--primary); }
-        .faq-q svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary); transition: var(--transition); }
-        .faq-a { padding: 0 24px 20px; font-size: 0.93rem; color: var(--text-mid); line-height: 1.7; }
-
-        /* CONTACT */
-        .contact { background: var(--white); }
-        .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
-        .contact-info-card {
-            background: var(--bg-light); border-radius: var(--radius-lg); padding: 36px;
-            border: 1px solid var(--border);
-        }
-        .contact-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 24px; color: var(--text-dark); }
-        .contact-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
-        .contact-item { display: flex; align-items: flex-start; gap: 14px; }
-        .contact-item-icon {
-            width: 42px; height: 42px; border-radius: 10px; background: var(--primary-light);
-            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-        }
-        .contact-item-icon svg { width: 20px; height: 20px; color: var(--primary); }
-        .contact-item-label { font-size: 0.78rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-item-val { font-size: 0.97rem; font-weight: 600; color: var(--text-dark); margin-top: 2px; }
-        .contact-cta-col { display: flex; flex-direction: column; gap: 20px; justify-content: center; }
-        .cta-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: var(--radius-lg); padding: 36px; color: white; text-align: center;
-        }
-        .cta-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
-        .cta-card p { font-size: 0.92rem; opacity: 0.85; margin-bottom: 24px; line-height: 1.6; }
-        .btn-wa {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: #25d366; color: white; font-weight: 700; font-size: 1.05rem;
-            padding: 15px 32px; border-radius: 50px; box-shadow: 0 4px 18px rgba(37,211,102,0.35);
-            transition: var(--transition); text-decoration: none;
-        }
-        .btn-wa:hover { background: #1db855; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
-        .btn-wa svg { width: 22px; height: 22px; }
-        .social-row { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
-        .social-btn {
-            width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center;
-            justify-content: center; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
-            color: white; transition: var(--transition);
-        }
-        .social-btn:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
-        .social-btn svg { width: 20px; height: 20px; }
-        @media(max-width:768px){ .contact-inner { grid-template-columns: 1fr; gap: 28px; } }
-
-        /* FOOTER */
-        footer {
-            background: #0d1a2e; color: rgba(255,255,255,0.7); padding: 36px 0 24px;
-            font-size: 0.88rem;
-        }
-        .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-        .footer-logo { font-weight: 800; font-size: 1rem; color: white; }
-        .footer-logo span { color: #7de8b0; }
-
-        /* FLOATING WA */
-        .float-wa {
-            position: fixed; bottom: 28px; right: 28px; z-index: 999;
-            width: 60px; height: 60px; border-radius: 50%; background: #25d366;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.45); transition: var(--transition);
-            text-decoration: none;
-        }
-        .float-wa:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.55); }
-        .float-wa svg { width: 30px; height: 30px; fill: white; }
-        /* CSS_ORIGINAL_PRESERVED */
+        :root { --transition: all 0.5s ease; }
+        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --bg-alt: #f8fafc; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.85); --radius: 0px; }
+        [data-theme="organic"]   { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --bg-alt: #f5f5f4; --text-main: #57534e; --font-display: '"Playfair Display"', serif;       --overlay: rgba(68, 64, 60, 0.75); --radius: 2rem; }
+        [data-theme="vogue"]     { --primary: #d4af37; --accent: #d4af37; --surface: #0c0a09; --bg-alt: #1c1917; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif;       --overlay: rgba(12, 10, 9, 0.9);   --radius: 0px; }
+        [data-theme="tech"]      { --primary: #06b6d4; --accent: #06b6d4; --surface: #020617; --bg-alt: #0f172a; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif;    --overlay: radial-gradient(circle, rgba(2,6,23,0.9) 0%, rgba(2,6,23,0.6) 100%); --radius: 0.75rem; }
+        [data-theme="friendly"]  { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --bg-alt: #eff6ff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30, 58, 138, 0.7); --radius: 3rem; }
+        body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; width: 100%; position: relative; }
+        .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
+        .nav-scrolled { background: var(--primary) !important; padding: 10px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
+        .faq-icon { transition: transform 0.4s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
+        .glass-info { background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-top: 1px solid rgba(255,255,255,0.1); width: 100% !important; left: 0 !important; right: 0 !important; }
+        .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease; }
+        .testimonial-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
     </style>
 </head>
-<body>
+<body data-theme="architect">
 
-<!-- NAV -->
-<nav>
-    <div class="container">
-        <div class="nav-inner">
-            <div class="nav-logo">
-                <div class="nav-logo-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.5 2 6 5 6 8c0 1.5.5 3 1 4.5C8 15 9 17.5 9 20c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2 0-2.5 1-5 2-7.5.5-1.5 1-3 1-4.5 0-3-2.5-6-6-6z"/></svg>
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 transition-all duration-500 text-white px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg" style="border-radius: var(--radius)">C</div>
+                <span class="font-display font-bold text-lg leading-tight text-white">Consultorio Odontológico Kleiman</span>
+            </div>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase font-bold text-xs" style="border-radius: var(--radius)">CONTACTAR</a>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex flex-col justify-center overflow-hidden w-full px-4 md:px-0">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mb-20" data-aos="fade-up">
+            <h1 class="font-display font-bold text-5xl md:text-9xl mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter text-white">Diseñamos la<br><span class='text-accent'>sonrisa que soñás.</span></h1>
+            <p class="text-lg md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium text-balance text-white">Más de 22 años de experiencia en implantología. Tecnología de vanguardia y atención personalizada. Nuestros pacientes nos recomiendan.</p>
+            <a href="https://wa.me/541146012481" class="bg-accent text-white px-12 py-5 font-black text-base md:text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full glass-info py-6 md:py-8 z-20 text-white">
+            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>📅</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Lunes a Viernes de 9</p><p class="font-bold text-[10px] md:text-sm">00 a 19</p></div></div>
+                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🕒</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Sábados</p><p class="font-bold text-[10px] md:text-sm">9:00 a 13:00 hs</p></div></div>
+                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🚨</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Urgencias</p><p class="font-bold text-[10px] md:text-sm text-accent">Atención inmediata</p></div></div>
+                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>💳</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Financiación</p><p class="font-bold text-[10px] md:text-sm">Cuotas sin interés</p></div></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12 md:py-20 bg-bgAlt">
+        <div class="container mx-auto px-6">
+            <div class="bg-surface p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 shadow-xl border border-white/10" style="border-radius: var(--radius)">
+                <div class="text-center"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="500">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Pacientes<br>satisfechos</div></div>
+                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="22">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Años de<br>experiencia</div></div>
+                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-accent mb-2 leading-none flex items-center justify-center gap-1">★<span class="counter" data-target="49">0</span>★</div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Calificación<br>en Google</div></div>
+                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="10">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Especialidades<br>disponibles</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 bg-surface">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="font-display font-bold text-4xl md:text-6xl text-text mb-4 tracking-tighter">Cuidado integral.</h2>
+                <p class="text-text opacity-70 font-medium max-w-2xl mx-auto">Todo lo que necesitás para mantener tu sonrisa saludable en un solo lugar, con la mejor tecnología.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)"><div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza dental</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+<div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)"><div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+<div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)"><div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Implantes dentales</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+<div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)"><div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Coronas y carillas</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+<div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)"><div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Endodoncia</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+<div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition border-2 border-accent" style="border-radius: var(--radius)"><div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2">Urgencias dentales</h4><p class="text-sm opacity-60">Atención personalizada con tecnología de primer nivel.</p></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-bgAlt border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80" class="w-full h-[300px] md:h-[500px] object-cover shadow-2xl" style="border-radius: var(--radius)">
+                    <div class="absolute bottom-6 left-6 bg-surface p-6 shadow-2xl text-center" style="border-radius: var(--radius)">
+                        <div class="text-accent font-black text-2xl md:text-3xl leading-none">+22 años</div>
+                        <div class="text-[10px] font-bold uppercase opacity-60 tracking-widest mt-1">de experiencia</div>
+                    </div>
                 </div>
+                <div class="w-full lg:w-1/2 text-left" data-aos="fade-left">
+                    <span class="text-accent font-bold text-xs uppercase tracking-[0.4em] block mb-4">¿Por qué elegirnos?</span>
+                    <h2 class="font-display font-bold text-4xl md:text-5xl text-text mb-12 tracking-tighter leading-tight text-balance">Atención que marca <br class="hidden md:block"> la diferencia.</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div><div class="text-accent font-black text-xl mb-1">01</div><h4 class="font-bold mb-1 text-sm">Experiencia comprobada</h4><p class="text-xs opacity-60">Más de 22 años transformando sonrisas reales.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">02</div><h4 class="font-bold mb-1 text-sm">Tecnología de punta</h4><p class="text-xs opacity-60">Equipos digitales para diagnósticos precisos.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">03</div><h4 class="font-bold mb-1 text-sm">Financiación accesible</h4><p class="text-xs opacity-60">Efectivo, Débito, Crédito, Cuotas sin interés, MercadoPago.</p></div>
+                        <div><div class="text-accent font-black text-xl mb-1">04</div><h4 class="font-bold mb-1 text-sm">Ubicación estratégica</h4><p class="text-xs opacity-60">Fácil acceso en transporte público en el corazón de CABA - Balvanera.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#0a0c10] text-white">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 text-left">
+                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Lo que dicen nuestros pacientes</span>
+                <h2 class="font-display font-bold text-5xl tracking-tighter">Experiencias reales</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 flex flex-col justify-between" style="border-radius: var(--radius)"><div><div class="text-accent mb-4">★★★★★</div><p class="text-lg italic opacity-80 mb-8">&ldquo;Excelente profesional. Me hice los implantes y quedé feliz con el resultado. Muy atento y explicó todo en detalle.&rdquo;</p></div><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-surface">MG</div><div><p class="font-bold">María González</p><p class="text-[10px] opacity-50 uppercase tracking-widest">Paciente</p></div></div></div>
+<div class="testimonial-card p-8 flex flex-col justify-between" style="border-radius: var(--radius)"><div><div class="text-accent mb-4">★★★★★</div><p class="text-lg italic opacity-80 mb-8">&ldquo;Muy buen consultorio, limpio, moderno y el Dr. Kleiman es muy profesional. Lo recomiendo sin dudas.&rdquo;</p></div><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-surface">CM</div><div><p class="font-bold">Carlos Mendez</p><p class="text-[10px] opacity-50 uppercase tracking-widest">Paciente</p></div></div></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="preguntas" class="py-24 bg-surface">
+        <div class="container mx-auto px-6">
+            <div class="text-left mb-16" data-aos="fade-right">
+                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Preguntas frecuentes</span>
+                <h2 class="font-display font-bold text-5xl mb-4 tracking-tighter text-text">Resolvemos tus dudas</h2>
+                <p class="text-text opacity-70 max-w-2xl">Las preguntas más comunes que nos hacen antes de sacar un turno.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')"><div class="flex flex-col items-center font-bold text-sm text-text">¿Hacen atención de urgencias? <span class="faq-icon text-accent mt-2">+</span></div><div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Sí, atendemos urgencias de lunes a viernes de 8 a 20 hs. Llamanos al WhatsApp y te damos turno el mismo día.</div></div>
+<div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')"><div class="flex flex-col items-center font-bold text-sm text-text">¿Trabajan con obras sociales? <span class="faq-icon text-accent mt-2">+</span></div><div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Trabajamos con OSDE, Swiss Medical, Galeno, Medicus e IOMA. Consultá por tu cobertura.</div></div>
+<div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')"><div class="flex flex-col items-center font-bold text-sm text-text">¿Cuánto dura una limpieza? <span class="faq-icon text-accent mt-2">+</span></div><div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Una limpieza completa dura entre 45 y 60 minutos. El valor depende de la cobertura de tu obra social.</div></div>
+<div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')"><div class="flex flex-col items-center font-bold text-sm text-text">¿Cómo saco un turno? <span class="faq-icon text-accent mt-2">+</span></div><div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Por WhatsApp al +5491146012481 o llamando al consultorio.</div></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-bgAlt">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Cobertura</span>
+            <h2 class="font-display font-bold text-5xl mb-4 tracking-tighter text-text">Obras sociales y prepagas</h2>
+            <div class="flex flex-wrap justify-center gap-4 mt-12 max-w-4xl mx-auto">
+                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">OSDE</span>
+<span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Swiss Medical</span>
+<span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Galeno</span>
+<span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Medicus</span>
+<span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">IOMA</span>
+<span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-accent/30 shadow-sm text-accent">+ Consultá la tuya</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-surface">
+        <div class="container mx-auto px-6 text-left">
+            <div class="mb-16">
+                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Dónde encontrarnos</span>
+                <h2 class="font-display font-bold text-5xl text-text tracking-tighter leading-tight">Visitanos en CABA - Balvanera</h2>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+                <div class="w-full lg:w-1/3 grid grid-cols-1 gap-4">
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📍 Dirección</p><p class="font-bold text-sm text-text">Av. Corrientes 1234, Piso 3, Buenos Aires, CABA - Balvanera</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📞 Teléfono</p><p class="font-bold text-sm text-text">541146012481</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">💬 WhatsApp</p><p class="font-bold text-sm text-accent">Escribinos al instante</p></div>
+                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">🕐 Horarios</p><p class="text-xs font-bold leading-relaxed text-text">Lunes a Viernes de 9:00 a 19:00 hs. Sábados de 9:00 a 13:00 hs.</p></div>
+                </div>
+                <div class="w-full lg:w-2/3 h-[400px] lg:h-auto overflow-hidden shadow-2xl border border-white/5" style="border-radius: var(--radius);">
+                    <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.1) contrast(1.1);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Corrientes%201234%2C%20Piso%203%2C%20Buenos%20Aires%2C%20CABA%20-%20Balvanera%2C%20Argentina&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 bg-[#0a0c10] text-white text-center">
+        <div class="container mx-auto px-6">
+            <div class="mb-24">
+                <h2 class="font-display font-bold text-5xl md:text-7xl mb-6 tracking-tighter">Transformá tu sonrisa hoy.</h2>
+                <p class="text-xl opacity-80 mb-12 max-w-3xl mx-auto leading-relaxed">Reservá tu consulta inicial sin costo por WhatsApp.</p>
+                <a href="https://wa.me/541146012481" class="bg-[#25D366] px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition block md:inline-block uppercase tracking-widest text-surface" style="border-radius: var(--radius)">WhatsApp Directo</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 pt-16 border-t border-white/10 text-left">
                 <div>
-                    <div class="nav-logo-text"><span>Kleiman</span> Odontología</div>
-                    <div class="nav-logo-sub">Dr. José E. Kleiman</div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg text-surface" style="border-radius: var(--radius)">C</div>
+                        <span class="font-display font-bold text-lg leading-tight text-white">Consultorio Odontológico Kleiman</span>
+                    </div>
+                    <div class="flex gap-4 mt-4 opacity-60 text-xs font-medium"><a href="https://instagram.com/kleiman.odontologia" target="_blank" class="hover:opacity-100 hover:text-accent transition">Instagram</a></div>
                 </div>
+                <div><h4 class="font-bold text-lg mb-6 text-accent">Servicios</h4><ul class="space-y-3 opacity-60 text-xs font-medium uppercase"><li>Limpieza dental</li><li>Blanqueamiento</li><li>Implantes dentales</li><li>Coronas y carillas</li></ul></div>
+                <div><h4 class="font-bold text-lg mb-6 text-accent">Contacto</h4><ul class="space-y-3 opacity-60 text-xs font-medium"><li>541146012481</li><li>WhatsApp</li><li>Av. Corrientes 1234, Piso 3, Buenos Aires</li><li>CABA - Balvanera</li><li>tomasoco96@gmail.com</li></ul></div>
+                <div><h4 class="font-bold text-lg mb-2 text-accent">Horarios</h4><ul class="space-y-2 opacity-60 text-xs font-medium"><li>Lunes a Viernes de 9:00 a 19:00 hs. Sábados de 9:00 a 13:00 hs.</li><li class="text-accent font-bold">Urgencias: WhatsApp</li></ul></div>
             </div>
-            <div class="nav-links">
-                <a href="#servicios">Servicios</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#obras-sociales">Coberturas</a>
-                <a href="#opiniones">Opiniones</a>
-                <a href="#faq">Preguntas</a>
-                <a href="https://wa.me/541146012481" class="nav-cta" target="_blank">Turno por WhatsApp</a>
-            </div>
-            <button class="nav-mobile-btn" aria-label="Menú">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-            </button>
+            <p class="text-[10px] opacity-20 uppercase tracking-[0.4em] pt-8">© 2026 Consultorio Odontológico Kleiman · Todos los derechos reservados</p>
         </div>
-    </div>
-</nav>
+    </footer>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-inner">
-            <div class="hero-text-col">
-                <div class="hero-badge">
-                    <span class="hero-badge-dot"></span>
-                    Consultorio abierto · CABA - Balvanera
-                </div>
-                <h1>Implantes Dentales y <span>Rehabilitación Oral</span> de excelencia</h1>
-                <p class="hero-desc">Implantes de carga inmediata: en un solo día recuperás tu sonrisa sin necesidad de internación. Más de 22 años de experiencia al servicio de tu salud dental.</p>
-                <div class="hero-btns">
-                    <a href="https://wa.me/541146012481" class="btn-primary" target="_blank">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.113 1.52 5.845L0 24l6.335-1.505A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.727.885.924-3.619-.236-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
-                        Pedir turno por WhatsApp
-                    </a>
-                    <a href="#servicios" class="btn-secondary" style="color:white;border-color:rgba(255,255,255,0.5);">Ver servicios</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-num">22+</div>
-                        <div class="hero-stat-label">Años de experiencia</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-num">5★</div>
-                        <div class="hero-stat-label">Valoración pacientes</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-num">5</div>
-                        <div class="hero-stat-label">Obras sociales</div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-img-wrap">
-                <div class="hero-img-card">
-                    <div class="hero-img-avatar">🦷</div>
-                    <div class="hero-img-name">Dr. José E. Kleiman</div>
-                    <div class="hero-img-spec">Implantes dentales y Rehabilitación Oral</div>
-                    <div class="hero-img-badges">
-                        <div class="hero-img-badge-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Miembro Asoc. Argentina de Implantología
-                        </div>
-                        <div class="hero-img-badge-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Docente UBA desde 2010
-                        </div>
-                        <div class="hero-img-badge-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Tecnología de vanguardia
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <a href="https://wa.me/541146012481" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-[#25D366] flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" style="border-radius: 50%" title="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.099 1.508 5.825L0 24l6.341-1.488A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.888 0-3.667-.503-5.2-1.382l-.368-.215-3.832.899.914-3.742-.238-.381A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-    <div class="container">
-        <div class="trust-bar-inner">
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Lun–Vie 9:00–19:00 | Sáb 9:00–13:00
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Av. Corrientes 1234, Piso 3 · CABA
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-                OSDE · Swiss Medical · Galeno · Medicus · IOMA
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                +22 años de trayectoria
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- SERVICES -->
-<section class="services" id="servicios">
-    <div class="container">
-        <div class="services-header">
-            <div class="section-label">Nuestros servicios</div>
-            <h2 class="section-title">Todo lo que necesitás para tu salud dental</h2>
-            <p class="section-sub">Ofrecemos atención integral con tecnología de vanguardia y el respaldo de más de dos décadas de experiencia.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.5 2 6 5 6 8c0 1.5.5 3 1 4.5C8 15 9 17.5 9 20c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2 0-2.5 1-5 2-7.5.5-1.5 1-3 1-4.5 0-3-2.5-6-6-6z"/></svg>
-                </div>
-                <div class="service-title">Limpieza dental</div>
-                <div class="service-desc">Profilaxis profesional para eliminar sarro y placa bacteriana. Fundamental para prevenir enfermedades periodontales y mantener tu salud bucal.</div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                </div>
-                <div class="service-title">Blanqueamiento</div>
-                <div class="service-desc">Recuperá la blancura natural de tus dientes con nuestros tratamientos de blanqueamiento profesional, seguros y eficaces.</div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-                </div>
-                <div class="service-title">Implantes dentales</div>
-                <div class="service-desc">Implantes de carga inmediata: en un solo día recuperás tu sonrisa sin internación. Especialidad del Dr. Kleiman con más de 22 años de experiencia.</div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="service-title">Coronas y carillas</div>
-                <div class="service-desc">Restauraciones estéticas y funcionales de alta calidad. Recuperá la forma, color y función de tus dientes con materiales de última generación.</div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                </div>
-                <div class="service-title">Endodoncia</div>
-                <div class="service-desc">Tratamiento de conductos para salvar dientes comprometidos. Procedimiento indoloro con técnicas modernas que preservan tu dentadura natural.</div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                </div>
-                <div class="service-title">Urgencias dentales</div>
-                <div class="service-desc">Atendemos urgencias de lunes a viernes. Contactanos por WhatsApp y te damos turno el mismo día para aliviar tu dolor cuanto antes.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="nosotros">
-    <div class="container">
-        <div class="about-inner">
-            <div class="about-img-col">
-                <div class="about-img-frame">
-                    <div class="about-avatar">👨‍⚕️</div>
-                    <div class="about-name">Dr. José E. Kleiman</div>
-                    <div class="about-spec">Implantes dentales y Rehabilitación Oral</div>
-                    <div class="about-badges">
-                        <div class="about-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Miembro Asoc. Argentina de Implantología
-                        </div>
-                        <div class="about-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Docente UBA desde 2010
-                        </div>
-                        <div class="about-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            +22 años en implantología
-                        </div>
-                        <div class="about-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Tecnología de vanguardia
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="about-text-col">
-                <div class="section-label">Sobre nosotros</div>
-                <h2 class="section-title">Más de 22 años transformando sonrisas</h2>
-                <p class="about-desc">El Dr. José E. Kleiman es especialista en Implantes dentales y Rehabilitación Oral, con más de dos décadas de trayectoria en CABA. Miembro activo de la Asociación Argentina de Implantología y docente de la UBA desde 2010, combina experiencia clínica con formación académica de excelencia.</p>
-                <p class="about-desc">Nuestro consultorio se distingue por el uso de tecnología de vanguardia, un trato personalizado y resultados que nuestros propios pacientes recomiendan. Especialistas en implantes de carga inmediata: recuperás tu sonrisa en un solo día.</p>
-                <div class="about-highlights">
-                    <div class="about-hl">
-                        <div class="about-hl-num">22+</div>
-                        <div class="about-hl-label">Años de experiencia</div>
-                    </div>
-                    <div class="about-hl">
-                        <div class="about-hl-num">UBA</div>
-                        <div class="about-hl-label">Docente desde 2010</div>
-                    </div>
-                    <div class="about-hl">
-                        <div class="about-hl-num">5★</div>
-                        <div class="about-hl-label">Valoración promedio</div>
-                    </div>
-                    <div class="about-hl">
-                        <div class="about-hl-num">1 día</div>
-                        <div class="about-hl-label">Implante carga inmediata</div>
-                    </div>
-                </div>
-                <a href="https://wa.me/541146012481" class="btn-primary" target="_blank">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.113 1.52 5.845L0 24l6.335-1.505A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.727.885.924-3.619-.236-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
-                    Consultá sin compromiso
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- OBRAS SOCIALES -->
-<section class="os-section" id="obras-sociales">
-    <div class="container">
-        <div class="os-header">
-            <div class="section-label">Coberturas y pagos</div>
-            <h2 class="section-title">Trabajamos con tu obra social</h2>
-            <p class="section-sub" style="margin:0 auto;">Aceptamos las principales obras sociales y prepagos. Consultá por tu cobertura particular.</p>
-        </div>
-        <div class="os-grid">
-            <div class="os-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                OSDE
-            </div>
-            <div class="os-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Swiss Medical
-            </div>
-            <div class="os-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Galeno
-            </div>
-            <div class="os-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                Medicus
-            </div>
-            <div class="os-pill">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                IOMA
-            </div>
-        </div>
-        <div class="pagos-section">
-            <div class="pagos-title">Formas de pago aceptadas</div>
-            <div class="pagos-list">
-                <div class="pago-tag">💵 Efectivo</div>
-                <div class="pago-tag">💳 Débito</div>
-                <div class="pago-tag">💳 Crédito</div>
-                <div class="pago-tag">📆 Cuotas sin interés</div>
-                <div class="pago-tag">📱 MercadoPago</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="reviews" id="opiniones">
-    <div class="container">
-        <div class="reviews-header">
-            <div class="section-label">Lo que dicen nuestros pacientes</div>
-            <h2 class="section-title">Pacientes que nos recomiendan</h2>
-        </div>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-stars">
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <p class="review-text">"Excelente profesional. Me hice los implantes y quedé feliz con el resultado. Muy atento y explicó todo en detalle."</p>
-                <div class="review-author">
-                    <div class="review-avatar">MG</div>
-                    <div>
-                        <div class="review-name">María González</div>
-                        <div class="review-source">Paciente verificada</div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <p class="review-text">"Muy buen consultorio, limpio, moderno y el Dr. Kleiman es muy profesional. Lo recomiendo sin dudas."</p>
-                <div class="review-author">
-                    <div class="review-avatar">CM</div>
-                    <div>
-                        <div class="review-name">Carlos Mendez</div>
-                        <div class="review-source">Paciente verificado</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-    <div class="container">
-        <div class="faq-header">
-            <div class="section-label">Preguntas frecuentes</div>
-            <h2 class="section-title">Todo lo que necesitás saber</h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
-                    ¿Hacen atención de urgencias?
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="faq-a">Sí, atendemos urgencias de lunes a viernes de 8 a 20 hs. Llamanos al WhatsApp y te damos turno el mismo día.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
-                    ¿Trabajan con obras sociales?
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="faq-a">Trabajamos con OSDE, Swiss Medical, Galeno, Medicus e IOMA. Consultá por tu cobertura.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
-                    ¿Cuánto dura una limpieza?
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="faq-a">Una limpieza completa dura entre 45 y 60 minutos. El valor depende de la cobertura de tu obra social.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
-                    ¿Cómo saco un turno?
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                </button>
-                <div class="faq-a">Por WhatsApp al +54 11 4601-2481 o llam
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ once: true, duration: 1000 });
+        window.onscroll = function() {
+            const nav = document.getElementById("navbar");
+            if (nav && window.pageYOffset > 50) nav.classList.add("nav-scrolled");
+            else if (nav) nav.classList.remove("nav-scrolled");
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-target'));
+                    let count = 0;
+                    const updateCount = () => {
+                        const increment = Math.ceil(target / 80);
+                        if (count < target) { count += increment; if (count > target) count = target; el.innerText = count; setTimeout(updateCount, 20); }
+                    };
+                    updateCount();
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.8 });
+        document.querySelectorAll('.counter').forEach(c => observer.observe(c));
+    </script>
+</body>
+</html>
