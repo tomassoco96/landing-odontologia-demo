@@ -1,542 +1,682 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consultorio Odontológico Kleiman | Dr. José E. Kleiman | Implantes y Rehabilitación Oral</title>
-<meta name="description" content="Consultorio Odontológico Kleiman. Dr. José E. Kleiman, especialista en Implantes Dentales y Rehabilitación Oral con 22 años de experiencia. Ubicado en Av. Corrientes 1234, CABA.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Odontológico Kleiman | Dr. José E. Kleiman</title>
+    <meta name="description" content="Implantes dentales y Rehabilitación Oral en CABA. Más de 22 años de experiencia. Implantes de carga inmediata. Turno por WhatsApp.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS_ORIGINAL_PRESERVED */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #1a6eb5;
+            --primary-dark: #145a96;
+            --primary-light: #e8f2fb;
+            --accent: #27ae60;
+            --accent-dark: #1e8e4f;
+            --text-dark: #1a1a2e;
+            --text-mid: #444;
+            --text-light: #777;
+            --bg-light: #f7f9fc;
+            --white: #ffffff;
+            --border: #dde4ef;
+            --shadow-sm: 0 2px 8px rgba(26,110,181,0.08);
+            --shadow-md: 0 6px 24px rgba(26,110,181,0.13);
+            --shadow-lg: 0 16px 48px rgba(26,110,181,0.18);
+            --radius: 14px;
+            --radius-lg: 22px;
+            --transition: 0.25s cubic-bezier(.4,0,.2,1);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: var(--white); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--white); font-weight: 700; font-size: 1.05rem;
+            padding: 15px 32px; border-radius: 50px; border: none; cursor: pointer;
+            box-shadow: 0 4px 18px rgba(39,174,96,0.25); transition: var(--transition);
+            text-decoration: none;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(39,174,96,0.35); }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: transparent; color: var(--primary); font-weight: 600; font-size: 1rem;
+            padding: 13px 28px; border-radius: 50px; border: 2px solid var(--primary); cursor: pointer;
+            transition: var(--transition); text-decoration: none;
+        }
+        .btn-secondary:hover { background: var(--primary); color: var(--white); }
+        section { padding: 80px 0; }
+        .section-label { font-size: 0.82rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); margin-bottom: 10px; }
+        .section-title { font-size: clamp(1.7rem, 3.5vw, 2.5rem); font-weight: 800; color: var(--text-dark); line-height: 1.2; margin-bottom: 16px; }
+        .section-sub { font-size: 1.05rem; color: var(--text-light); max-width: 560px; }
 
-  :root {
-    --primary: #1a6b8a;
-    --primary-dark: #134f68;
-    --primary-light: #e8f4f8;
-    --accent: #2ec4b6;
-    --accent-dark: #1a9e92;
-    --gold: #c9a84c;
-    --text-dark: #1e2a38;
-    --text-mid: #4a5568;
-    --text-light: #718096;
-    --white: #ffffff;
-    --off-white: #f7fafc;
-    --border: #e2e8f0;
-    --shadow: 0 4px 24px rgba(26,107,138,0.10);
-    --shadow-lg: 0 8px 40px rgba(26,107,138,0.16);
-    --radius: 14px;
-    --radius-lg: 22px;
-    --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-  }
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm);
+        }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; }
+        .nav-logo-icon {
+            width: 42px; height: 42px; border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-logo-icon svg { width: 24px; height: 24px; fill: white; }
+        .nav-logo-text { font-weight: 800; font-size: 1rem; color: var(--text-dark); line-height: 1.2; }
+        .nav-logo-text span { color: var(--primary); }
+        .nav-logo-sub { font-size: 0.72rem; color: var(--text-light); font-weight: 400; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-mid); transition: var(--transition); }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { font-size: 0.88rem !important; font-weight: 700 !important; color: var(--white) !important; background: var(--primary); padding: 9px 20px; border-radius: 50px; }
+        .nav-cta:hover { background: var(--primary-dark) !important; color: var(--white) !important; }
+        .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        @media(max-width:768px){
+            .nav-links { display: none; }
+            .nav-mobile-btn { display: block; }
+        }
 
-  html { scroll-behavior: smooth; }
+        /* HERO */
+        .hero {
+            min-height: 100vh; padding-top: 68px;
+            background: linear-gradient(135deg, #0d3b6e 0%, #1a6eb5 50%, #1a8bc4 100%);
+            display: flex; align-items: center; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.25); color: white; font-size: 0.82rem; font-weight: 600; padding: 7px 16px; border-radius: 50px; margin-bottom: 22px; }
+        .hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #5dffa0; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+        .hero h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 18px; }
+        .hero h1 span { color: #7de8b0; }
+        .hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+        .hero-stats { display: flex; gap: 28px; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat-num { font-size: 1.8rem; font-weight: 800; color: white; line-height: 1; }
+        .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-top: 3px; }
+        .hero-img-wrap {
+            position: relative; display: flex; justify-content: center; align-items: center;
+        }
+        .hero-img-card {
+            background: rgba(255,255,255,0.12); backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-lg);
+            padding: 32px; text-align: center; max-width: 360px; width: 100%;
+        }
+        .hero-img-avatar {
+            width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 18px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+            display: flex; align-items: center; justify-content: center;
+            border: 4px solid rgba(255,255,255,0.4); font-size: 3.5rem;
+            color: white; overflow: hidden;
+        }
+        .hero-img-name { font-size: 1.15rem; font-weight: 700; color: white; margin-bottom: 4px; }
+        .hero-img-spec { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-bottom: 18px; }
+        .hero-img-badges { display: flex; flex-direction: column; gap: 8px; }
+        .hero-img-badge-item {
+            display: flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 12px;
+            color: rgba(255,255,255,0.9); font-size: 0.8rem;
+        }
+        .hero-img-badge-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+        @media(max-width:768px){
+            .hero-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-img-wrap { order: -1; }
+        }
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-dark);
-    background: var(--white);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+        /* TRUST BAR */
+        .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 22px 0; }
+        .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 36px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 9px; font-size: 0.88rem; font-weight: 600; color: var(--text-mid); }
+        .trust-item svg { width: 20px; height: 20px; color: var(--primary); }
 
-  /* ── HEADER ── */
-  header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.97);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 16px rgba(26,107,138,0.07);
-  }
+        /* SERVICES */
+        .services { background: var(--bg-light); }
+        .services-header { text-align: center; margin-bottom: 52px; }
+        .services-header .section-sub { margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .service-card {
+            background: var(--white); border-radius: var(--radius); padding: 30px;
+            border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+            transition: var(--transition); position: relative; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0); transform-origin: left; transition: var(--transition);
+        }
+        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon {
+            width: 52px; height: 52px; border-radius: 12px; margin-bottom: 18px;
+            background: var(--primary-light); display: flex; align-items: center; justify-content: center;
+        }
+        .service-icon svg { width: 26px; height: 26px; color: var(--primary); }
+        .service-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .service-desc { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
 
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 72px;
-  }
+        /* ABOUT */
+        .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .about-img-col { position: relative; }
+        .about-img-frame {
+            background: linear-gradient(135deg, var(--primary-light), #d0e8ff);
+            border-radius: var(--radius-lg); padding: 32px; text-align: center;
+            border: 1px solid var(--border);
+        }
+        .about-avatar {
+            width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 4rem; border: 5px solid white; box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        .about-name { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+        .about-spec { font-size: 0.88rem; color: var(--primary); font-weight: 600; margin-top: 4px; margin-bottom: 20px; }
+        .about-badges { display: flex; flex-direction: column; gap: 10px; }
+        .about-badge {
+            display: flex; align-items: center; gap: 10px;
+            background: white; border-radius: 10px; padding: 10px 14px;
+            font-size: 0.83rem; font-weight: 500; color: var(--text-mid);
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+        }
+        .about-badge svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; }
+        .about-text-col { }
+        .about-desc { font-size: 1rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 24px; }
+        .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+        .about-hl {
+            background: var(--bg-light); border-radius: var(--radius); padding: 18px;
+            border: 1px solid var(--border); text-align: center;
+        }
+        .about-hl-num { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+        .about-hl-label { font-size: 0.8rem; color: var(--text-light); margin-top: 3px; }
+        @media(max-width:768px){ .about-inner { grid-template-columns: 1fr; gap: 36px; } }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
+        /* OBRAS SOCIALES */
+        .os-section { background: var(--bg-light); }
+        .os-header { text-align: center; margin-bottom: 44px; }
+        .os-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+        .os-pill {
+            display: flex; align-items: center; gap: 9px;
+            background: var(--white); border: 1px solid var(--border);
+            border-radius: 50px; padding: 11px 22px; font-size: 0.92rem; font-weight: 600;
+            color: var(--text-mid); box-shadow: var(--shadow-sm); transition: var(--transition);
+        }
+        .os-pill:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
+        .os-pill svg { width: 18px; height: 18px; color: var(--accent); }
+        .pagos-section { margin-top: 52px; text-align: center; }
+        .pagos-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--text-dark); }
+        .pagos-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .pago-tag {
+            background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+            padding: 8px 18px; font-size: 0.88rem; font-weight: 500; color: var(--text-mid);
+            box-shadow: var(--shadow-sm);
+        }
 
-  .logo-icon {
-    width: 44px; height: 44px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
+        /* REVIEWS */
+        .reviews { background: var(--white); }
+        .reviews-header { text-align: center; margin-bottom: 52px; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .review-card {
+            background: var(--bg-light); border-radius: var(--radius); padding: 28px;
+            border: 1px solid var(--border); box-shadow: var(--shadow-sm); position: relative;
+        }
+        .review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
+        .review-stars svg { width: 18px; height: 18px; fill: #f59e0b; }
+        .review-text { font-size: 0.97rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 18px; font-style: italic; }
+        .review-author { display: flex; align-items: center; gap: 12px; }
+        .review-avatar {
+            width: 42px; height: 42px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; color: white; font-size: 1rem;
+        }
+        .review-name { font-weight: 700; font-size: 0.92rem; }
+        .review-source { font-size: 0.78rem; color: var(--text-light); }
 
-  .logo-icon svg { width: 26px; height: 26px; fill: white; }
+        /* FAQ */
+        .faq { background: var(--bg-light); }
+        .faq-header { text-align: center; margin-bottom: 44px; }
+        .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+        .faq-item {
+            background: var(--white); border-radius: var(--radius); border: 1px solid var(--border);
+            overflow: hidden; box-shadow: var(--shadow-sm);
+        }
+        .faq-q {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 24px; font-size: 0.97rem; font-weight: 600; color: var(--text-dark);
+            background: none; border: none; cursor: pointer; text-align: left; gap: 16px;
+            transition: var(--transition);
+        }
+        .faq-q:hover { color: var(--primary); }
+        .faq-q svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary); transition: var(--transition); }
+        .faq-a { padding: 0 24px 20px; font-size: 0.93rem; color: var(--text-mid); line-height: 1.7; }
 
-  .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
-  .logo-name {
-    font-size: 15px; font-weight: 700; color: var(--primary-dark);
-    letter-spacing: -0.3px;
-  }
-  .logo-sub { font-size: 11px; font-weight: 500; color: var(--text-light); letter-spacing: 0.5px; }
+        /* CONTACT */
+        .contact { background: var(--white); }
+        .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+        .contact-info-card {
+            background: var(--bg-light); border-radius: var(--radius-lg); padding: 36px;
+            border: 1px solid var(--border);
+        }
+        .contact-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 24px; color: var(--text-dark); }
+        .contact-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+        .contact-item-icon {
+            width: 42px; height: 42px; border-radius: 10px; background: var(--primary-light);
+            display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+        }
+        .contact-item-icon svg { width: 20px; height: 20px; color: var(--primary); }
+        .contact-item-label { font-size: 0.78rem; color: var(--text-light); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-item-val { font-size: 0.97rem; font-weight: 600; color: var(--text-dark); margin-top: 2px; }
+        .contact-cta-col { display: flex; flex-direction: column; gap: 20px; justify-content: center; }
+        .cta-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-lg); padding: 36px; color: white; text-align: center;
+        }
+        .cta-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+        .cta-card p { font-size: 0.92rem; opacity: 0.85; margin-bottom: 24px; line-height: 1.6; }
+        .btn-wa {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #25d366; color: white; font-weight: 700; font-size: 1.05rem;
+            padding: 15px 32px; border-radius: 50px; box-shadow: 0 4px 18px rgba(37,211,102,0.35);
+            transition: var(--transition); text-decoration: none;
+        }
+        .btn-wa:hover { background: #1db855; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.45); }
+        .btn-wa svg { width: 22px; height: 22px; }
+        .social-row { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
+        .social-btn {
+            width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+            color: white; transition: var(--transition);
+        }
+        .social-btn:hover { background: rgba(255,255,255,0.25); transform: translateY(-2px); }
+        .social-btn svg { width: 20px; height: 20px; }
+        @media(max-width:768px){ .contact-inner { grid-template-columns: 1fr; gap: 28px; } }
 
-  nav { display: flex; align-items: center; gap: 6px; }
-  nav a {
-    font-size: 13.5px; font-weight: 500; color: var(--text-mid);
-    text-decoration: none; padding: 8px 14px; border-radius: 8px;
-    transition: var(--transition);
-  }
-  nav a:hover { color: var(--primary); background: var(--primary-light); }
+        /* FOOTER */
+        footer {
+            background: #0d1a2e; color: rgba(255,255,255,0.7); padding: 36px 0 24px;
+            font-size: 0.88rem;
+        }
+        .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .footer-logo { font-weight: 800; font-size: 1rem; color: white; }
+        .footer-logo span { color: #7de8b0; }
 
-  .btn-nav {
-    background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
-    color: white !important;
-    padding: 10px 22px !important;
-    border-radius: 50px !important;
-    font-weight: 600 !important;
-    font-size: 13.5px !important;
-    box-shadow: 0 2px 12px rgba(26,107,138,0.30);
-    transition: var(--transition);
-  }
-  .btn-nav:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(26,107,138,0.40) !important; background: none; }
+        /* FLOATING WA */
+        .float-wa {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            width: 60px; height: 60px; border-radius: 50%; background: #25d366;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.45); transition: var(--transition);
+            text-decoration: none;
+        }
+        .float-wa:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.55); }
+        .float-wa svg { width: 30px; height: 30px; fill: white; }
+        /* CSS_ORIGINAL_PRESERVED */
+    </style>
+</head>
+<body>
 
-  .hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    cursor: pointer; padding: 8px; border-radius: 8px; border: none; background: none;
-  }
-  .hamburger span {
-    display: block; width: 24px; height: 2px;
-    background: var(--text-dark); border-radius: 2px; transition: var(--transition);
-  }
+<!-- NAV -->
+<nav>
+    <div class="container">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.5 2 6 5 6 8c0 1.5.5 3 1 4.5C8 15 9 17.5 9 20c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2 0-2.5 1-5 2-7.5.5-1.5 1-3 1-4.5 0-3-2.5-6-6-6z"/></svg>
+                </div>
+                <div>
+                    <div class="nav-logo-text"><span>Kleiman</span> Odontología</div>
+                    <div class="nav-logo-sub">Dr. José E. Kleiman</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#obras-sociales">Coberturas</a>
+                <a href="#opiniones">Opiniones</a>
+                <a href="#faq">Preguntas</a>
+                <a href="https://wa.me/541146012481" class="nav-cta" target="_blank">Turno por WhatsApp</a>
+            </div>
+            <button class="nav-mobile-btn" aria-label="Menú">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0d3d52 0%, #1a6b8a 50%, #1e8a7a 100%);
-    display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding-top: 72px;
-  }
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-text-col">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Consultorio abierto · CABA - Balvanera
+                </div>
+                <h1>Implantes Dentales y <span>Rehabilitación Oral</span> de excelencia</h1>
+                <p class="hero-desc">Implantes de carga inmediata: en un solo día recuperás tu sonrisa sin necesidad de internación. Más de 22 años de experiencia al servicio de tu salud dental.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/541146012481" class="btn-primary" target="_blank">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.113 1.52 5.845L0 24l6.335-1.505A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.727.885.924-3.619-.236-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+                        Pedir turno por WhatsApp
+                    </a>
+                    <a href="#servicios" class="btn-secondary" style="color:white;border-color:rgba(255,255,255,0.5);">Ver servicios</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">22+</div>
+                        <div class="hero-stat-label">Años de experiencia</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">5★</div>
+                        <div class="hero-stat-label">Valoración pacientes</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">5</div>
+                        <div class="hero-stat-label">Obras sociales</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-img-wrap">
+                <div class="hero-img-card">
+                    <div class="hero-img-avatar">🦷</div>
+                    <div class="hero-img-name">Dr. José E. Kleiman</div>
+                    <div class="hero-img-spec">Implantes dentales y Rehabilitación Oral</div>
+                    <div class="hero-img-badges">
+                        <div class="hero-img-badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Miembro Asoc. Argentina de Implantología
+                        </div>
+                        <div class="hero-img-badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Docente UBA desde 2010
+                        </div>
+                        <div class="hero-img-badge-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Tecnología de vanguardia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-  }
+<!-- TRUST BAR -->
+<div class="trust-bar">
+    <div class="container">
+        <div class="trust-bar-inner">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Lun–Vie 9:00–19:00 | Sáb 9:00–13:00
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Av. Corrientes 1234, Piso 3 · CABA
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                OSDE · Swiss Medical · Galeno · Medicus · IOMA
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                +22 años de trayectoria
+            </div>
+        </div>
+    </div>
+</div>
 
-  .hero-blob {
-    position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.18; pointer-events: none;
-  }
-  .hero-blob-1 { width: 600px; height: 600px; background: var(--accent); top: -200px; right: -100px; }
-  .hero-blob-2 { width: 400px; height: 400px; background: var(--gold); bottom: -150px; left: -100px; }
+<!-- SERVICES -->
+<section class="services" id="servicios">
+    <div class="container">
+        <div class="services-header">
+            <div class="section-label">Nuestros servicios</div>
+            <h2 class="section-title">Todo lo que necesitás para tu salud dental</h2>
+            <p class="section-sub">Ofrecemos atención integral con tecnología de vanguardia y el respaldo de más de dos décadas de experiencia.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.5 2 6 5 6 8c0 1.5.5 3 1 4.5C8 15 9 17.5 9 20c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2 0-2.5 1-5 2-7.5.5-1.5 1-3 1-4.5 0-3-2.5-6-6-6z"/></svg>
+                </div>
+                <div class="service-title">Limpieza dental</div>
+                <div class="service-desc">Profilaxis profesional para eliminar sarro y placa bacteriana. Fundamental para prevenir enfermedades periodontales y mantener tu salud bucal.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                </div>
+                <div class="service-title">Blanqueamiento</div>
+                <div class="service-desc">Recuperá la blancura natural de tus dientes con nuestros tratamientos de blanqueamiento profesional, seguros y eficaces.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+                </div>
+                <div class="service-title">Implantes dentales</div>
+                <div class="service-desc">Implantes de carga inmediata: en un solo día recuperás tu sonrisa sin internación. Especialidad del Dr. Kleiman con más de 22 años de experiencia.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="service-title">Coronas y carillas</div>
+                <div class="service-desc">Restauraciones estéticas y funcionales de alta calidad. Recuperá la forma, color y función de tus dientes con materiales de última generación.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="service-title">Endodoncia</div>
+                <div class="service-desc">Tratamiento de conductos para salvar dientes comprometidos. Procedimiento indoloro con técnicas modernas que preservan tu dentadura natural.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <div class="service-title">Urgencias dentales</div>
+                <div class="service-desc">Atendemos urgencias de lunes a viernes. Contactanos por WhatsApp y te damos turno el mismo día para aliviar tu dolor cuanto antes.</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  .hero-inner {
-    max-width: 1200px; margin: 0 auto; padding: 80px 24px;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
-    position: relative; z-index: 1;
-  }
+<!-- ABOUT -->
+<section class="about" id="nosotros">
+    <div class="container">
+        <div class="about-inner">
+            <div class="about-img-col">
+                <div class="about-img-frame">
+                    <div class="about-avatar">👨‍⚕️</div>
+                    <div class="about-name">Dr. José E. Kleiman</div>
+                    <div class="about-spec">Implantes dentales y Rehabilitación Oral</div>
+                    <div class="about-badges">
+                        <div class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Miembro Asoc. Argentina de Implantología
+                        </div>
+                        <div class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Docente UBA desde 2010
+                        </div>
+                        <div class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            +22 años en implantología
+                        </div>
+                        <div class="about-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            Tecnología de vanguardia
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text-col">
+                <div class="section-label">Sobre nosotros</div>
+                <h2 class="section-title">Más de 22 años transformando sonrisas</h2>
+                <p class="about-desc">El Dr. José E. Kleiman es especialista en Implantes dentales y Rehabilitación Oral, con más de dos décadas de trayectoria en CABA. Miembro activo de la Asociación Argentina de Implantología y docente de la UBA desde 2010, combina experiencia clínica con formación académica de excelencia.</p>
+                <p class="about-desc">Nuestro consultorio se distingue por el uso de tecnología de vanguardia, un trato personalizado y resultados que nuestros propios pacientes recomiendan. Especialistas en implantes de carga inmediata: recuperás tu sonrisa en un solo día.</p>
+                <div class="about-highlights">
+                    <div class="about-hl">
+                        <div class="about-hl-num">22+</div>
+                        <div class="about-hl-label">Años de experiencia</div>
+                    </div>
+                    <div class="about-hl">
+                        <div class="about-hl-num">UBA</div>
+                        <div class="about-hl-label">Docente desde 2010</div>
+                    </div>
+                    <div class="about-hl">
+                        <div class="about-hl-num">5★</div>
+                        <div class="about-hl-label">Valoración promedio</div>
+                    </div>
+                    <div class="about-hl">
+                        <div class="about-hl-num">1 día</div>
+                        <div class="about-hl-label">Implante carga inmediata</div>
+                    </div>
+                </div>
+                <a href="https://wa.me/541146012481" class="btn-primary" target="_blank">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.113 1.52 5.845L0 24l6.335-1.505A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.727.885.924-3.619-.236-.372A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+                    Consultá sin compromiso
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.12); backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.20);
-    border-radius: 50px; padding: 8px 18px;
-    font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.90);
-    letter-spacing: 0.5px; margin-bottom: 28px;
-  }
-  .hero-badge-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+<!-- OBRAS SOCIALES -->
+<section class="os-section" id="obras-sociales">
+    <div class="container">
+        <div class="os-header">
+            <div class="section-label">Coberturas y pagos</div>
+            <h2 class="section-title">Trabajamos con tu obra social</h2>
+            <p class="section-sub" style="margin:0 auto;">Aceptamos las principales obras sociales y prepagos. Consultá por tu cobertura particular.</p>
+        </div>
+        <div class="os-grid">
+            <div class="os-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                OSDE
+            </div>
+            <div class="os-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Swiss Medical
+            </div>
+            <div class="os-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Galeno
+            </div>
+            <div class="os-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Medicus
+            </div>
+            <div class="os-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                IOMA
+            </div>
+        </div>
+        <div class="pagos-section">
+            <div class="pagos-title">Formas de pago aceptadas</div>
+            <div class="pagos-list">
+                <div class="pago-tag">💵 Efectivo</div>
+                <div class="pago-tag">💳 Débito</div>
+                <div class="pago-tag">💳 Crédito</div>
+                <div class="pago-tag">📆 Cuotas sin interés</div>
+                <div class="pago-tag">📱 MercadoPago</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.3); }
-  }
+<!-- REVIEWS -->
+<section class="reviews" id="opiniones">
+    <div class="container">
+        <div class="reviews-header">
+            <div class="section-label">Lo que dicen nuestros pacientes</div>
+            <h2 class="section-title">Pacientes que nos recomiendan</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="review-text">"Excelente profesional. Me hice los implantes y quedé feliz con el resultado. Muy atento y explicó todo en detalle."</p>
+                <div class="review-author">
+                    <div class="review-avatar">MG</div>
+                    <div>
+                        <div class="review-name">María González</div>
+                        <div class="review-source">Paciente verificada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <p class="review-text">"Muy buen consultorio, limpio, moderno y el Dr. Kleiman es muy profesional. Lo recomiendo sin dudas."</p>
+                <div class="review-author">
+                    <div class="review-avatar">CM</div>
+                    <div>
+                        <div class="review-name">Carlos Mendez</div>
+                        <div class="review-source">Paciente verificado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 4.5vw, 58px);
-    font-weight: 700; color: white;
-    line-height: 1.15; margin-bottom: 22px;
-    letter-spacing: -0.5px;
-  }
-
-  .hero h1 span { color: var(--accent); }
-
-  .hero-desc {
-    font-size: 17px; color: rgba(255,255,255,0.82);
-    line-height: 1.75; margin-bottom: 40px;
-    font-weight: 400;
-  }
-
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
-
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: white; color: var(--primary-dark);
-    font-size: 15px; font-weight: 700; text-decoration: none;
-    padding: 16px 32px; border-radius: 50px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.20);
-    transition: var(--transition);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.28); }
-  .btn-primary svg { width: 20px; height: 20px; fill: #25D366; }
-
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: rgba(255,255,255,0.12); color: white;
-    font-size: 15px; font-weight: 600; text-decoration: none;
-    padding: 16px 32px; border-radius: 50px;
-    border: 1.5px solid rgba(255,255,255,0.30);
-    backdrop-filter: blur(8px);
-    transition: var(--transition);
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
-
-  .hero-stats {
-    display: flex; gap: 32px; flex-wrap: wrap;
-  }
-  .stat { display: flex; flex-direction: column; }
-  .stat-num {
-    font-size: 32px; font-weight: 800; color: white;
-    line-height: 1; font-family: 'Playfair Display', serif;
-  }
-  .stat-num span { color: var(--accent); }
-  .stat-label { font-size: 12px; color: rgba(255,255,255,0.65); font-weight: 500; margin-top: 4px; }
-
-  .hero-card {
-    background: rgba(255,255,255,0.10);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: var(--radius-lg);
-    padding: 40px;
-    box-shadow: var(--shadow-lg);
-  }
-
-  .hero-card-header {
-    display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
-    padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.15);
-  }
-
-  .dr-avatar {
-    width: 72px; height: 72px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 28px; font-weight: 700; color: white;
-    border: 3px solid rgba(255,255,255,0.30);
-    flex-shrink: 0;
-  }
-
-  .dr-info .dr-name { font-size: 18px; font-weight: 700; color: white; }
-  .dr-info .dr-title { font-size: 13px; color: rgba(255,255,255,0.70); margin-top: 3px; }
-
-  .hero-features { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
-  .hero-feature {
-    display: flex; align-items: center; gap: 12px;
-    font-size: 14px; color: rgba(255,255,255,0.88); font-weight: 500;
-  }
-  .hero-feature-icon {
-    width: 32px; height: 32px; border-radius: 8px;
-    background: rgba(255,255,255,0.12);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .hero-feature-icon svg { width: 16px; height: 16px; fill: var(--accent); }
-
-  .hero-cta-mini {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    background: linear-gradient(135deg, #25D366, #1da851);
-    color: white; font-size: 14.5px; font-weight: 700;
-    text-decoration: none; padding: 14px 24px; border-radius: 50px;
-    box-shadow: 0 4px 16px rgba(37,211,102,0.40);
-    transition: var(--transition);
-  }
-  .hero-cta-mini:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,0.50); }
-  .hero-cta-mini svg { width: 20px; height: 20px; fill: white; }
-
-  /* ── SECTIONS GENERAL ── */
-  section { padding: 96px 0; }
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-  .section-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--primary-light); color: var(--primary);
-    font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-    padding: 6px 16px; border-radius: 50px; margin-bottom: 16px;
-  }
-  .section-tag::before { content: ''; width: 6px; height: 6px; background: var(--primary); border-radius: 50%; }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 3.5vw, 42px);
-    font-weight: 700; color: var(--text-dark);
-    line-height: 1.25; margin-bottom: 18px;
-    letter-spacing: -0.3px;
-  }
-  .section-title span { color: var(--primary); }
-
-  .section-desc {
-    font-size: 17px; color: var(--text-mid);
-    max-width: 600px; line-height: 1.75;
-  }
-
-  .section-header { margin-bottom: 56px; }
-  .section-header.center { text-align: center; }
-  .section-header.center .section-desc { margin: 0 auto; }
-
-  /* ── TRUST BAR ── */
-  .trust-bar {
-    background: var(--primary-dark);
-    padding: 20px 0;
-  }
-  .trust-bar-inner {
-    max-width: 1200px; margin: 0 auto; padding: 0 24px;
-    display: flex; align-items: center; justify-content: center;
-    gap: 40px; flex-wrap: wrap;
-  }
-  .trust-item {
-    display: flex; align-items: center; gap: 10px;
-    color: rgba(255,255,255,0.85); font-size: 13.5px; font-weight: 500;
-  }
-  .trust-item svg { width: 18px; height: 18px; fill: var(--accent); flex-shrink: 0; }
-
-  /* ── SOBRE EL DR ── */
-  .about { background: var(--off-white); }
-  .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
-
-  .about-visual { position: relative; }
-  .about-img-wrap {
-    width: 100%; aspect-ratio: 4/5; max-width: 420px;
-    border-radius: var(--radius-lg); overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-light), #c8eaf3);
-    position: relative;
-    box-shadow: var(--shadow-lg);
-  }
-  .about-img-placeholder {
-    width: 100%; height: 100%;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 16px;
-  }
-  .about-img-placeholder svg { width: 80px; height: 80px; fill: var(--primary); opacity: 0.5; }
-  .about-img-placeholder p { font-size: 14px; color: var(--text-light); font-weight: 500; }
-
-  .about-badge-exp {
-    position: absolute; bottom: -20px; right: -20px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white; border-radius: var(--radius);
-    padding: 20px 24px; text-align: center;
-    box-shadow: var(--shadow);
-  }
-  .about-badge-exp .num { font-size: 36px; font-weight: 800; line-height: 1; font-family: 'Playfair Display', serif; }
-  .about-badge-exp .label { font-size: 12px; font-weight: 600; opacity: 0.9; margin-top: 4px; }
-
-  .about-badge-member {
-    position: absolute; top: -16px; left: -16px;
-    background: white; border-radius: var(--radius);
-    padding: 14px 18px;
-    box-shadow: var(--shadow);
-    display: flex; align-items: center; gap: 10px;
-    max-width: 220px;
-  }
-  .about-badge-member svg { width: 24px; height: 24px; fill: var(--gold); flex-shrink: 0; }
-  .about-badge-member p { font-size: 12px; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
-
-  .about-content { }
-  .about-intro { font-size: 17px; color: var(--text-mid); line-height: 1.8; margin-bottom: 32px; }
-  .about-highlights { display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px; }
-  .highlight-item {
-    display: flex; gap: 16px; align-items: flex-start;
-  }
-  .highlight-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: var(--primary-light);
-    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  }
-  .highlight-icon svg { width: 20px; height: 20px; fill: var(--primary); }
-  .highlight-text h4 { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
-  .highlight-text p { font-size: 14px; color: var(--text-mid); }
-
-  .about-certs {
-    display: flex; gap: 12px; flex-wrap: wrap;
-  }
-  .cert-chip {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: white; border: 1.5px solid var(--border);
-    border-radius: 50px; padding: 8px 16px;
-    font-size: 13px; font-weight: 600; color: var(--text-dark);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  }
-  .cert-chip svg { width: 14px; height: 14px; fill: var(--gold); }
-
-  /* ── SERVICIOS ── */
-  .services { background: white; }
-  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-
-  .service-card {
-    background: var(--off-white); border: 1.5px solid var(--border);
-    border-radius: var(--radius-lg); padding: 36px 28px;
-    transition: var(--transition); cursor: default;
-    position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    transform: scaleX(0); transition: var(--transition); transform-origin: left;
-  }
-  .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--primary); background: white; }
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-card.featured {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    border-color: var(--primary);
-    color: white;
-  }
-  .service-card.featured::before { display: none; }
-  .service-card.featured:hover { border-color: var(--accent); }
-
-  .service-icon {
-    width: 56px; height: 56px; border-radius: 14px;
-    background: var(--primary-light);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 22px;
-  }
-  .service-icon svg { width: 28px; height: 28px; fill: var(--primary); }
-  .service-card.featured .service-icon { background: rgba(255,255,255,0.15); }
-  .service-card.featured .service-icon svg { fill: white; }
-
-  .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text-dark); }
-  .service-card.featured h3 { color: white; }
-  .service-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
-  .service-card.featured p { color: rgba(255,255,255,0.80); }
-
-  .service-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: var(--accent); color: white;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
-    padding: 5px 12px; border-radius: 50px; margin-top: 16px;
-  }
-
-  /* ── PROCESO / PASOS ── */
-  .proceso { background: var(--off-white); }
-  .proceso-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
-  .proceso-steps::before {
-    content: ''; position: absolute;
-    top: 32px; left: 10%; right: 10%; height: 2px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    z-index: 0;
-  }
-
-  .proceso-step {
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    position: relative; z-index: 1;
-  }
-  .step-num {
-    width: 64px; height: 64px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white; font-size: 22px; font-weight: 800;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 20px; box-shadow: 0 4px 16px rgba(26,107,138,0.30);
-    border: 4px solid var(--off-white);
-  }
-  .proceso-step h4 { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
-  .proceso-step p { font-size: 13.5px; color: var(--text-mid); line-height: 1.65; }
-
-  /* ── TESTIMONIOS ── */
-  .testimonios { background: white; }
-  .testimonios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-
-  .testimonial-card {
-    background: var(--off-white); border: 1.5px solid var(--border);
-    border-radius: var(--radius-lg); padding: 36px;
-    transition: var(--transition);
-  }
-  .testimonial-card:hover { box-shadow: var(--shadow); border-color: var(--primary); }
-
-  .stars { display: flex; gap: 4px; margin-bottom: 20px; }
-  .stars svg { width: 18px; height: 18px; fill: var(--gold); }
-
-  .testimonial-text {
-    font-size: 15.5px; color: var(--text-mid); line-height: 1.8;
-    margin-bottom: 24px; font-style: italic;
-    position: relative;
-  }
-  .testimonial-text::before {
-    content: '"';
-    font-family: 'Playfair Display', serif;
-    font-size: 64px; color: var(--primary); opacity: 0.15;
-    position: absolute; top: -20px; left: -8px;
-    line-height: 1;
-  }
-
-  .testimonial-author {
-    display: flex; align-items: center; gap: 14px;
-    padding-top: 20px; border-top: 1px solid var(--border);
-  }
-  .author-avatar {
-    width: 46px; height: 46px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; font-weight: 700; color: white; flex-shrink: 0;
-  }
-  .author-name { font-size: 15px; font-weight: 700; color: var(--text-dark); }
-  .author-label { font-size: 12.5px; color: var(--text-light); margin-top: 2px; }
-
-  /* ── OBRAS SOCIALES ── */
-  .convenios { background: var(--primary-dark); padding: 72px 0; }
-  .convenios-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 48px; flex-wrap: wrap;
-  }
-  .convenios-left h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; font-weight: 700; color: white; margin-bottom: 10px;
-  }
-  .convenios-left p { font-size: 15px; color: rgba(255,255,255,0.70); }
-
-  .convenios-logos { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .os-chip {
-    background: rgba(255,255,255,0.10);
-    border: 1px solid rgba(255,255,255,0.20);
-    border-radius: 10px; padding: 12px 20px;
-    font-size: 14px; font-weight: 700; color: white;
-    letter-spacing: 0.3px; transition: var(--transition);
-  }
-  .os-chip:hover { background: rgba(255,255,255,0.18); }
-
-  /* ── PAGOS ── */
-  .pagos { background: var(--off-white); padding: 72px 0; }
-  .pagos-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 48px; flex-wrap: wrap;
-  }
-  .pagos-left h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px; font-weight: 700; color: var(--text-dark); margin-bottom: 10px;
-  }
-  .pagos-left p { font-size: 15px; color: var(--text-mid); }
-  .pagos-chips { display: flex; gap: 12px; flex-wrap: wrap; }
-  .pago-chip {
-    display: flex; align-items: center; gap: 8px;
-    background: white; border: 1.5px solid var(--border);
-    border-radius: 10px; padding: 12px 18px;
-    font-size: 13.5px; font-weight: 600; color: var(--text-dark);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  .pago-chip svg { width: 20px; height: 20px; }
-
-  /* ── FAQ ── */
-  .faq { background: white; }
-  .faq-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-
-  .faq-item {
-    border: 1.5px solid var(--border); border-radius: var(--radius);
-    overflow: hidden; transition: var(--transition);
-  }
-  .faq-item:hover { border-color: var(--primary); box-shadow: 0 2px 12px rgba(26,107,138,0.10); }
-  .faq-item.open { border-color: var(--primary); }
-
-  .
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="faq-header">
+            <div class="section-label">Preguntas frecuentes</div>
+            <h2 class="section-title">Todo lo que necesitás saber</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
+                    ¿Hacen atención de urgencias?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-a">Sí, atendemos urgencias de lunes a viernes de 8 a 20 hs. Llamanos al WhatsApp y te damos turno el mismo día.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
+                    ¿Trabajan con obras sociales?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-a">Trabajamos con OSDE, Swiss Medical, Galeno, Medicus e IOMA. Consultá por tu cobertura.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
+                    ¿Cuánto dura una limpieza?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-a">Una limpieza completa dura entre 45 y 60 minutos. El valor depende de la cobertura de tu obra social.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q" onclick="this.parentElement.classList.toggle('open');this.querySelector('svg').style.transform=this.parentElement.classList.contains('open')?'rotate(45deg)':''">
+                    ¿Cómo saco un turno?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="faq-a">Por WhatsApp al +54 11 4601-2481 o llam
