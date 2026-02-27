@@ -1,299 +1,777 @@
+```html
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth" style="overflow-x: hidden;">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Kleiman Jose E | Experiencia Premium</title>
-    
-    <link rel="icon" href="https://fav.farm/🦷" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultorio Odontológico Kleiman | Dr. José E. Kleiman | Implantes y Rehabilitación Oral</title>
+<meta name="description" content="Dr. José E. Kleiman - Especialista en Implantes Dentales y Rehabilitación Oral en Buenos Aires. Más de 22 años de experiencia. Turnos por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  :root {
+    --navy: #0a1628;
+    --navy-light: #112240;
+    --gold: #c9a84c;
+    --gold-light: #e2c07a;
+    --gold-pale: #f5e9cc;
+    --white: #ffffff;
+    --off-white: #f8f6f1;
+    --gray-100: #f2f2f2;
+    --gray-300: #cccccc;
+    --gray-500: #888888;
+    --gray-700: #444444;
+    --text-dark: #1a1a2e;
+    --radius: 12px;
+    --shadow: 0 8px 32px rgba(10,22,40,0.12);
+    --shadow-lg: 0 16px 48px rgba(10,22,40,0.18);
+  }
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], display: ['var(--font-display)'] },
-                    colors: { primary: 'var(--primary)', accent: 'var(--accent)', surface: 'var(--surface)', text: 'var(--text-main)', bgAlt: 'var(--bg-alt)' }
-                }
-            }
-        }
-    </script>
+  html { scroll-behavior: smooth; }
 
-    <style>
-        :root { --transition: all 0.5s ease; }
-        [data-theme="architect"] { --primary: #0f172a; --accent: #2563eb; --surface: #ffffff; --bg-alt: #f8fafc; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(15,23,42,0.85); --radius: 0px; }
-        [data-theme="organic"] { --primary: #44403c; --accent: #84cc16; --surface: #fafaf9; --bg-alt: #f5f5f4; --text-main: #57534e; --font-display: '"Playfair Display"', serif; --overlay: rgba(68, 64, 60, 0.75); --radius: 2rem; }
-        [data-theme="vogue"] { --primary: #d4af37; --accent: #d4af37; --surface: #0c0a09; --bg-alt: #1c1917; --text-main: #fafaf9; --font-display: '"Playfair Display"', serif; --overlay: rgba(12, 10, 9, 0.9); --radius: 0px; }
-        [data-theme="tech"] { --primary: #06b6d4; --accent: #06b6d4; --surface: #020617; --bg-alt: #0f172a; --text-main: #e2e8f0; --font-display: '"Space Grotesk"', sans-serif; --overlay: radial-gradient(circle, rgba(2,6,23,0.9) 0%, rgba(2,6,23,0.6) 100%); --radius: 0.75rem; }
-        [data-theme="friendly"] { --primary: #1e3a8a; --accent: #f59e0b; --surface: #ffffff; --bg-alt: #eff6ff; --text-main: #1e293b; --font-display: '"Plus Jakarta Sans"', sans-serif; --overlay: rgba(30, 58, 138, 0.7); --radius: 3rem; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
 
-        body { background-color: var(--surface); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; width: 100%; position: relative; }
-        .hero-overlay { background: var(--overlay); backdrop-filter: blur(2px); }
-        .nav-scrolled { background: var(--primary) !important; padding: 10px 0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .faq-item.active .faq-answer { max-height: 500px; padding-top: 1rem; opacity: 1; }
-        .faq-icon { transition: transform 0.4s ease; }
-        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--accent); }
-        .glass-info { background: rgba(0,0,0,0.5); backdrop-filter: blur(15px); border-top: 1px solid rgba(255,255,255,0.1); width: 100% !important; left: 0 !important; right: 0 !important; }
-        .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.3s ease; }
-        .testimonial-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
-    </style>
-</head>
-<body data-theme="friendly">
+  h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
 
-    <nav id="navbar" class="fixed top-0 w-full z-50 py-6 transition-all duration-500 text-white px-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg" style="border-radius: var(--radius)">K</div>
-                <span class="font-display font-bold text-lg leading-tight text-white">Kleiman Jose E</span>
-            </div>
-            <a href="https://wa.me/541146012481" class="bg-accent text-white px-6 py-2 shadow-lg transition uppercase font-bold text-xs" style="border-radius: var(--radius)">CONTACTAR</a>
-        </div>
-    </nav>
+  a { text-decoration: none; color: inherit; }
 
-    <header class="relative h-screen flex flex-col justify-center overflow-hidden w-full px-4 md:px-0">
-        <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="container mx-auto px-6 relative z-10 text-center text-white mb-20" data-aos="fade-up">
-            <h1 class="font-display font-bold text-5xl md:text-9xl mb-8 leading-[1.1] md:leading-[0.9] tracking-tighter text-white">Tecnología dental<br><span class='text-accent'>de vanguardia.</span></h1>
-            <p class="text-lg md:text-2xl opacity-90 max-w-2xl mx-auto mb-10 font-medium text-balance text-white">Odontología de precisión en Buenos Aires. Tecnología avanzada y trato humano para transformar tu salud bucal sin dolor.</p>
-            <a href="https://wa.me/541146012481" class="bg-accent text-white px-12 py-5 font-black text-base md:text-lg shadow-2xl hover:scale-105 transition tracking-widest uppercase inline-block" style="border-radius: var(--radius)">RESERVAR TURNO ONLINE</a>
-        </div>
-        <div class="absolute bottom-0 left-0 w-full glass-info py-6 md:py-8 z-20 text-white">
-            <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center md:text-left">
-                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>📅</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Lun–Vie</p><p class="font-bold text-[10px] md:text-sm">9:00 a 19:00 hs</p></div></div>
-                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🕒</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Sábados</p><p class="font-bold text-[10px] md:text-sm">9:00 a 13:00 hs</p></div></div>
-                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>🚨</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Urgencias</p><p class="font-bold text-[10px] md:text-sm text-accent">Atención inmediata</p></div></div>
-                <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-3"><span>💳</span><div><p class="text-[8px] md:text-[10px] font-bold uppercase opacity-60">Financiación</p><p class="font-bold text-[10px] md:text-sm">Cuotas sin interés</p></div></div>
-            </div>
-        </div>
-    </header>
+  img { max-width: 100%; display: block; }
 
-    <section class="py-12 md:py-20 bg-bgAlt">
-        <div class="container mx-auto px-6">
-            <div class="bg-surface p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 shadow-xl border border-white/10" style="border-radius: var(--radius)">
-                <div class="text-center"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="500">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Pacientes<br>satisfechos</div></div>
-                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="15">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Años de<br>experiencia</div></div>
-                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-accent mb-2 leading-none flex items-center justify-center gap-1">★<span class="counter" data-target="49">0</span>★</div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Calificación<br>en Google</div></div>
-                <div class="text-center border-l border-white/10"><div class="font-display font-black text-3xl md:text-5xl text-primary mb-2 leading-none">+<span class="counter" data-target="10">0</span></div><div class="text-[10px] font-bold uppercase opacity-60 tracking-widest leading-tight text-balance">Especialidades<br>disponibles</div></div>
-            </div>
-        </div>
-    </section>
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
-    <section id="servicios" class="py-24 bg-surface">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-16" data-aos="fade-up">
-                <h2 class="font-display font-bold text-4xl md:text-6xl text-text mb-4 tracking-tighter">Cuidado integral.</h2>
-                <p class="text-text opacity-70 font-medium max-w-2xl mx-auto">Todo lo que necesitás para mantener tu sonrisa saludable en un solo lugar, con la mejor tecnología.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🦷</div><h4 class="font-bold text-lg mb-2">Limpieza Dental</h4><p class="text-sm opacity-60">Eliminamos sarro y manchas con ultrasonido. Recomendada cada 6 meses.</p>
-                </div>
-                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">✨</div><h4 class="font-bold text-lg mb-2">Blanqueamiento</h4><p class="text-sm opacity-60">LED de última generación. Resultados visibles hoy.</p>
-                </div>
-                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">😁</div><h4 class="font-bold text-lg mb-2">Ortodoncia</h4><p class="text-sm opacity-60">Alineadores invisibles o brackets tradicionales.</p>
-                </div>
-                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🔩</div><h4 class="font-bold text-lg mb-2">Implantes</h4><p class="text-sm opacity-60">Titanio de por vida. La solución más natural y definitiva.</p>
-                </div>
-                <div class="bg-bgAlt p-8 border border-white/5 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">👑</div><h4 class="font-bold text-lg mb-2">Coronas y Carillas</h4><p class="text-sm opacity-60">Materiales estéticos de alta calidad para restaurar tu sonrisa.</p>
-                </div>
-                <div class="bg-surface border-2 border-accent p-8 hover:shadow-xl transition" style="border-radius: var(--radius)">
-                    <div class="text-3xl mb-4">🚨</div><h4 class="font-bold text-lg mb-2 text-accent">Urgencias</h4><p class="text-sm opacity-60">Atención inmediata. Escribinos ahora mismo por WhatsApp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  /* ─── NAVBAR ─── */
+  .navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    background: rgba(10,22,40,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 0 24px;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
 
-    <section class="py-24 bg-bgAlt border-y border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1600&q=80" class="w-full h-[300px] md:h-[500px] object-cover shadow-2xl" style="border-radius: var(--radius)">
-                    <div class="absolute bottom-6 left-6 bg-surface p-6 shadow-2xl text-center" style="border-radius: var(--radius)">
-                        <div class="text-accent font-black text-2xl md:text-3xl leading-none">+15 años</div>
-                        <div class="text-[10px] font-bold uppercase opacity-60 tracking-widest mt-1">de experiencia</div>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 text-left" data-aos="fade-left">
-                    <span class="text-accent font-bold text-xs uppercase tracking-[0.4em] block mb-4">¿Por qué elegirnos?</span>
-                    <h2 class="font-display font-bold text-4xl md:text-5xl text-text mb-12 tracking-tighter leading-tight text-balance">Atención que marca <br class="hidden md:block"> la diferencia.</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div><div class="text-accent font-black text-xl mb-1">01</div><h4 class="font-bold mb-1 text-sm">Experiencia comprobada</h4><p class="text-xs opacity-60">Más de 15 años transformando sonrisas reales.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">02</div><h4 class="font-bold mb-1 text-sm">Tecnología de punta</h4><p class="text-xs opacity-60">Equipos digitales para diagnósticos precisos.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">03</div><h4 class="font-bold mb-1 text-sm">Financiación accesible</h4><p class="text-xs opacity-60">Planes de pago flexibles y cuotas sin interés.</p></div>
-                        <div><div class="text-accent font-black text-xl mb-1">04</div><h4 class="font-bold mb-1 text-sm">Ubicación estratégica</h4><p class="text-xs opacity-60">Fácil acceso en transporte público en el corazón de Buenos Aires.</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  .navbar-brand {
+    display: flex; align-items: center; gap: 12px;
+  }
 
-    <section class="py-24 bg-[#0a0c10] text-white">
-        <div class="container mx-auto px-6">
-            <div class="mb-16 text-left">
-                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Lo que dicen nuestros pacientes</span>
-                <h2 class="font-display font-bold text-5xl tracking-tighter">Experiencias reales</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="testimonial-card p-8 flex flex-col justify-between" style="border-radius: var(--radius)">
-                    <div><div class="text-accent mb-4">★★★★★</div><p class="text-lg italic opacity-80 mb-8">"Llegué con mucho miedo y salí completamente tranquila. El blanqueamiento quedó increíble."</p></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-surface">ML</div>
-                        <div><p class="font-bold">María Laura G.</p><p class="text-[10px] opacity-50 uppercase tracking-widest">Blanqueamiento dental</p></div>
-                    </div>
-                </div>
-                <div class="testimonial-card p-8 flex flex-col justify-between" style="border-radius: var(--radius)">
-                    <div><div class="text-accent mb-4">★★★★★</div><p class="text-lg italic opacity-80 mb-8">"Excelente atención y profesionalismo. Me colocaron implantes y el proceso fue súper cómodo."</p></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-surface">CR</div>
-                        <div><p class="font-bold">Carlos R.</p><p class="text-[10px] opacity-50 uppercase tracking-widest">Implantes dentales</p></div>
-                    </div>
-                </div>
-                <div class="testimonial-card p-8 flex flex-col justify-between" style="border-radius: var(--radius)">
-                    <div><div class="text-accent mb-4">★★★★★</div><p class="text-lg italic opacity-80 mb-8">"Llevo 18 meses con la ortodoncia y los cambios son increíbles. El equipo siempre me ayuda."</p></div>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center font-bold text-surface">SV</div>
-                        <div><p class="font-bold">Sofía V.</p><p class="text-[10px] opacity-50 uppercase tracking-widest">Ortodoncia</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  .navbar-logo-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
 
-    <section id="preguntas" class="py-24 bg-surface">
-        <div class="container mx-auto px-6">
-            <div class="text-left mb-16" data-aos="fade-right">
-                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Preguntas frecuentes</span>
-                <h2 class="font-display font-bold text-5xl mb-4 tracking-tighter text-text">Resolvemos tus dudas</h2>
-                <p class="text-text opacity-70 max-w-2xl">Las preguntas más comunes que nos hacen antes de sacar un turno.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm text-text">¿Cómo saco un turno? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">WhatsApp o llamada directa. Respondemos en minutos.</div>
-                </div>
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm leading-tight text-text">¿Atienden obras sociales? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Sí, las principales prepagas y obras sociales del país.</div>
-                </div>
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm leading-tight text-text">¿El blanqueamiento duele? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">No duele. Es un procedimiento seguro y rápido con tecnología LED.</div>
-                </div>
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm leading-tight text-text">¿Cuánto duran los implantes? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">De por vida con el cuidado adecuado. Es la solución definitiva.</div>
-                </div>
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm leading-tight text-text">¿Tienen estacionamiento? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Sí, contamos con estacionamiento cerca para tu comodidad.</div>
-                </div>
-                <div class="faq-item bg-bgAlt border border-white/5 p-6 cursor-pointer text-center" style="border-radius: var(--radius)" onclick="this.classList.toggle('active')">
-                    <div class="flex flex-col items-center font-bold text-sm leading-tight text-text">¿Aceptan tarjeta? <span class="faq-icon text-accent mt-2">+</span></div>
-                    <div class="faq-answer max-h-0 overflow-hidden opacity-0 transition-all duration-500 text-xs text-text opacity-60 leading-relaxed mt-2">Todas las tarjetas, efectivo y planes de cuotas sin interés.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  .navbar-logo-icon svg { width: 22px; height: 22px; fill: var(--navy); }
 
-    <section class="py-24 bg-bgAlt">
-        <div class="container mx-auto px-6 text-center">
-            <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Cobertura</span>
-            <h2 class="font-display font-bold text-5xl mb-4 tracking-tighter text-text">Obras sociales y prepagas</h2>
-            <div class="flex flex-wrap justify-center gap-4 mt-12 max-w-4xl mx-auto">
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">OSDE</span>
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Swiss Medical</span>
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Galeno</span>
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">Medicus</span>
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-white/10 shadow-sm text-text">PAMI</span>
-                <span class="px-8 py-3 bg-surface rounded-full font-bold text-sm border border-accent/30 shadow-sm text-accent">+ Consultanos</span>
-            </div>
-        </div>
-    </section>
+  .navbar-brand-text { display: flex; flex-direction: column; }
 
-    <section class="py-24 bg-surface">
-        <div class="container mx-auto px-6 text-left">
-            <div class="mb-16">
-                <span class="text-accent font-bold text-xs uppercase tracking-widest block mb-4">Dónde encontrarnos</span>
-                <h2 class="font-display font-bold text-5xl text-text tracking-tighter leading-tight">Visitanos en Buenos Aires</h2>
-            </div>
-            <div class="flex flex-col lg:flex-row gap-12 items-stretch">
-                <div class="w-full lg:w-1/3 grid grid-cols-1 gap-4">
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📍 Dirección</p><p class="font-bold text-sm text-text">Av. Riestra 5750, Cdad. Autónoma de Buenos Aires, Buenos Aires</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">📞 Teléfono</p><p class="font-bold text-sm text-text">541146012481</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">💬 WhatsApp</p><p class="font-bold text-sm text-accent">Escribinos al instante</p></div>
-                    <div class="bg-bgAlt p-6 border border-white/5" style="border-radius: var(--radius)"><p class="font-bold text-[10px] uppercase opacity-40 mb-2 text-text">🕐 Horarios</p><p class="text-xs font-bold leading-relaxed text-text">Lun–Vie: 9:00 a 19:00 hs<br>Sábados: 9:00 a 13:00 hs</p></div>
-                </div>
-                <div class="w-full lg:w-2/3 h-[400px] lg:h-auto overflow-hidden shadow-2xl border border-white/5" style="border-radius: var(--radius);">
-                    <iframe width="100%" height="100%" frameborder="0" style="border:0; filter: grayscale(1) invert(0.1) contrast(1.1);" loading="lazy" src="https://maps.google.com/maps?q=Av.%20Riestra%205750%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+  .navbar-brand-name {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
 
-    <footer class="py-24 bg-[#0a0c10] text-white text-center">
-        <div class="container mx-auto px-6">
-            <div class="mb-24">
-                <h2 class="font-display font-bold text-5xl md:text-7xl mb-6 tracking-tighter">Transformá tu sonrisa hoy.</h2>
-                <p class="text-xl opacity-80 mb-12 max-w-3xl mx-auto leading-relaxed">Reservá tu consulta inicial sin costo por WhatsApp.</p>
-                <a href="https://wa.me/541146012481" class="bg-[#25D366] px-12 py-5 font-black text-lg shadow-2xl hover:scale-105 transition block md:inline-block uppercase tracking-widest text-surface" style="border-radius: var(--radius)">WhatsApp Directo</a>
-            </div>
+  .navbar-brand-sub {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 pt-16 border-t border-white/10 text-left">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center font-black text-xl shadow-lg text-surface" style="border-radius: var(--radius)">K</div>
-                        <span class="font-display font-bold text-lg leading-tight text-white">Kleiman Jose E</span>
-                    </div>
-                </div>
-                <div><h4 class="font-bold text-lg mb-6 text-accent">Servicios</h4><ul class="space-y-3 opacity-60 text-xs font-medium uppercase"><li>Limpieza</li><li>Blanqueamiento</li><li>Ortodoncia</li><li>Implantes</li></ul></div>
-                <div><h4 class="font-bold text-lg mb-6 text-accent">Contacto</h4><ul class="space-y-3 opacity-60 text-xs font-medium"><li>541146012481</li><li>WhatsApp</li><li>Av. Riestra 5750, Cdad. Autónoma de Buenos Aires</li><li>Buenos Aires</li></ul></div>
-                <div><h4 class="font-bold text-lg mb-2 text-accent">Horarios</h4><ul class="space-y-2 opacity-60 text-xs font-medium"><li>Lun–Vie: 9 a 19 hs</li><li>Sáb: 9 a 13 hs</li><li class="text-accent font-bold">Urgencias: WhatsApp</li></ul></div>
-            </div>
-            <p class="text-[10px] opacity-20 uppercase tracking-[0.4em] pt-8">© 2026 Kleiman Jose E · Todos los derechos reservados</p>
-        </div>
-    </footer>
+  .navbar-nav {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none;
+  }
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        lucide.createIcons();
-        AOS.init({ once: true, duration: 1000 });
-        window.onscroll = function() {
-            const nav = document.getElementById("navbar");
-            if (nav && window.pageYOffset > 50) nav.classList.add("nav-scrolled");
-            else if (nav) nav.classList.remove("nav-scrolled");
-        };
+  .navbar-nav a {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const target = parseInt(el.getAttribute('data-target'));
-                    let count = 0;
-                    const updateCount = () => {
-                        const increment = Math.ceil(target / 80);
-                        if (count < target) {
-                            count += increment;
-                            if (count > target) count = target;
-                            el.innerText = count;
-                            setTimeout(updateCount, 20);
-                        }
-                    };
-                    updateCount();
-                    observer.unobserve(el);
-                }
-            });
-        }, { threshold: 0.8 });
-        document.querySelectorAll('.counter').forEach(c => observer.observe(c));
-    </script>
-</body>
-</html>
+  .navbar-nav a:hover { color: var(--gold-light); }
+
+  .navbar-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy) !important;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-weight: 600 !important;
+    font-size: 0.82rem !important;
+    transition: opacity 0.2s, transform 0.2s !important;
+  }
+
+  .navbar-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1a3a5c 100%);
+    display: flex; align-items: center;
+    padding-top: 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    padding: 80px 0;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.35);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge span { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: var(--white);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .hero-title .highlight {
+    color: var(--gold-light);
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .hero-desc {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 16px 32px;
+    border-radius: 50px;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.45); }
+
+  .btn-primary svg { width: 20px; height: 20px; fill: var(--navy); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 10px;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 15px 28px;
+    border-radius: 50px;
+    transition: all 0.25s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+  .hero-stats {
+    display: flex; gap: 36px;
+  }
+
+  .hero-stat { text-align: center; }
+
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  .hero-visual {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .hero-card-main {
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: blur(16px);
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-avatar {
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    box-shadow: 0 0 0 4px rgba(201,168,76,0.25);
+  }
+
+  .hero-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .hero-card-esp {
+    color: var(--gold-light);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+  }
+
+  .hero-card-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.12);
+    margin: 20px 0;
+  }
+
+  .hero-card-info { display: flex; flex-direction: column; gap: 10px; }
+
+  .hero-card-info-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.82rem;
+  }
+
+  .hero-card-info-item svg { width: 16px; height: 16px; fill: var(--gold-light); flex-shrink: 0; }
+
+  .hero-float-badge {
+    position: absolute;
+    top: -16px; right: -16px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    border-radius: 16px;
+    padding: 12px 18px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    font-weight: 700;
+  }
+
+  .hero-float-badge-num { font-family: 'Playfair Display', serif; font-size: 1.6rem; line-height: 1; }
+  .hero-float-badge-txt { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* ─── SECTION COMMONS ─── */
+  .section { padding: 96px 0; }
+
+  .section-alt { background: var(--off-white); }
+
+  .section-header { text-align: center; margin-bottom: 64px; }
+
+  .section-tag {
+    display: inline-block;
+    background: var(--gold-pale);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    color: var(--gray-500);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ─── SERVICES ─── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    box-shadow: 0 2px 16px rgba(10,22,40,0.07);
+    border: 1px solid rgba(10,22,40,0.06);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-icon {
+    width: 56px; height: 56px;
+    background: var(--gold-pale);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .service-icon svg { width: 28px; height: 28px; fill: var(--gold); }
+
+  .service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .service-desc { color: var(--gray-500); font-size: 0.88rem; line-height: 1.65; }
+
+  .service-featured {
+    background: linear-gradient(145deg, var(--navy), var(--navy-light));
+    border-color: rgba(201,168,76,0.2);
+  }
+
+  .service-featured .service-icon { background: rgba(201,168,76,0.15); }
+  .service-featured .service-icon svg { fill: var(--gold-light); }
+  .service-featured .service-name { color: var(--white); }
+  .service-featured .service-desc { color: rgba(255,255,255,0.65); }
+  .service-featured::before { transform: scaleX(1); }
+
+  /* ─── ABOUT ─── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual { position: relative; }
+
+  .about-img-wrap {
+    background: linear-gradient(145deg, var(--navy), var(--navy-light));
+    border-radius: 24px;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-img-wrap::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,168,76,0.12), transparent 70%);
+    border-radius: 50%;
+  }
+
+  .about-avatar {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--navy);
+    box-shadow: 0 0 0 6px rgba(201,168,76,0.2), 0 16px 32px rgba(0,0,0,0.3);
+  }
+
+  .about-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .about-card-esp {
+    color: var(--gold-light);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .about-card-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+  .about-tag {
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: var(--gold-light);
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 50px;
+  }
+
+  .about-float {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .about-float-icon {
+    width: 42px; height: 42px;
+    background: var(--gold-pale);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .about-float-icon svg { width: 22px; height: 22px; fill: var(--gold); }
+
+  .about-float-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .about-float-txt { font-size: 0.72rem; color: var(--gray-500); }
+
+  .about-tag-top {
+    display: inline-block;
+    background: var(--gold-pale);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .about-title {
+    font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .about-desc {
+    color: var(--gray-700);
+    font-size: 0.97rem;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .about-logros { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+
+  .about-logro {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 12px 16px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .about-logro svg { width: 18px; height: 18px; fill: var(--gold); flex-shrink: 0; margin-top: 2px; }
+  .about-logro span { font-size: 0.88rem; color: var(--gray-700); line-height: 1.5; }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .testimonial-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(10,22,40,0.06);
+    position: relative;
+  }
+
+  .testimonial-quote {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+    opacity: 0.5;
+  }
+
+  .testimonial-text {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-stars {
+    display: flex; gap: 3px; margin-bottom: 16px;
+  }
+
+  .testimonial-stars svg { width: 16px; height: 16px; fill: var(--gold); }
+
+  .testimonial-author {
+    display: flex; align-items: center; gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--navy);
+  }
+
+  .testimonial-meta {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+  }
+
+  /* ─── FAQ ─── */
+  .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid rgba(10,22,40,0.08);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(10,22,40,0.05);
+  }
+
+  .faq-q {
+    width: 100%;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 24px;
+    background: none; border: none; cursor: pointer;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    gap: 16px;
+    transition: background 0.2s;
+  }
+
+  .faq-q:hover { background: var(--off-white); }
+
+  .faq-q svg { width: 20px; height: 20px; fill: var(--gold); flex-shrink: 0; transition: transform 0.3s; }
+
+  .faq-q[aria-expanded="true"] svg { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 24px 20px;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  .faq-a.open { display: block; }
+
+  /* ─── CONTACT ─── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 24px; }
+
+  .contact-block {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(10,22,40,0.06);
+    display: flex; align-items: flex-start; gap: 16px;
+  }
+
+  .contact-block-icon {
+    width: 48px; height: 48px;
+    background: var(--gold-pale);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-block-icon svg { width: 22px; height: 22px; fill: var(--gold); }
+
+  .contact-block-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-500);
+    margin-bottom: 4px;
+  }
+
+  .contact-block-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+
+  .contact-block-sub {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-top: 4px;
+  }
+
+  .contact-form-wrap {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(10,22,40,0.06);
+  }
+
+  .contact-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .contact-form-sub {
+    color: var(--gray-500);
+    font-size: 0.85rem;
+    margin-bottom: 28px;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-label { font-size: 0.8rem; font-weight: 600; color: var(--navy); }
+
+  .form-control {
+    padding: 12px 16px;
+    border: 1.5px solid var(--gray-300);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+  }
+
+  .form-control:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+  }
+
+  textarea.form-control { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 16px rgba(201,168,76,0.35);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+  }
+
+  .form-submit svg { width: 18px; height: 18px; fill: var(--navy); }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.45); }
+
+  /* ─── OBRAS SOCIALES /
