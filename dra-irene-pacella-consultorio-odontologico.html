@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Irene Pacella Consultorio Odontologico | Odontología de Excelencia en Buenos Aires</title>
+    <meta name="description" content="Dra. Irene Pacella Consultorio Odontologico - Centro odontológico de excelencia en Buenos Aires. Especialistas en implantes, ortodoncia y estética dental. +15 años de trayectoria. Consultá sin cargo.">
+    <meta name="keywords" content="dentista Buenos Aires, odontólogo Cdad. Autónoma de Buenos Aires, implantes dentales, ortodoncia, blanqueamiento, Dra. Irene Pacella Consultorio Odontologico">
+    <meta property="og:title" content="Dra. Irene Pacella Consultorio Odontologico | Odontología de Excelencia">
+    <meta property="og:description" content="Centro odontológico de excelencia en Buenos Aires. +15 años de trayectoria.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://landing-odontologia-demo.vercel.app/dra-irene-pacella-consultorio-odontologico.html">
+    <link rel="icon" href="https://fav.farm/🦷">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+                        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: { 50: '#f0f3f9', 100: '#d9e0f0', 400: '#4a6fa5', 500: '#2d4a7a', 600: '#1e3a5f', 700: '#152d4a', 800: '#0f2035', 900: '#0a1628' },
+                        gold: { 300: '#f0d78c', 400: '#e8c55a', 500: '#d4a853', 600: '#b8922e' },
+                        cream: '#FDFBF7',
+                        'cream-dark': '#F5F0E8',
+                        warm: '#E8E0D4',
+                        charcoal: '#1C1C1C',
+                        'off-black': '#0E0E0E',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        html, body { overflow-x: hidden; max-width: 100vw; }
+        body { font-family: 'DM Sans', sans-serif; color: #1C1C1C; background: #FDFBF7; }
+        .nav-scrolled { background: rgba(253,251,247,0.95); backdrop-filter: blur(16px) saturate(180%); border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .hero-overlay { background: linear-gradient(180deg, rgba(10,22,40,0.4) 0%, rgba(10,22,40,0.6) 50%, rgba(10,22,40,0.8) 100%); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .anim-hero-1 { animation: fadeUp 0.8s ease 0.2s both; }
+        .anim-hero-2 { animation: fadeUp 0.8s ease 0.4s both; }
+        .anim-hero-3 { animation: fadeUp 0.8s ease 0.6s both; }
+        .anim-hero-4 { animation: fadeUp 0.8s ease 0.8s both; }
+        .step-line { position: relative; }
+        .step-line::after { content: ''; position: absolute; top: 50%; left: 100%; width: 100%; height: 1px; background: linear-gradient(90deg, #1e3a5f 0%, transparent 100%); }
+        @media (max-width: 768px) { .step-line::after { display: none; } }
+        .comp-container { position: relative; overflow: hidden; cursor: ew-resize; touch-action: none; }
+        .comp-overlay { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; }
+        .comp-slider { position: absolute; top: 0; height: 100%; width: 2px; background: white; z-index: 10; }
+        .comp-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .faq-item .faq-answer { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 0.75rem; opacity: 1; }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .faq-item.active .faq-chevron { transform: rotate(180deg); }
+        .card-hover { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+        .card-hover h3 { position: relative; display: inline-block; }
+        .card-hover h3::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #1e3a5f; transition: width 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .card-hover:hover h3::after { width: 100%; }
+        .why-card { position: relative; padding-left: 1.5rem; }
+        .why-card::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #d4a853 0%, #1e3a5f 100%); border-radius: 2px; }
+        .mobile-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+        .mobile-panel { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .mobile-overlay.open .mobile-panel { transform: translateX(0); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-track { animation: marquee 30s linear infinite; }
+        .marquee-track:hover { animation-play-state: paused; }
+        section[id] { scroll-margin-top: 80px; }
+        .accent-line { width: 40px; height: 2px; background: #d4a853; }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-5 px-5 md:px-8">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2.5">
+            <span class="font-serif text-xl font-semibold tracking-tight" id="navLogo">Dra. Irene Pacella Consultorio Odontologico</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="#servicios" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Servicios</a>
+            <a href="#proceso" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Proceso</a>
+            <a href="#resultados" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Resultados</a>
+            <a href="#opiniones" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Opiniones</a>
+            <a href="#contacto" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Contacto</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-4">
+            <a href="tel:+545491136670860" class="nav-link text-sm font-medium opacity-70 hover:opacity-100 transition">+54 91 1366-7086</a>
+            <a href="https://wa.me/545491136670860" id="navCta" class="bg-navy-600 text-white px-5 py-2.5 text-sm font-semibold tracking-wide uppercase hover:bg-navy-700 transition-all">Reservar Turno</a>
+        </div>
+        <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileOverlay" class="mobile-overlay fixed inset-0 z-[60] bg-black/40">
+    <div class="mobile-panel absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-cream flex flex-col">
+        <div class="flex justify-between items-center p-6 border-b border-warm">
+            <span class="font-serif text-lg font-semibold">Dra. Irene Pacella Consultorio Odontologico</span>
+            <button id="closeMenu" class="p-2"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="flex-1 flex flex-col justify-between p-6">
+            <div class="space-y-1">
+                <a href="#servicios" class="mob-link block py-3 text-lg font-medium border-b border-warm/50">Servicios</a>
+                <a href="#proceso" class="mob-link block py-3 text-lg font-medium border-b border-warm/50">Nuestro Proceso</a>
+                <a href="#resultados" class="mob-link block py-3 text-lg font-medium border-b border-warm/50">Resultados</a>
+                <a href="#opiniones" class="mob-link block py-3 text-lg font-medium border-b border-warm/50">Opiniones</a>
+                <a href="#preguntas" class="mob-link block py-3 text-lg font-medium border-b border-warm/50">Preguntas</a>
+                <a href="#contacto" class="mob-link block py-3 text-lg font-medium">Contacto</a>
+            </div>
+            <div class="space-y-3">
+                <a href="tel:+545491136670860" class="block text-center py-3 border border-charcoal text-sm font-semibold uppercase tracking-wide">+54 91 1366-7086</a>
+                <a href="https://wa.me/545491136670860" class="block text-center py-3 bg-navy-600 text-white text-sm font-semibold uppercase tracking-wide">Reservar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="relative h-screen min-h-[650px] flex items-end overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1800&q=85" alt="Consultorio odontológico de alta gama" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 w-full pb-16 md:pb-24 px-6 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="anim-hero-1 flex items-center gap-3 mb-6">
+                <div class="accent-line"></div>
+                <span class="text-gold-400 text-xs font-semibold tracking-[0.3em] uppercase">Buenos Aires, Argentina</span>
+            </div>
+            <h1 class="anim-hero-2 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-normal leading-[1.05] tracking-tight max-w-4xl mb-6">
+                Excelencia en cada<br><em class="italic text-gold-400">detalle.</em>
+            </h1>
+            <p class="anim-hero-3 text-base sm:text-lg text-white/70 max-w-xl mb-10 leading-relaxed font-light">
+                Un equipo de especialistas comprometidos con la salud y estética de tu sonrisa. Más de 15 años de trayectoria nos respaldan.
+            </p>
+            <div class="anim-hero-4 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12">
+                <a href="https://wa.me/545491136670860" class="bg-gold-500 text-charcoal px-8 py-4 font-semibold text-sm tracking-wide uppercase hover:bg-gold-400 transition-all inline-flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Agendar Consulta Sin Cargo
+                </a>
+                <a href="#servicios" class="border border-white/30 text-white px-8 py-4 font-semibold text-sm tracking-wide uppercase hover:bg-white/10 transition-all inline-flex items-center justify-center">
+                    Descubrir más
+                </a>
+            </div>
+            <div id="heroStats" class="anim-hero-4 flex flex-wrap gap-8 sm:gap-12 text-white/60 text-sm">
+                <div><span class="text-white font-serif text-2xl sm:text-3xl font-normal block counter" data-target="500" data-prefix="+">+0</span>Pacientes</div>
+                <div><span class="text-white font-serif text-2xl sm:text-3xl font-normal block counter" data-target="15" data-prefix="+">+0</span>Años</div>
+                <div><span class="text-white font-serif text-2xl sm:text-3xl font-normal block flex items-center gap-1"><span class="text-gold-400">★</span> <span class="counter" data-target="5" data-decimal="true">0</span></span>Google</div>
+                <div><span class="text-white font-serif text-2xl sm:text-3xl font-normal block counter" data-target="6" data-suffix="+">0</span>Especialidades</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- TRUST BAR -->
+<section class="py-6 bg-white border-b border-warm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-x-4 md:gap-x-6 text-charcoal/30 text-[10px] sm:text-[11px] md:text-xs font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase">
+        <span>+15 Años</span><span class="text-warm">·</span>
+        <span>Tecnología 3D</span><span class="text-warm">·</span>
+        <span>Materiales Importados</span><span class="text-warm">·</span>
+        <span>Atención Personalizada</span><span class="text-warm">·</span>
+        <span>Financiación Sin Interés</span>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-16" data-aos="fade-up">
+            <div class="accent-line mb-4"></div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-tight mb-4">Nuestras especialidades</h2>
+            <p class="text-charcoal/60 text-base leading-relaxed">Cada tratamiento es diseñado con precisión y dedicación. Combinamos ciencia y arte para resultados excepcionales.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="card-hover bg-white p-8 border border-warm/50 group" data-aos="fade-up">
+                <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy-100 transition"><i data-lucide="sparkles" class="w-6 h-6 text-navy-600"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Profilaxis Profesional</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Limpieza profunda con instrumental de última tecnología. Prevenimos enfermedades y mantenemos tu salud bucal.</p>
+            </div>
+            <div class="card-hover bg-white p-8 border border-warm/50 group" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy-100 transition"><i data-lucide="sun" class="w-6 h-6 text-navy-600"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Estética Dental</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Blanqueamiento de alta potencia y diseño de sonrisa digital. Resultados naturales y armoniosos.</p>
+            </div>
+            <div class="card-hover bg-white p-8 border border-warm/50 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy-100 transition"><i data-lucide="smile" class="w-6 h-6 text-navy-600"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Ortodoncia Avanzada</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Alineadores transparentes y brackets de última generación. Tratamiento personalizado con seguimiento continuo.</p>
+            </div>
+            <div class="card-hover bg-white p-8 border border-warm/50 group" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy-100 transition"><i data-lucide="pin" class="w-6 h-6 text-navy-600"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Implantología</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Implantes de titanio premium con planificación digital 3D. La solución definitiva y más natural.</p>
+            </div>
+            <div class="card-hover bg-white p-8 border border-warm/50 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-navy-100 transition"><i data-lucide="gem" class="w-6 h-6 text-navy-600"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Rehabilitación Oral</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Coronas, carillas y prótesis con materiales de máxima calidad. Devolvemos función y belleza a tu sonrisa.</p>
+            </div>
+            <a href="https://wa.me/545491136670860" class="card-hover bg-navy-600 text-white p-8 group" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-14 h-14 bg-white/15 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/25 transition"><i data-lucide="phone" class="w-6 h-6 text-white"></i></div>
+                <h3 class="font-serif text-xl font-normal mb-2">Urgencias 24h</h3>
+                <p class="text-sm text-white/70 leading-relaxed mb-3">Dolor agudo, traumatismo o emergencia. Atención prioritaria por WhatsApp.</p>
+                <span class="text-gold-300 text-sm font-semibold inline-flex items-center gap-1">Contactar ahora <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- POR QUE ELEGIRNOS -->
+<section class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 lg:gap-20">
+            <div class="w-full lg:w-5/12" data-aos="fade-right">
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-tight mb-4">Nuestra diferencia</h2>
+                <p class="text-charcoal/60 leading-relaxed mb-8">Elegir un profesional de confianza marca la diferencia en tu salud bucal. Conocé lo que nos distingue.</p>
+                <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=700&q=80" alt="Profesional dental" class="w-full h-[280px] object-cover hidden lg:block">
+            </div>
+            <div class="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="why-card" data-aos="fade-up">
+                    <span class="text-navy-600 font-serif text-3xl font-normal block mb-2">15+</span>
+                    <h3 class="font-serif text-lg font-normal mb-2">Trayectoria sólida</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Años de formación continua y miles de pacientes que nos eligen. Experiencia que se nota en cada tratamiento.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-navy-600 font-serif text-3xl font-normal block mb-2">3D</span>
+                    <h3 class="font-serif text-lg font-normal mb-2">Diagnóstico digital</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Escáner intraoral, tomografía y diseño computarizado para planificar con máxima precisión.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-navy-600 font-serif text-3xl font-normal block mb-2">0%</span>
+                    <h3 class="font-serif text-lg font-normal mb-2">Planes accesibles</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Cuotas sin interés con todas las tarjetas. Presupuestos transparentes y sin letra chica.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-navy-600 font-serif text-3xl font-normal block mb-2">★</span>
+                    <h3 class="font-serif text-lg font-normal mb-2">Cercanía y confianza</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Escuchamos, explicamos y acompañamos. Nuestro trato humano es lo que más valoran nuestros pacientes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TU PLAN DE SONRISA -->
+<section id="proceso" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
+            <div class="accent-line mx-auto mb-4"></div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight mb-4">Cómo trabajamos</h2>
+            <p class="text-charcoal/60 leading-relaxed">Un camino claro y sin sorpresas hacia la sonrisa que merecés.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+            <div class="text-center" data-aos="fade-up">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-navy-600 text-navy-600 font-serif text-xl font-normal mb-6 mx-auto">01</div>
+                <h3 class="font-serif text-lg font-normal mb-2">Diagnóstico Integral</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Evaluación clínica y radiográfica completa. Primera consulta sin cargo.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-navy-600 text-navy-600 font-serif text-xl font-normal mb-6 mx-auto">02</div>
+                <h3 class="font-serif text-lg font-normal mb-2">Propuesta a Medida</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Plan de tratamiento detallado con opciones y presupuesto claro.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-navy-600 text-navy-600 font-serif text-xl font-normal mb-6 mx-auto">03</div>
+                <h3 class="font-serif text-lg font-normal mb-2">Ejecución Precisa</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Tratamiento con los mejores materiales y la tecnología más avanzada.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-navy-600 text-white font-serif text-xl font-normal mb-6 mx-auto">04</div>
+                <h3 class="font-serif text-lg font-normal mb-2">Seguimiento Continuo</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Controles periódicos para garantizar resultados duraderos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="py-20 bg-off-black text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 mb-12" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-serif text-3xl sm:text-4xl font-normal tracking-tight">Tecnología que marca la diferencia</h2>
+            </div>
+            <p class="text-white/50 text-sm max-w-md leading-relaxed">Invertimos constantemente en equipamiento de vanguardia para ofrecerte diagnósticos precisos y tratamientos más cómodos.</p>
+        </div>
+    </div>
+    <div class="overflow-hidden py-8 border-y border-white/10">
+        <div class="marquee-track flex gap-12 whitespace-nowrap" style="width: max-content;">
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="scan" class="w-4 h-4 text-gold-400"></i> Escáner intraoral 3D</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="zap" class="w-4 h-4 text-gold-400"></i> Blanqueamiento LED</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="smile" class="w-4 h-4 text-gold-400"></i> Diseño digital de sonrisa</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i> Esterilización certificada</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="syringe" class="w-4 h-4 text-gold-400"></i> Sedación consciente</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="monitor" class="w-4 h-4 text-gold-400"></i> Radiografía panorámica digital</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="gem" class="w-4 h-4 text-gold-400"></i> Porcelanas importadas</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="clock" class="w-4 h-4 text-gold-400"></i> Turnos en el día</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="scan" class="w-4 h-4 text-gold-400"></i> Escáner intraoral 3D</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="zap" class="w-4 h-4 text-gold-400"></i> Blanqueamiento LED</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="smile" class="w-4 h-4 text-gold-400"></i> Diseño digital de sonrisa</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="shield-check" class="w-4 h-4 text-gold-400"></i> Esterilización certificada</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="syringe" class="w-4 h-4 text-gold-400"></i> Sedación consciente</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="monitor" class="w-4 h-4 text-gold-400"></i> Radiografía panorámica digital</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="gem" class="w-4 h-4 text-gold-400"></i> Porcelanas importadas</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="clock" class="w-4 h-4 text-gold-400"></i> Turnos en el día</span>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-1 md:grid-cols-2 gap-5" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80" alt="Equipamiento dental moderno" class="w-full h-[300px] md:h-[400px] object-cover">
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80" alt="Profesional atendiendo paciente" class="w-full h-[300px] md:h-[400px] object-cover">
+    </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section id="resultados" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="w-full lg:w-5/12" data-aos="fade-right">
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-tight mb-4">Casos reales, sonrisas reales</h2>
+                <p class="text-charcoal/60 leading-relaxed mb-8">Deslizá para ver la transformación. Cada resultado refleja un plan de tratamiento único y personalizado.</p>
+                <a href="https://wa.me/545491136670860" class="inline-flex items-center gap-2 text-navy-600 font-semibold text-sm uppercase tracking-wide hover:text-navy-700 transition">
+                    Quiero mi transformación <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="w-full lg:w-7/12" data-aos="fade-left">
+                <div id="comparison" class="comp-container rounded-sm shadow-2xl" style="aspect-ratio: 16/10;">
+                    <img src="https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Después" class="w-full h-full object-cover">
+                    <div class="comp-overlay" id="compOverlay" style="width: 50%;">
+                        <img src="https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Antes" class="h-full object-cover" style="width: 900px; max-width: none;">
+                    </div>
+                    <div class="comp-slider" id="compSlider" style="left: 50%;"><div class="comp-handle"><svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg></div></div>
+                    <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1.5 uppercase tracking-widest z-20">Antes</div>
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-charcoal text-[11px] font-semibold px-3 py-1.5 uppercase tracking-widest z-20">Después</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="opiniones" class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16" data-aos="fade-up">
+            <div>
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight">Nuestros pacientes<br>nos recomiendan</h2>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-gold-400 text-lg">★★★★★</span>
+                <span class="text-sm text-charcoal/50">5/5 en <strong class="text-charcoal">Google</strong> · +50 reseñas</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="card-hover bg-cream p-8 border border-warm/50" data-aos="fade-up">
+                <div class="flex gap-0.5 text-gold-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"La atención fue impecable desde el primer momento. Me explicaron todo el tratamiento con claridad y los resultados superaron mis expectativas."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-warm">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Valentina M.</p><p class="text-xs text-charcoal/40">Carillas de porcelana</p></div>
+                </div>
+            </div>
+            <div class="card-hover bg-cream p-8 border border-warm/50" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-0.5 text-gold-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"Después de años sin ir al dentista, encontré un equipo que me transmitió total confianza. Los implantes quedaron perfectos."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-warm">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Roberto D.</p><p class="text-xs text-charcoal/40">Implantes dentales</p></div>
+                </div>
+            </div>
+            <div class="card-hover bg-cream p-8 border border-warm/50" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-0.5 text-gold-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"Mi hija le tenía pánico al dentista y ahora pide ir. El trato con los chicos es extraordinario, un equipo realmente humano."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-warm">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Carolina P.</p><p class="text-xs text-charcoal/40">Odontopediatría</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="accent-line mx-auto mb-4"></div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight mb-4">Consultas frecuentes</h2>
+        </div>
+        <div class="space-y-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-item bg-white border border-warm/50 px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿La primera consulta tiene costo?</span><svg class="faq-chevron w-5 h-5 text-charcoal/30 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">No, la primera consulta es completamente sin cargo. Incluye evaluación clínica, radiografías digitales y un plan de tratamiento con presupuesto detallado.</div>
+            </div>
+            <div class="faq-item bg-white border border-warm/50 px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Trabajan con obras sociales?</span><svg class="faq-chevron w-5 h-5 text-charcoal/30 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Sí, trabajamos con las principales obras sociales y prepagas. Consultanos por tu cobertura para darte información precisa sobre bonificaciones.</div>
+            </div>
+            <div class="faq-item bg-white border border-warm/50 px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Los implantes son dolorosos?</span><svg class="faq-chevron w-5 h-5 text-charcoal/30 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">El procedimiento se realiza con anestesia local y es prácticamente indoloro. La recuperación es rápida y controlamos cualquier molestia con medicación adecuada.</div>
+            </div>
+            <div class="faq-item bg-white border border-warm/50 px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Cuántas cuotas puedo hacer?</span><svg class="faq-chevron w-5 h-5 text-charcoal/30 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Aceptamos todas las tarjetas con planes de hasta 12 cuotas sin interés. También efectivo, transferencia y débito. Armamos un plan de pago a tu medida.</div>
+            </div>
+            <div class="faq-item bg-white border border-warm/50 px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Cómo saco turno?</span><svg class="faq-chevron w-5 h-5 text-charcoal/30 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Podés contactarnos por WhatsApp, teléfono o directamente en el consultorio. Respondemos en minutos y te asignamos el horario que mejor te convenga.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OBRAS SOCIALES -->
+<section class="py-16 bg-white border-y border-warm">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] uppercase text-charcoal/30 mb-8">Cobertura y obras sociales</p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-6 py-2.5 bg-cream border border-warm/50 text-sm font-medium text-charcoal/60">OSDE</span>
+            <span class="px-6 py-2.5 bg-cream border border-warm/50 text-sm font-medium text-charcoal/60">Swiss Medical</span>
+            <span class="px-6 py-2.5 bg-cream border border-warm/50 text-sm font-medium text-charcoal/60">Galeno</span>
+            <span class="px-6 py-2.5 bg-cream border border-warm/50 text-sm font-medium text-charcoal/60">Medicus</span>
+            <span class="px-6 py-2.5 bg-cream border border-warm/50 text-sm font-medium text-charcoal/60">PAMI</span>
+            <a href="https://wa.me/545491136670860" class="px-6 py-2.5 bg-navy-50 border border-navy-100 text-sm font-semibold text-navy-600 hover:bg-navy-100 transition">+ Consultanos</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16" data-aos="fade-up">
+            <div class="accent-line mb-4"></div>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight">Encontranos</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div class="w-full lg:w-1/3 space-y-4">
+                <div class="bg-white p-6 border border-warm/50" data-aos="fade-up">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Dirección</p>
+                    <p class="font-medium text-sm">3 de Febrero 2750, Cdad. Autónoma de Buenos Aires</p>
+                    <p class="text-sm text-charcoal/50">Cdad. Autónoma de Buenos Aires, Buenos Aires</p>
+                </div>
+                <div class="bg-white p-6 border border-warm/50" data-aos="fade-up" data-aos-delay="50">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Teléfono</p>
+                    <a href="tel:+545491136670860" class="font-medium text-sm hover:text-navy-600 transition">+54 91 1366-7086</a>
+                </div>
+                <a href="https://wa.me/545491136670860" class="block bg-navy-600 text-white p-6 hover:bg-navy-700 transition group" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-2">WhatsApp</p>
+                    <p class="font-medium text-sm flex items-center gap-2">Escribinos ahora <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></p>
+                </a>
+                <div class="bg-white p-6 border border-warm/50" data-aos="fade-up" data-aos-delay="150">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Horarios</p>
+                    <p class="text-sm font-medium">Lun–Vie: 9:00 a 19:00</p>
+                    <p class="text-sm font-medium">Sábados: 9:00 a 13:00</p>
+                    <p class="text-sm font-semibold text-navy-600 mt-1">Urgencias: WhatsApp 24h</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/3 h-[350px] lg:h-auto overflow-hidden shadow-xl border border-warm/50" data-aos="fade-up" data-aos-delay="100">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0; min-height: 400px;" loading="lazy" src="https://maps.google.com/maps?q=3%20de%20Febrero%202750%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="relative py-32 md:py-40 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-navy-900/85"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center text-white">
+        <div class="accent-line mx-auto mb-6" data-aos="fade-up"></div>
+        <h2 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Tu mejor sonrisa<br>empieza <em class="italic text-gold-400">hoy.</em>
+        </h2>
+        <p class="text-lg text-white/60 mb-10 leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
+            La primera consulta es sin cargo. Escribinos y te respondemos en minutos.
+        </p>
+        <a href="https://wa.me/545491136670860" class="bg-gold-500 text-charcoal px-10 py-4 font-semibold text-sm tracking-wide uppercase hover:bg-gold-400 transition-all inline-flex items-center gap-2" data-aos="fade-up" data-aos-delay="300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Agendar Consulta Sin Cargo
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 bg-off-black text-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-1">
+                <span class="font-serif text-xl font-normal block mb-4">Dra. Irene Pacella Consultorio Odontologico</span>
+                <p class="text-sm text-white/40 leading-relaxed">Odontología de excelencia con tecnología de vanguardia en Buenos Aires.</p>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Servicios</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>Profilaxis profesional</li><li>Estética dental</li><li>Ortodoncia</li><li>Implantes</li><li>Rehabilitación oral</li></ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Contacto</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>+54 91 1366-7086</li><li>WhatsApp directo</li><li>3 de Febrero 2750, Cdad. Autónoma de Buenos Aires</li><li>Cdad. Autónoma de Buenos Aires, Buenos Aires</li></ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Horarios</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>Lun–Vie: 9 a 19h</li><li>Sábados: 9 a 13h</li><li class="text-gold-400 font-medium">Urgencias: WhatsApp</li></ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-[11px] text-white/20 uppercase tracking-[0.2em]">&copy; 2026 Dra. Irene Pacella Consultorio Odontologico</p>
+            <p class="text-[11px] text-white/20 uppercase tracking-[0.2em]">Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/545491136670860" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:shadow-xl transition-all" aria-label="WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    lucide.createIcons();
+    AOS.init({ once: true, duration: 700, offset: 40, easing: 'ease-out-cubic' });
+
+    const navbar = document.getElementById('navbar');
+    const navLogo = document.getElementById('navLogo');
+    const navCta = document.getElementById('navCta');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function updateNav() {
+        const scrolled = window.scrollY > 80;
+        navbar.classList.toggle('nav-scrolled', scrolled);
+        navbar.style.paddingTop = scrolled ? '12px' : '';
+        navbar.style.paddingBottom = scrolled ? '12px' : '';
+        const textColor = scrolled ? '#1C1C1C' : '#ffffff';
+        navLogo.style.color = textColor;
+        menuIcon.style.stroke = textColor;
+        navLinks.forEach(l => { l.style.color = textColor; l.style.opacity = scrolled ? '0.7' : '0.8'; });
+        if (navCta) { navCta.style.background = scrolled ? '#1e3a5f' : '#1e3a5f'; navCta.style.color = '#fff'; }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    const overlay = document.getElementById('mobileOverlay');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    const mobLinks = document.querySelectorAll('.mob-link');
+    function openMenu() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeM() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    menuBtn.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeM);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeM(); });
+    mobLinks.forEach(l => l.addEventListener('click', closeM));
+
+    const comp = document.getElementById('comparison');
+    const compOverlay = document.getElementById('compOverlay');
+    const compSlider = document.getElementById('compSlider');
+    let isDragging = false;
+    function moveSlider(x) { const rect = comp.getBoundingClientRect(); let pos = ((x - rect.left) / rect.width) * 100; pos = Math.max(2, Math.min(98, pos)); compOverlay.style.width = pos + '%'; compSlider.style.left = pos + '%'; }
+    comp.addEventListener('mousedown', (e) => { isDragging = true; moveSlider(e.clientX); });
+    document.addEventListener('mousemove', (e) => { if (isDragging) moveSlider(e.clientX); });
+    document.addEventListener('mouseup', () => isDragging = false);
+    comp.addEventListener('touchstart', (e) => { isDragging = true; moveSlider(e.touches[0].clientX); }, { passive: true });
+    comp.addEventListener('touchmove', (e) => { if (isDragging) moveSlider(e.touches[0].clientX); }, { passive: true });
+    comp.addEventListener('touchend', () => isDragging = false);
+    function fixOverlayImg() { const img = compOverlay.querySelector('img'); if (img) img.style.width = comp.offsetWidth + 'px'; }
+    window.addEventListener('load', fixOverlayImg);
+    window.addEventListener('resize', fixOverlayImg);
+
+    function animateCounters() {
+        document.querySelectorAll('.counter').forEach(el => {
+            if (el.dataset.animated) return;
+            const target = parseFloat(el.dataset.target);
+            const isDecimal = el.dataset.decimal === 'true';
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const steps = 60; let step = 0;
+            el.dataset.animated = 'true';
+            const timer = setInterval(() => {
+                step++;
+                const progress = 1 - Math.pow(1 - step / steps, 3);
+                let current = target * progress;
+                if (step >= steps) { current = target; clearInterval(timer); }
+                el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+            }, 2000 / steps);
+        });
+    }
+    const statsSection = document.getElementById('heroStats');
+    if (statsSection) {
+        const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { setTimeout(animateCounters, 600); obs.unobserve(e.target); } }); }, { threshold: 0.5 });
+        obs.observe(statsSection);
+    }
+</script>
+</body>
+</html>
