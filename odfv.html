@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>od.fv | Tu Dentista de Confianza en Buenos Aires</title>
+    <meta name="description" content="od.fv - Clínica odontológica moderna en Buenos Aires. Tecnología de punta, equipo multidisciplinario y trato humano. +15 años cuidando sonrisas. Turno online sin cargo.">
+    <meta name="keywords" content="dentista Buenos Aires, odontólogo Cdad. Autónoma de Buenos Aires, implantes dentales, ortodoncia, blanqueamiento, od.fv">
+    <meta property="og:title" content="od.fv | Tu Dentista de Confianza">
+    <meta property="og:description" content="Clínica odontológica moderna en Buenos Aires. +15 años cuidando sonrisas.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://landing-odontologia-demo.vercel.app/odfv.html">
+    <link rel="icon" href="https://fav.farm/🦷">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Outfit', 'system-ui', 'sans-serif'],
+                        body: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' },
+                        coral: { 300: '#fca5a1', 400: '#F97066', 500: '#ef4444', 600: '#dc2626' },
+                        mint: '#f0fdf4',
+                        'mint-dark': '#dcfce7',
+                        sage: '#d1d5db',
+                        charcoal: '#1C1C1C',
+                        'off-black': '#0E0E0E',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        html, body { overflow-x: hidden; max-width: 100vw; }
+        body { font-family: 'Space Grotesk', sans-serif; color: #1C1C1C; background: #ffffff; }
+        .nav-scrolled { background: rgba(255,255,255,0.95); backdrop-filter: blur(16px) saturate(180%); border-bottom: 2px solid #d1fae5; }
+        .hero-overlay { background: linear-gradient(180deg, rgba(6,78,59,0.35) 0%, rgba(6,78,59,0.55) 50%, rgba(6,78,59,0.80) 100%); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .anim-hero-1 { animation: fadeUp 0.8s ease 0.2s both; }
+        .anim-hero-2 { animation: fadeUp 0.8s ease 0.4s both; }
+        .anim-hero-3 { animation: fadeUp 0.8s ease 0.6s both; }
+        .anim-hero-4 { animation: fadeUp 0.8s ease 0.8s both; }
+        .step-line { position: relative; }
+        .step-line::after { content: ''; position: absolute; top: 50%; left: 100%; width: 100%; height: 1px; background: linear-gradient(90deg, #059669 0%, transparent 100%); }
+        @media (max-width: 768px) { .step-line::after { display: none; } }
+        .comp-container { position: relative; overflow: hidden; cursor: ew-resize; touch-action: none; }
+        .comp-overlay { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; }
+        .comp-slider { position: absolute; top: 0; height: 100%; width: 2px; background: white; z-index: 10; }
+        .comp-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        .faq-item .faq-answer { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.5s ease, opacity 0.3s ease, padding 0.3s ease; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 0.75rem; opacity: 1; }
+        .faq-chevron { transition: transform 0.3s ease; color: #059669; }
+        .faq-item.active .faq-chevron { transform: rotate(180deg); }
+        .card-hover { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+        .card-hover h3 { position: relative; display: inline-block; }
+        .card-hover h3::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #059669; transition: width 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .card-hover:hover h3::after { width: 100%; }
+        .why-card { position: relative; padding-left: 1.5rem; }
+        .why-card::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 100%; background: linear-gradient(180deg, #F97066 0%, #059669 100%); border-radius: 2px; }
+        .mobile-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+        .mobile-panel { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .mobile-overlay.open .mobile-panel { transform: translateX(0); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-track { animation: marquee 30s linear infinite; }
+        .marquee-track:hover { animation-play-state: paused; }
+        section[id] { scroll-margin-top: 80px; }
+        .accent-line { width: 40px; height: 2px; background: #F97066; }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-5 px-5 md:px-8">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center gap-2.5">
+            <span class="font-heading text-xl font-semibold tracking-tight" id="navLogo">od.fv</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+            <a href="#servicios" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Servicios</a>
+            <a href="#proceso" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Proceso</a>
+            <a href="#resultados" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Resultados</a>
+            <a href="#opiniones" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Opiniones</a>
+            <a href="#contacto" class="nav-link text-sm font-medium tracking-wide uppercase opacity-80 hover:opacity-100 transition">Contacto</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-4">
+            <a href="tel:+54541149464155" class="nav-link text-sm font-medium opacity-70 hover:opacity-100 transition">+54 11 4946-4155</a>
+            <a href="https://wa.me/54541149464155" id="navCta" class="bg-coral-400 text-white px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-coral-300 transition-all">Solicitar Turno</a>
+        </div>
+        <button id="menuBtn" class="lg:hidden p-2" aria-label="Menu">
+            <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileOverlay" class="mobile-overlay fixed inset-0 z-[60] bg-black/40">
+    <div class="mobile-panel absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-emerald-900 flex flex-col">
+        <div class="flex justify-between items-center p-6 border-b border-emerald-700">
+            <span class="font-heading text-lg font-semibold text-white">od.fv</span>
+            <button id="closeMenu" class="p-2 text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></button>
+        </div>
+        <div class="flex-1 flex flex-col justify-between p-6">
+            <div class="space-y-1">
+                <a href="#servicios" class="mob-link block py-3 text-lg font-medium text-white/90 border-b border-emerald-700/50">Servicios</a>
+                <a href="#proceso" class="mob-link block py-3 text-lg font-medium text-white/90 border-b border-emerald-700/50">Nuestro Proceso</a>
+                <a href="#resultados" class="mob-link block py-3 text-lg font-medium text-white/90 border-b border-emerald-700/50">Resultados</a>
+                <a href="#opiniones" class="mob-link block py-3 text-lg font-medium text-white/90 border-b border-emerald-700/50">Opiniones</a>
+                <a href="#preguntas" class="mob-link block py-3 text-lg font-medium text-white/90 border-b border-emerald-700/50">Preguntas</a>
+                <a href="#contacto" class="mob-link block py-3 text-lg font-medium text-white/90">Contacto</a>
+            </div>
+            <div class="space-y-3">
+                <a href="tel:+54541149464155" class="block text-center py-3 border border-white/30 text-white text-sm font-semibold uppercase tracking-wide rounded-full">+54 11 4946-4155</a>
+                <a href="https://wa.me/54541149464155" class="block text-center py-3 bg-coral-400 text-white text-sm font-semibold uppercase tracking-wide rounded-full">Reservar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HERO -->
+<header class="relative h-screen min-h-[650px] flex items-end overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1920&q=80" alt="Clínica dental moderna y profesional" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 w-full pb-16 md:pb-24 px-6 md:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="anim-hero-1 flex items-center gap-3 mb-6">
+                <div class="accent-line"></div>
+                <span class="text-coral-400 text-xs font-semibold tracking-[0.3em] uppercase">Buenos Aires, Argentina</span>
+            </div>
+            <h1 class="anim-hero-2 font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-[1.05] tracking-tight max-w-4xl mb-6">
+                Sonrisas que<br>transforman <em class="italic text-coral-400">vidas.</em>
+            </h1>
+            <p class="anim-hero-3 text-base sm:text-lg text-white/70 max-w-xl mb-10 leading-relaxed font-light">
+                Combinamos la última tecnología con un trato humano y cercano para que cada visita sea una experiencia positiva.
+            </p>
+            <div class="anim-hero-4 flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12">
+                <a href="https://wa.me/54541149464155" class="bg-coral-400 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide uppercase hover:bg-coral-300 transition-all inline-flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Solicitar Turno Gratis
+                </a>
+                <a href="#servicios" class="border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-sm tracking-wide uppercase hover:bg-white/10 transition-all inline-flex items-center justify-center">
+                    Conocer más
+                </a>
+            </div>
+            <div id="heroStats" class="anim-hero-4 flex flex-wrap gap-8 sm:gap-12 text-white/60 text-sm">
+                <div><span class="text-white font-heading text-2xl sm:text-3xl font-bold block counter" data-target="500" data-prefix="+">+0</span>Pacientes</div>
+                <div><span class="text-white font-heading text-2xl sm:text-3xl font-bold block counter" data-target="15" data-prefix="+">+0</span>Años</div>
+                <div><span class="text-white font-heading text-2xl sm:text-3xl font-bold block flex items-center gap-1"><span class="text-coral-400">★</span> <span class="counter" data-target="5" data-decimal="true">0</span></span>Google</div>
+                <div><span class="text-white font-heading text-2xl sm:text-3xl font-bold block counter" data-target="6" data-suffix="+">0</span>Especialidades</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- TRUST BAR -->
+<section class="py-6 bg-white border-b border-emerald-100">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-x-4 md:gap-x-6 text-charcoal/30 text-[10px] sm:text-[11px] md:text-xs font-semibold tracking-[0.12em] sm:tracking-[0.18em] uppercase">
+        <span>Turnos Online</span><span class="text-emerald-200">·</span>
+        <span>Sin Dolor Garantizado</span><span class="text-emerald-200">·</span>
+        <span>+500 Sonrisas</span><span class="text-emerald-200">·</span>
+        <span>Equipo Multidisciplinario</span><span class="text-emerald-200">·</span>
+        <span>Presupuesto Sin Compromiso</span>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-24 md:py-32 bg-mint">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mb-16" data-aos="fade-up">
+            <div class="accent-line mb-4"></div>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">Todo lo que necesitás en un solo lugar</h2>
+            <p class="text-charcoal/60 text-base leading-relaxed">Ofrecemos una atención integral para toda la familia. Cada tratamiento está pensado para que te sientas cómodo y seguro.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="card-hover bg-white p-8 rounded-2xl border-l-4 border-l-emerald-600 border border-emerald-100 group" data-aos="fade-up">
+                <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition"><i data-lucide="sparkles" class="w-6 h-6 text-emerald-600"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Limpieza y Prevención</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Higiene profunda con ultrasonido y pulido profesional. La base para una boca sana y libre de enfermedades.</p>
+            </div>
+            <div class="card-hover bg-white p-8 rounded-2xl border-l-4 border-l-emerald-600 border border-emerald-100 group" data-aos="fade-up" data-aos-delay="50">
+                <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition"><i data-lucide="sun" class="w-6 h-6 text-emerald-600"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Diseño de Sonrisa</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Carillas, blanqueamiento y contorneado digital. Creamos la sonrisa que siempre soñaste con resultados naturales.</p>
+            </div>
+            <div class="card-hover bg-white p-8 rounded-2xl border-l-4 border-l-emerald-600 border border-emerald-100 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition"><i data-lucide="smile" class="w-6 h-6 text-emerald-600"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Ortodoncia Moderna</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Alineadores invisibles y brackets estéticos de última generación. Corregí tu mordida sin que nadie lo note.</p>
+            </div>
+            <div class="card-hover bg-white p-8 rounded-2xl border-l-4 border-l-emerald-600 border border-emerald-100 group" data-aos="fade-up" data-aos-delay="150">
+                <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition"><i data-lucide="pin" class="w-6 h-6 text-emerald-600"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Implantes Dentales</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Implantes de titanio con cirugía guiada 3D. Recuperá piezas perdidas con la solución más duradera y estética.</p>
+            </div>
+            <div class="card-hover bg-white p-8 rounded-2xl border-l-4 border-l-emerald-600 border border-emerald-100 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-emerald-100 transition"><i data-lucide="gem" class="w-6 h-6 text-emerald-600"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Endodoncia Indolora</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed">Tratamiento de conducto con técnicas modernas y anestesia localizada. Salvamos tu pieza dental sin dolor.</p>
+            </div>
+            <a href="https://wa.me/54541149464155" class="card-hover bg-emerald-600 text-white p-8 rounded-2xl group" data-aos="fade-up" data-aos-delay="250">
+                <div class="w-14 h-14 bg-white/15 rounded-full flex items-center justify-center mb-6 group-hover:bg-white/25 transition"><i data-lucide="baby" class="w-6 h-6 text-white"></i></div>
+                <h3 class="font-heading text-xl font-semibold mb-2">Odontopediatría</h3>
+                <p class="text-sm text-white/70 leading-relaxed mb-3">Cuidado dental especializado para los más chicos. Un espacio amigable donde aprenden a cuidar su sonrisa.</p>
+                <span class="text-coral-300 text-sm font-semibold inline-flex items-center gap-1">Consultar ahora <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- POR QUE ELEGIRNOS -->
+<section class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 lg:gap-20">
+            <div class="w-full lg:w-5/12" data-aos="fade-right">
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">Lo que nos hace diferentes</h2>
+                <p class="text-charcoal/60 leading-relaxed mb-8">No somos una clínica más. Apostamos por la innovación, la calidez y la transparencia en cada paso del camino.</p>
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=700&q=80" alt="Profesional dental atendiendo" class="w-full h-[280px] object-cover rounded-2xl hidden lg:block">
+            </div>
+            <div class="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="why-card" data-aos="fade-up">
+                    <span class="text-emerald-600 font-heading text-3xl font-bold block mb-2">3D</span>
+                    <h3 class="font-heading text-lg font-semibold mb-2">Tecnología de punta</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Escáner intraoral, tomografía digital y planificación computarizada para diagnósticos más precisos y tratamientos más rápidos.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-emerald-600 font-heading text-3xl font-bold block mb-2">15+</span>
+                    <h3 class="font-heading text-lg font-semibold mb-2">Equipo especializado</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Profesionales con formación continua en las mejores universidades. Cada área cuenta con su propio especialista.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-emerald-600 font-heading text-3xl font-bold block mb-2">0%</span>
+                    <h3 class="font-heading text-lg font-semibold mb-2">Financiación flexible</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Hasta 12 cuotas sin interés con todas las tarjetas. Planes de pago adaptados a tu presupuesto, sin sorpresas.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-emerald-600 font-heading text-3xl font-bold block mb-2">24h</span>
+                    <h3 class="font-heading text-lg font-semibold mb-2">Atención inmediata</h3>
+                    <p class="text-sm text-charcoal/50 leading-relaxed">Urgencias por WhatsApp las 24 horas. Turnos en el día para cuando no podés esperar. Siempre estamos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TU PLAN DE SONRISA -->
+<section id="proceso" class="py-24 md:py-32 bg-mint">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-20" data-aos="fade-up">
+            <div class="accent-line mx-auto mb-4"></div>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Tu tratamiento, paso a paso</h2>
+            <p class="text-charcoal/60 leading-relaxed">Un proceso transparente y organizado para que sepas exactamente qué esperar.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+            <div class="text-center" data-aos="fade-up">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-emerald-600 text-emerald-600 font-heading text-xl font-bold mb-6 mx-auto">01</div>
+                <h3 class="font-heading text-lg font-semibold mb-2">Evaluación integral</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Revisión completa con radiografías digitales y diagnóstico detallado. Primera visita sin cargo.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-emerald-600 text-emerald-600 font-heading text-xl font-bold mb-6 mx-auto">02</div>
+                <h3 class="font-heading text-lg font-semibold mb-2">Plan personalizado</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Diseñamos un plan a tu medida con tiempos, costos y alternativas claras.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-line inline-flex items-center justify-center w-16 h-16 rounded-full border-2 border-emerald-600 text-emerald-600 font-heading text-xl font-bold mb-6 mx-auto">03</div>
+                <h3 class="font-heading text-lg font-semibold mb-2">Tratamiento preciso</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Ejecutamos cada etapa con los mejores materiales y el menor tiempo posible.</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-600 text-white font-heading text-xl font-bold mb-6 mx-auto">04</div>
+                <h3 class="font-heading text-lg font-semibold mb-2">Seguimiento continuo</h3>
+                <p class="text-sm text-charcoal/50 leading-relaxed max-w-[200px] mx-auto">Controles regulares y soporte permanente para que tus resultados duren toda la vida.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section class="py-20 bg-off-black text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 mb-12" data-aos="fade-up">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight">Tecnología al servicio de tu sonrisa</h2>
+            </div>
+            <p class="text-white/50 text-sm max-w-md leading-relaxed">Incorporamos constantemente equipamiento de última generación para ofrecerte tratamientos más seguros, rápidos y confortables.</p>
+        </div>
+    </div>
+    <div class="overflow-hidden py-8 border-y border-white/10">
+        <div class="marquee-track flex gap-12 whitespace-nowrap" style="width: max-content;">
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="smile" class="w-4 h-4 text-coral-400"></i> Ortodoncia invisible</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="zap" class="w-4 h-4 text-coral-400"></i> Blanqueamiento express</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="pin" class="w-4 h-4 text-coral-400"></i> Implantes en el día</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="monitor" class="w-4 h-4 text-coral-400"></i> Prótesis digitales</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="baby" class="w-4 h-4 text-coral-400"></i> Odontopediatría</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="scan" class="w-4 h-4 text-coral-400"></i> Cirugía guiada 3D</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="gem" class="w-4 h-4 text-coral-400"></i> Carillas de porcelana</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="shield-check" class="w-4 h-4 text-coral-400"></i> Guardas nocturnas</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="smile" class="w-4 h-4 text-coral-400"></i> Ortodoncia invisible</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="zap" class="w-4 h-4 text-coral-400"></i> Blanqueamiento express</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="pin" class="w-4 h-4 text-coral-400"></i> Implantes en el día</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="monitor" class="w-4 h-4 text-coral-400"></i> Prótesis digitales</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="baby" class="w-4 h-4 text-coral-400"></i> Odontopediatría</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="scan" class="w-4 h-4 text-coral-400"></i> Cirugía guiada 3D</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="gem" class="w-4 h-4 text-coral-400"></i> Carillas de porcelana</span>
+            <span class="flex items-center gap-3 text-white/50 text-sm font-medium"><i data-lucide="shield-check" class="w-4 h-4 text-coral-400"></i> Guardas nocturnas</span>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-1 md:grid-cols-2 gap-5" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80" alt="Dentista trabajando con tecnología moderna" class="w-full h-[300px] md:h-[400px] object-cover rounded-2xl">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" alt="Equipamiento dental de última generación" class="w-full h-[300px] md:h-[400px] object-cover rounded-2xl">
+    </div>
+</section>
+
+<!-- BEFORE/AFTER -->
+<section id="resultados" class="py-24 md:py-32 bg-mint">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+            <div class="w-full lg:w-5/12" data-aos="fade-right">
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-4">Transformaciones reales</h2>
+                <p class="text-charcoal/60 leading-relaxed mb-8">Deslizá para ver el cambio. Cada sonrisa es el resultado de un trabajo personalizado y comprometido con la excelencia.</p>
+                <a href="https://wa.me/54541149464155" class="inline-flex items-center gap-2 text-emerald-600 font-semibold text-sm uppercase tracking-wide hover:text-emerald-700 transition">
+                    Quiero mi transformación <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="w-full lg:w-7/12" data-aos="fade-left">
+                <div id="comparison" class="comp-container rounded-2xl shadow-2xl" style="aspect-ratio: 16/10;">
+                    <img src="https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Después" class="w-full h-full object-cover">
+                    <div class="comp-overlay" id="compOverlay" style="width: 50%;">
+                        <img src="https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Antes" class="h-full object-cover" style="width: 900px; max-width: none;">
+                    </div>
+                    <div class="comp-slider" id="compSlider" style="left: 50%;"><div class="comp-handle"><svg class="w-5 h-5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg></div></div>
+                    <div class="absolute top-4 left-4 bg-black/50 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1.5 uppercase tracking-widest z-20 rounded-full">Antes</div>
+                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-charcoal text-[11px] font-semibold px-3 py-1.5 uppercase tracking-widest z-20 rounded-full">Después</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="opiniones" class="py-24 md:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16" data-aos="fade-up">
+            <div>
+                <div class="accent-line mb-4"></div>
+                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">Lo que dicen<br>nuestros pacientes</h2>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-coral-400 text-lg">★★★★★</span>
+                <span class="text-sm text-charcoal/50">5/5 en <strong class="text-charcoal">Google</strong> · +50 reseñas</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="card-hover bg-mint p-8 rounded-2xl border border-emerald-100" data-aos="fade-up">
+                <div class="flex gap-0.5 text-coral-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"Llegué con mucho miedo y me fui con una sonrisa nueva. El equipo fue súper cálido y me explicaron cada paso. Nunca sentí dolor en ningún momento."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-emerald-100">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Luciana G.</p><p class="text-xs text-charcoal/40">Blanqueamiento dental</p></div>
+                </div>
+            </div>
+            <div class="card-hover bg-mint p-8 rounded-2xl border border-emerald-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-0.5 text-coral-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"Me hicieron los implantes con planificación 3D y el resultado fue increíble. En pocas sesiones recuperé la funcionalidad y la estética que había perdido."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-emerald-100">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Martín A.</p><p class="text-xs text-charcoal/40">Implantes dentales</p></div>
+                </div>
+            </div>
+            <div class="card-hover bg-mint p-8 rounded-2xl border border-emerald-100" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-0.5 text-coral-400 text-sm mb-4">★★★★★</div>
+                <p class="text-base text-charcoal/70 leading-relaxed mb-8 font-light italic">"Llevo a mis tres hijos y todos quieren volver. La odontopediatra es genial, tiene una paciencia infinita y el consultorio está preparado para que los chicos se diviertan."</p>
+                <div class="flex items-center gap-3 pt-5 border-t border-emerald-100">
+                    <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=80&q=80" alt="" class="w-10 h-10 rounded-full object-cover">
+                    <div><p class="font-medium text-sm">Florencia R.</p><p class="text-xs text-charcoal/40">Odontopediatría</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="preguntas" class="py-24 md:py-32 bg-mint">
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <div class="accent-line mx-auto mb-4"></div>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Resolvé tus dudas</h2>
+        </div>
+        <div class="space-y-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="faq-item bg-white border border-emerald-100 rounded-2xl px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Cómo puedo sacar turno online?</span><svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Podés escribirnos por WhatsApp o llamarnos por teléfono. Te respondemos en minutos y te asignamos el día y horario que mejor te convenga. También atendemos consultas por redes sociales.</div>
+            </div>
+            <div class="faq-item bg-white border border-emerald-100 rounded-2xl px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Es verdad que los tratamientos no duelen?</span><svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Sí, utilizamos anestesia de última generación y técnicas mínimamente invasivas. La mayoría de nuestros pacientes se sorprenden de lo cómodo que resulta el procedimiento. Tu bienestar es nuestra prioridad.</div>
+            </div>
+            <div class="faq-item bg-white border border-emerald-100 rounded-2xl px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Qué opciones de pago aceptan?</span><svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Aceptamos efectivo, transferencia, débito y todas las tarjetas de crédito con planes de hasta 12 cuotas sin interés. Armamos un plan de financiación a tu medida para que el presupuesto no sea un obstáculo.</div>
+            </div>
+            <div class="faq-item bg-white border border-emerald-100 rounded-2xl px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Cuánto dura un blanqueamiento dental?</span><svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">El blanqueamiento en consultorio dura aproximadamente una hora y los resultados son inmediatos. Con los cuidados adecuados, el efecto puede mantenerse entre 1 y 3 años. Te damos todas las indicaciones post-tratamiento.</div>
+            </div>
+            <div class="faq-item bg-white border border-emerald-100 rounded-2xl px-6 py-5 cursor-pointer" onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center"><span class="font-medium text-sm pr-4">¿Atienden emergencias fuera de horario?</span><svg class="faq-chevron w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg></div>
+                <div class="faq-answer text-sm text-charcoal/50 leading-relaxed">Sí, contamos con atención de urgencias las 24 horas vía WhatsApp. Ante dolor agudo, traumatismos o cualquier emergencia dental, escribinos y te damos respuesta inmediata con indicaciones o turno prioritario.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OBRAS SOCIALES -->
+<section class="py-16 bg-white border-y border-emerald-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-xs font-semibold tracking-[0.3em] uppercase text-charcoal/30 mb-8">Cobertura y obras sociales</p>
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-6 py-2.5 bg-mint border border-emerald-100 rounded-full text-sm font-medium text-charcoal/60">OSDE</span>
+            <span class="px-6 py-2.5 bg-mint border border-emerald-100 rounded-full text-sm font-medium text-charcoal/60">Swiss Medical</span>
+            <span class="px-6 py-2.5 bg-mint border border-emerald-100 rounded-full text-sm font-medium text-charcoal/60">Galeno</span>
+            <span class="px-6 py-2.5 bg-mint border border-emerald-100 rounded-full text-sm font-medium text-charcoal/60">Medicus</span>
+            <span class="px-6 py-2.5 bg-mint border border-emerald-100 rounded-full text-sm font-medium text-charcoal/60">PAMI</span>
+            <a href="https://wa.me/54541149464155" class="px-6 py-2.5 bg-emerald-50 border border-emerald-200 rounded-full text-sm font-semibold text-emerald-600 hover:bg-emerald-100 transition">+ Consultanos</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 md:py-32 bg-mint">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16" data-aos="fade-up">
+            <div class="accent-line mb-4"></div>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">Encontranos</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div class="w-full lg:w-1/3 space-y-4">
+                <div class="bg-white p-6 rounded-2xl border border-emerald-100" data-aos="fade-up">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Dirección</p>
+                    <p class="font-medium text-sm">Av. del Libertador 6223, Cdad. Autónoma de Buenos Aires</p>
+                    <p class="text-sm text-charcoal/50">Cdad. Autónoma de Buenos Aires, Buenos Aires</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-emerald-100" data-aos="fade-up" data-aos-delay="50">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Teléfono</p>
+                    <a href="tel:+54541149464155" class="font-medium text-sm hover:text-emerald-600 transition">+54 11 4946-4155</a>
+                </div>
+                <a href="https://wa.me/54541149464155" class="block bg-emerald-600 text-white p-6 rounded-2xl hover:bg-emerald-700 transition group" data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-white/50 mb-2">WhatsApp</p>
+                    <p class="font-medium text-sm flex items-center gap-2">Escribinos ahora <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></p>
+                </a>
+                <div class="bg-white p-6 rounded-2xl border border-emerald-100" data-aos="fade-up" data-aos-delay="150">
+                    <p class="text-[10px] font-semibold uppercase tracking-widest text-charcoal/30 mb-2">Horarios</p>
+                    <p class="text-sm font-medium">Lun–Vie: 9:00 a 19:00</p>
+                    <p class="text-sm font-medium">Sábados: 9:00 a 13:00</p>
+                    <p class="text-sm font-semibold text-emerald-600 mt-1">Urgencias: WhatsApp 24h</p>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/3 h-[350px] lg:h-auto overflow-hidden shadow-xl rounded-2xl border border-emerald-100" data-aos="fade-up" data-aos-delay="100">
+                <iframe width="100%" height="100%" frameborder="0" style="border:0; min-height: 400px;" loading="lazy" src="https://maps.google.com/maps?q=Av.%20del%20Libertador%206223%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina&output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="relative py-32 md:py-40 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-emerald-900/85"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center text-white">
+        <div class="accent-line mx-auto mb-6" data-aos="fade-up"></div>
+        <h2 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6" data-aos="fade-up" data-aos-delay="100">
+            Empezá tu<br>transformación <em class="italic text-coral-400">hoy.</em>
+        </h2>
+        <p class="text-lg text-white/60 mb-10 leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
+            La primera consulta es sin cargo. Escribinos y empezá a sonreír de verdad.
+        </p>
+        <a href="https://wa.me/54541149464155" class="bg-coral-400 text-white px-10 py-4 rounded-full font-semibold text-sm tracking-wide uppercase hover:bg-coral-300 transition-all inline-flex items-center gap-2" data-aos="fade-up" data-aos-delay="300">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Solicitar Turno Gratis
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 bg-off-black text-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="md:col-span-1">
+                <span class="font-heading text-xl font-semibold block mb-4">od.fv</span>
+                <p class="text-sm text-white/40 leading-relaxed">Tu sonrisa, nuestra pasión. Odontología moderna en Buenos Aires.</p>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Servicios</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>Limpieza y prevención</li><li>Diseño de sonrisa</li><li>Ortodoncia</li><li>Implantes</li><li>Odontopediatría</li></ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Contacto</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>+54 11 4946-4155</li><li>WhatsApp directo</li><li>Av. del Libertador 6223, Cdad. Autónoma de Buenos Aires</li><li>Cdad. Autónoma de Buenos Aires, Buenos Aires</li></ul>
+            </div>
+            <div>
+                <h4 class="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">Horarios</h4>
+                <ul class="space-y-2 text-sm text-white/50"><li>Lun–Vie: 9 a 19h</li><li>Sábados: 9 a 13h</li><li class="text-coral-400 font-medium">Urgencias: WhatsApp</li></ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-[11px] text-white/20 uppercase tracking-[0.2em]">&copy; 2026 od.fv</p>
+            <p class="text-[11px] text-white/20 uppercase tracking-[0.2em]">Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/54541149464155" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:scale-110 hover:shadow-xl transition-all" aria-label="WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.556-1.188A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.322-.724-6.016-1.952l-.42-.316-3.034.79.828-3.016-.347-.55A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    lucide.createIcons();
+    AOS.init({ once: true, duration: 700, offset: 40, easing: 'ease-out-cubic' });
+
+    const navbar = document.getElementById('navbar');
+    const navLogo = document.getElementById('navLogo');
+    const navCta = document.getElementById('navCta');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const menuIcon = document.getElementById('menuIcon');
+
+    function updateNav() {
+        const scrolled = window.scrollY > 80;
+        navbar.classList.toggle('nav-scrolled', scrolled);
+        navbar.style.paddingTop = scrolled ? '12px' : '';
+        navbar.style.paddingBottom = scrolled ? '12px' : '';
+        const textColor = scrolled ? '#1C1C1C' : '#ffffff';
+        navLogo.style.color = textColor;
+        menuIcon.style.stroke = textColor;
+        navLinks.forEach(l => { l.style.color = textColor; l.style.opacity = scrolled ? '0.7' : '0.8'; });
+        if (navCta) { navCta.style.background = scrolled ? '#F97066' : '#F97066'; navCta.style.color = '#fff'; }
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    const overlay = document.getElementById('mobileOverlay');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    const mobLinks = document.querySelectorAll('.mob-link');
+    function openMenu() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeM() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    menuBtn.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeM);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeM(); });
+    mobLinks.forEach(l => l.addEventListener('click', closeM));
+
+    const comp = document.getElementById('comparison');
+    const compOverlay = document.getElementById('compOverlay');
+    const compSlider = document.getElementById('compSlider');
+    let isDragging = false;
+    function moveSlider(x) { const rect = comp.getBoundingClientRect(); let pos = ((x - rect.left) / rect.width) * 100; pos = Math.max(2, Math.min(98, pos)); compOverlay.style.width = pos + '%'; compSlider.style.left = pos + '%'; }
+    comp.addEventListener('mousedown', (e) => { isDragging = true; moveSlider(e.clientX); });
+    document.addEventListener('mousemove', (e) => { if (isDragging) moveSlider(e.clientX); });
+    document.addEventListener('mouseup', () => isDragging = false);
+    comp.addEventListener('touchstart', (e) => { isDragging = true; moveSlider(e.touches[0].clientX); }, { passive: true });
+    comp.addEventListener('touchmove', (e) => { if (isDragging) moveSlider(e.touches[0].clientX); }, { passive: true });
+    comp.addEventListener('touchend', () => isDragging = false);
+    function fixOverlayImg() { const img = compOverlay.querySelector('img'); if (img) img.style.width = comp.offsetWidth + 'px'; }
+    window.addEventListener('load', fixOverlayImg);
+    window.addEventListener('resize', fixOverlayImg);
+
+    function animateCounters() {
+        document.querySelectorAll('.counter').forEach(el => {
+            if (el.dataset.animated) return;
+            const target = parseFloat(el.dataset.target);
+            const isDecimal = el.dataset.decimal === 'true';
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const steps = 60; let step = 0;
+            el.dataset.animated = 'true';
+            const timer = setInterval(() => {
+                step++;
+                const progress = 1 - Math.pow(1 - step / steps, 3);
+                let current = target * progress;
+                if (step >= steps) { current = target; clearInterval(timer); }
+                el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+            }, 2000 / steps);
+        });
+    }
+    const statsSection = document.getElementById('heroStats');
+    if (statsSection) {
+        const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { setTimeout(animateCounters, 600); obs.unobserve(e.target); } }); }, { threshold: 0.5 });
+        obs.observe(statsSection);
+    }
+</script>
+</body>
+</html>
